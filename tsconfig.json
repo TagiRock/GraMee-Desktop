@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es5",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "skipLibCheck": false,
+    "outDir": "dist",
+    "rootDir": ".",
+    "sourceMap": true,
+    "types": ["reflect-metadata"],
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "./src/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

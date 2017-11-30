@@ -1,0 +1,29 @@
+{
+  "name": "gramee",
+  "version": "1.0.0",
+  "description": "gramee desktop",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "clean": "rm -rf node_modules; npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "youta1119",
+  "license": "ISC",
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.4.0",
+    "source-map-loader": "^0.2.3",
+    "tslint": "^5.8.0",
+    "tslint-config-airbnb": "^5.4.2",
+    "typescript": "^2.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.5"
+  },
+  "dependencies": {
+    "electron": "^1.7.9",
+    "vue": "^2.5.9",
+    "vue-router": "^3.0.1",
+    "vuetify": "^0.17.3"
+  }
+}
