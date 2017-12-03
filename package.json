@@ -15,15 +15,17 @@
     "awesome-typescript-loader": "^3.4.0",
     "source-map-loader": "^0.2.3",
     "tslint": "^5.8.0",
-    "tslint-config-airbnb": "^5.4.2",
     "typescript": "^2.6.2",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.9",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.5"
   },
   "dependencies": {
     "electron": "^1.7.9",
+    "ts-loader": "^3.2.0",
     "vue": "^2.5.9",
-    "vue-router": "^3.0.1",
-    "vuetify": "^0.17.3"
+    "vue-class-component": "^6.1.0",
+    "vue-router": "^3.0.1"
   }
 }

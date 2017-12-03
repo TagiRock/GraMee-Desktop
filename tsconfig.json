@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "module": "es2015",
     "target": "es5",
     "noImplicitAny": true,
@@ -7,23 +8,23 @@
     "preserveConstEnums": true,
     "strictNullChecks": true,
     "skipLibCheck": false,
-    "outDir": "dist",
-    "rootDir": ".",
     "sourceMap": true,
-    "types": ["reflect-metadata"],
+    "strict": true,
     "lib": [
-      "es6",
-      "dom"
+      "es5",
+      "dom",
+      "es2015.promise"
     ],
     "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,    
+    "experimentalDecorators": true
   },
   "include": [
     "./src/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "dist"
-  ]
+    "build"
+  ],
+  "compileOnSave": true
 }
