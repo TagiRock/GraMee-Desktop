@@ -1,12 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
-
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    entry: './src/app.ts',
+    entry: path.join(__dirname, 'src/app.ts'),
     output: {
         filename: 'app.js',
-        path: path.join(__dirname, 'build'),
-        publicPath: "build/"
+        path: path.join(__dirname, 'build')
     },
     resolve: {
         extensions: ['.ts', '.vue', '.js','.json'],
@@ -27,12 +26,23 @@ module.exports = {
                 options: {
                     appendTsSuffixTo: [/\.vue$/]
                 }
+            },
+            {
+                test: /\.pug$/,
+                loader: 'pug-loader'
             }
         ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: path.join(__dirname, 'src/app.pug'),
+            inject: 'body'
+            })
+    ],
     devServer: {
-        //inline: true,
+        inline: true,
         contentBase: path.join(__dirname, '/build')
     },
-    devtool: '#eval-source-map'
+    devtool: 'inline-source-map'
 };
