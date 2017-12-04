@@ -17,7 +17,12 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                options: {
+                    loaders : {
+                        css: 'vue-style-loader!css-loader'
+                    }
+                }
             },
             {
                 test: /\.tsx?$/,
@@ -30,7 +35,20 @@ module.exports = {
             {
                 test: /\.pug$/,
                 loader: 'pug-loader'
-            }
+            },
+            { 
+                test: /\.css$/, 
+                loader: "style-loader!css-loader"
+            },
+            {
+                test: /\.(jpeg|jpg|png|gif|svg)$/,
+                loader: "file-loader?name=[hash].[ext]"
+            },
+            {
+                test: /\.(ttf|eot|woff2|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "file-loader?name=[hash].[ext]"
+
+            },
         ]
     },
     plugins: [

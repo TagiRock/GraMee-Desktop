@@ -1,0 +1,16 @@
+{
+    "files.autoSave": "off",
+    // "tslint.autoFixOnSave": [
+    //     "arrow-parens"
+    // ],
+    "tslint.run": "onSave",
+    //"tslint.packageManager": "yarn",
+    "tslint.autoFixOnSave": false,
+    //"tslint.nodePath": "tmp",
+    "tslint.jsEnable": true,
+    //"tslint.rulesDirectory": ["tmp1", "tmp2"],
+    //"tslint.enable": true
+    "tslint.configFile": "tslint.ts"
+    //"tslint.trace.server": "verbose"
+    // "tslint.alwaysShowRuleFailuresAsWarnings": false
+}
