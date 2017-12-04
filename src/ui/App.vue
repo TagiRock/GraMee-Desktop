@@ -1,20 +1,22 @@
 <template lang="pug">
     <div class="container">
-        <vue-header></vue-header>
+        <vue-sidebar></vue-sidebar>
+        <router-view></router-view>
     </div>
 </template>
 
 <script lang="ts">
     import Component from "vue-class-component";
     import Vue from "vue";
-    import VueHeader from "./components/Header.vue"
+    import VueHeader from "./common/Header.vue";
+    import VueSidebar from "./common/Sidebar.vue";
 
     @Component({
         components: {
-            VueHeader
+            VueHeader,
+            VueSidebar
         }
     })
     export default class App extends Vue {
-        message = "hello vue";
     }
 </script>
