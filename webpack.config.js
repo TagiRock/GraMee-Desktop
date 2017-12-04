@@ -20,7 +20,8 @@ module.exports = {
                 loader: 'vue-loader',
                 options: {
                     loaders : {
-                        css: 'vue-style-loader!css-loader'
+                        scss: 'vue-style-loader!css-loader!sass-loader', // <style lang="scss">
+                        sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax' // <style lang="sass">
                     }
                 }
             },
@@ -37,8 +38,8 @@ module.exports = {
                 loader: 'pug-loader'
             },
             { 
-                test: /\.css$/, 
-                loader: "style-loader!css-loader"
+                test: /\.scss$/, 
+                loader: "style-loader!css-loader!sass-loader"
             },
             {
                 test: /\.(jpeg|jpg|png|gif|svg)$/,
