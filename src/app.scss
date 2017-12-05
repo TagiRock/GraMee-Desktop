@@ -12,17 +12,16 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 ul {
+  list-style: none;
   margin: 0;
 }
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
+a {
+  text-decoration: none;
 }
 p {
   margin: 0;
 }
-h2,h3 {
+h1,h2,h3 {
   font-size: 25px;
   font-weight: 600;
   margin: 0;
@@ -32,6 +31,11 @@ button {
 }
 button:focus {
   background: none;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
 }
 .cf:after {
   clear: both;

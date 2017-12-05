@@ -1,9 +1,10 @@
 <template lang="html">
   <div id="content">
     <vue-sidebar></vue-sidebar>
+    <div id="content_right">
+      <vue-header></vue-header>
+    </div>
   </div>
-
-  <!--<vue-header></vue-header>-->
 </template>
 
 <script lang="ts">
@@ -24,5 +25,8 @@ export default class App extends Vue {}
 #content {
   display: flex;
   height: 100%;
+}
+#content_right {
+  width: 100%;
 }
 </style>

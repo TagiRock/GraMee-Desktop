@@ -1,9 +1,13 @@
 <template lang="html">
   <header>
-        <img src="img/logo.svg" alt="" class="logo">
+        <h1><img src="img/logo.svg" alt="GraMee" class="logo"></h1>
         <ul id="header_links" class="right hide-on-med-and-down">
-          <li id="alart"><a href=""><i class="material-icons"><i class="material-icons">notifications</i></i><span class="new badge">1</span></a></li>
-          <li id="search"><a href=""><i class="material-icons"><i class="material-icons">search</i></i></a></li>
+          <li id="alart"><v-icon>notifications</v-icon>
+            <v-badge left>
+              <span slot="badge">6</span>
+            </v-badge>
+          </li>
+          <li id="search"><v-icon>search</v-icon></li>
         </ul>
   </header>
 </template>
@@ -26,15 +30,49 @@ header {
   position: relative;
   text-align: center;
 }
-ul{
-  margin: 0;
+v-badge {
+  background: #F7745D;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: bold;
+  height: 17px;
+  line-height: 17px;
+  min-width: 17px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 17px;
+}
+.logo {
+  width: 100px;
+}
+#header_links {
   display: flex;
   justify-content: space-between;
-  list-style:none;
-  position: fixed;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  width: 100px;
 }
-ul > ui {
-  margin-right: 10px;
-   padding-left: 10px;
+#alart {
+  position: relative;
+  width: 40px;
 }
+#header_links li {
+  color: #272C32;
+  display: block;
+}
+#alart i {
+  font-size: 30px;
+}
+#search i {
+  font-size: 33px;
+}
+
+
+
+
+
+
 </style>
