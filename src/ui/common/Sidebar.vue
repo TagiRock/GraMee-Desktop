@@ -32,7 +32,7 @@ aside {
   padding: 20px 0 0;
 }
 nav {
-  background: #272C32;
+  background-color: red;
   box-shadow:  none;
   height: auto;
 }
