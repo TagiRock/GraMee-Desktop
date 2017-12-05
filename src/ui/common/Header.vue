@@ -1,12 +1,11 @@
-<template lang="pug">
-header
-  ul
-    li
-      v-badge(overlap color="red" v-model="badgeVisibility")
-       v-icon(large) notifications
-       span(slot="badge") {{badgeCount}}
-    li
-      v-icon(large) search
+<template lang="html">
+  <header>
+        <img src="img/logo.svg" alt="" class="logo">
+        <ul id="header_links" class="right hide-on-med-and-down">
+          <li id="alart"><a href=""><i class="material-icons"><i class="material-icons">notifications</i></i><span class="new badge">1</span></a></li>
+          <li id="search"><a href=""><i class="material-icons"><i class="material-icons">search</i></i></a></li>
+        </ul>
+  </header>
 </template>
 
 <script lang="ts">
@@ -15,7 +14,7 @@ import Vue from "vue";
 
 @Component
 export default class Header extends Vue {
-  public badgeCount = 1;
+  public badgeCount = 0;
   public badgeVisibility = this.badgeCount !== 0;
 }
 </script>
@@ -39,4 +38,3 @@ ul > ui {
    padding-left: 10px;
 }
 </style>
-

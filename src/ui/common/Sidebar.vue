@@ -1,17 +1,16 @@
-<template lang="pug">
-aside
-  nav
-    ul.collection
-      li
-       router-link.collection-item(to="" exact) School
-      li
-        router-link.collection-item(to="home") Home
-      li
-        router-link.collection-item(to="message") Meassage
-      li
-        router-link.collection-item(to="favorite") Favorite  
-      li
-        router-link.collection-item(to="setting") Setting   
+<template lang="html">
+  <aside>
+    <nav>
+      <ul class="collection">
+        <li><img src="img/account/account01.png" alt=""></li>
+        <li><v-icon>school</v-icon>Schoole</li>
+        <li><v-icon>home</v-icon>Home</li>
+        <li><v-icon>textsms</v-icon>Message</li>
+        <li><v-icon>favorite</v-icon>Favorite</li>
+        <li><v-icon>settings</v-icon>Setting</li>
+      </ul>
+    </nav>
+  </aside>
 </template>
 
 <script lang="ts">
@@ -24,7 +23,9 @@ export default class Header extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
+/* サイドナビ */
+
 aside {
   height: 100%;
   background: #272C32;
@@ -38,12 +39,18 @@ nav {
 nav ul li {
   float: none;
 }
+ul {
+  list-style: none;
+}
 .collection {
   border: none;
   margin: 0;
 }
 .collection .prof {
   margin: 0 0 20px;
+}
+.collection .prof img {
+  width: 80%;
 }
 .collection .collection-item {
   background: none;
@@ -82,5 +89,6 @@ nav ul li {
 .collection a.collection-item:not(.active):hover {
   background: none;
 }
+/* -- 選択中 -- */
+/* -- サイドナビ -- */
 </style>
-

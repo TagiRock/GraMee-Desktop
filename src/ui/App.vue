@@ -1,8 +1,9 @@
-<template lang="pug">
-div.container
-  vue-header  
-  //vue-sidebar
-  router-view
+<template lang="html">
+  <div id="content">
+    <vue-sidebar></vue-sidebar>
+  </div>
+
+  <!--<vue-header></vue-header>-->
 </template>
 
 <script lang="ts">
@@ -18,3 +19,10 @@ import VueSidebar from "./common/Sidebar.vue";
 })
 export default class App extends Vue {}
 </script>
+
+<style lang="css" scoped>
+#content {
+  display: flex;
+  height: 100%;
+}
+</style>

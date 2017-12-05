@@ -1,3 +1,47 @@
 @import "~material-design-icons/iconfont/material-icons.css";
 @import "~vuetify/dist/vuetify.min.css";
 @import "~typeface-roboto/index.css";
+
+html {
+  line-height: normal;
+}
+html,body {
+  height: 100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+ul {
+  margin: 0;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+p {
+  margin: 0;
+}
+h2,h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+}
+button {
+  border: none;
+}
+button:focus {
+  background: none;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.en {
+  font-family: 'Montserrat', sans-serif;
+}
+.ja,.class_name {
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
