@@ -11,14 +11,13 @@ import Setting from "./ui/setting/Setting.vue";
 import Home from "./ui/home/Home.vue";
 
 const routes = [
-  { path: "/", component: School },
-  { path: "/message", component: Message },
-  { path: "/favorite", component: Favorite },
-  { path: "/home", component: Home },
-  { path: "/setting", component: Setting }
+  { path: "school", component: School },
+  { path: "message", component: Message },
+  { path: "favorite", component: Favorite },
+  { path: "home", component: Home },
+  { path: "setting", component: Setting }
 ];
 const router = new VueRouter({
-  mode: "history",
   base: __dirname,
   routes: routes
 });
