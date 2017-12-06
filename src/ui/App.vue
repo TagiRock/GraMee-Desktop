@@ -4,6 +4,7 @@
     <div id="content_right">
       <vue-header></vue-header>
     </div>
+    <vue-home></vue-home>
   </div>
 </template>
 
@@ -12,10 +13,12 @@ import Component from "vue-class-component";
 import Vue from "vue";
 import VueHeader from "./common/Header.vue";
 import VueSidebar from "./common/Sidebar.vue";
+import VueHome from "./home/Home.vue";
 @Component({
   components: {
     VueHeader,
-    VueSidebar
+    VueSidebar,
+    VueHome
   }
 })
 export default class App extends Vue {}
