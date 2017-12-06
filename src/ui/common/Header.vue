@@ -1,9 +1,9 @@
 <template lang="html">
   <header>
         <h1><img src="img/logo.svg" alt="GraMee" class="logo"></h1>
-        <ul id="header_links" class="right hide-on-med-and-down">
+        <ul id="header_links">
           <li id="alart"><v-icon>notifications</v-icon>
-            <v-badge left>
+            <v-badge overlap left color="red">
               <span slot="badge">6</span>
             </v-badge>
           </li>
@@ -30,20 +30,7 @@ header {
   position: relative;
   text-align: center;
 }
-v-badge {
-  background: #F7745D;
-  border-radius: 50%;
-  font-size: 13px;
-  font-weight: bold;
-  height: 17px;
-  line-height: 17px;
-  min-width: 17px;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 17px;
-}
+
 .logo {
   width: 100px;
 }
