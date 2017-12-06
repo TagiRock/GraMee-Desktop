@@ -61,7 +61,8 @@ module.exports = {
     ],
     devServer: {
         inline: true,
-        contentBase: path.join(__dirname, '/build')
+        contentBase: path.join(__dirname, '/build'),
+        publicPath: "/"
     },
     devtool: 'inline-source-map'
 };

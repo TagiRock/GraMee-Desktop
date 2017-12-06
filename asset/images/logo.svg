@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="2652 -158 108 37">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-アートボード_4);
+      }
+
+      .cls-2 {
+        fill: #272c32;
+        font-size: 28px;
+        font-family: Montserrat-SemiBold, Montserrat;
+        font-weight: 600;
+      }
+    </style>
+    <clipPath id="clip-アートボード_4">
+      <rect x="2652" y="-158" width="108" height="37"/>
+    </clipPath>
+  </defs>
+  <g id="アートボード_4" data-name="アートボード – 4" class="cls-1">
+    <text id="GraMee" class="cls-2" transform="translate(2652 -131)"><tspan x="0" y="0">GraMee</tspan></text>
+  </g>
+</svg>
