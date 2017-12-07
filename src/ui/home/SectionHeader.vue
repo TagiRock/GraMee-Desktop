@@ -1,5 +1,5 @@
 <template lang="html">
-<div>this is section header</div>
+  <h2>RECOMMEND<span class="view"><a href="#">ALL VIEW<i class="material-icons"><i class="material-icons">keyboard_arrow_right</i></i></a></span></h2>
 </template>
 
 <script lang="ts">
@@ -12,6 +12,24 @@ export default class SectionHeader extends Vue {
 </script>
 
 <style lang="scss" scoped>
-
+h2 {
+ border-bottom: 1px solid #DBDBDB;
+ color: #575A61;
+ margin: 0 0 15px;
+ padding: 0 0 10px;
+}
+.view a {
+  color: #575A61;
+  float: right;
+  font-size: 16px;
+  margin: 8px 0 0;
+}
+.view a:hover {
+  color: #F7745D;
+  transition: 0.3s ease-out;
+}
+.view a i {
+  font-size: 27px;
+  float: right;
+}
 </style>
-
