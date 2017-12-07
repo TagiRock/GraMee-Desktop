@@ -56,6 +56,9 @@ header {
 #search i {
   font-size: 33px;
 }
+.badge {
+  position: static !important;
+}
 
 
 
