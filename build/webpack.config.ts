@@ -10,6 +10,7 @@ interface Config extends webpack.Configuration {
 interface NewUseRule extends webpack.NewUseRule {
   use: webpack.NewLoader | webpack.NewLoader[];
 }
+
 const workdir = path.join(__dirname, "../");
 const rules: NewUseRule[] = [
   {
@@ -66,7 +67,6 @@ const config: Config = {
   entry: "./src/app.ts",
   output: {
     path: path.join(workdir, "./dist"),
-    publicPath: "dist/",
     filename: "bundle.js"
   },
   resolve: {
@@ -79,16 +79,15 @@ const config: Config = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: path.join(workdir, "src/app.pug"),
+      template: path.join(workdir, "./src/app.pug"),
       inject: "body"
     })
   ],
   devServer: {
     inline: true,
-    contentBase: path.join(workdir, "./build"),
-    publicPath: "/asset"
+    contentBase: path.join(workdir, "./dist")
   },
   devtool: "inline-source-map"
 };
 
-export default config;
+module.exports = config;
