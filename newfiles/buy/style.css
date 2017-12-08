@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+/* 全ページ共通 */
+html {
+  line-height: normal;
+}
+html,body,
+#content,#content_right,
+main {
+  height: 100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10%;
+}
+ul {
+  margin: 0;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+p {
+  margin: 0;
+}
+h2,h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+}
+button {
+  border: none;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.en {
+  font-family: 'Montserrat', sans-serif;
+}
+.ja,.class_name {
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+#content {
+  display: flex;
+}
+#content_right {
+  width: 100%;
+}
+
+/* ここから決済 */
+
+.cartbox {
+  background: #fff;
+  border-radius: 6px;
+  margin: 0 auto;
+  padding: 60px 60px 20px;
+  width: 80%;
+}
+.typebox {
+  margin: 0 0 20px;
+}
+label {
+  color: #575A61;
+  display: inline-block;
+  font-size: 16px;
+  width: 135px;
+}
+input {
+  border: 1px solid #CECECE;
+  border-radius: 50px;
+  font-size: 15px;
+  outline: none;
+  padding: 11px 20px;
+  width: 66%;
+}
+input:focus {
+  border: 1px solid #F7745D;
+  box-shadow: none;
+}
+.class {
+  margin: 40px 0 0;
+}
+.class img {
+  float: left;
+  margin: 0 20px 0 0;
+  width: 120px;
+}
+.class h2 {
+  font-size: 18px;
+  height: 40px;
+}
+#price {
+  color: #272C32;
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  text-align: right;
+  width: 100%;
+}
+#price span {
+  font-size: 18px;
+}
+
+#tag {
+  color: #575A61;
+  margin: 20px 0;
+}
+#tag span {
+  margin: 0 20px 0 0;
+}
+#tag span i {
+  vertical-align: middle;
+}
+
+.btnbox {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+button {
+  border-radius: 50px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0 10px;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+.cancel {
+  background: #575A61;
+}
+.buy {
+  background: #F7745D;
+}
+.help {
+  color: #575A61;
+  font-size: 13px;
+  position: relative;
+  text-align: right;
+}
+.help i {
+  font-size: 30px;
+  position: absolute;
+  right: -35px;
+  top: -6px;
+}
+
+
+
+
+
+
+
+
+/* -- ここまで決済 -- */

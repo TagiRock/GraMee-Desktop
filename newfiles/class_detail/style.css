@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+/* 全ページ共通 消してOK!! */
+html {
+  line-height: normal;
+}
+html,body,
+#content,#content_right,
+main {
+  height: 100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+ul {
+  margin: 0;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+h2,h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+}
+button {
+  border: none;
+}
+button:focus {
+  background: none;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.en {
+  font-family: 'Montserrat', sans-serif;
+}
+.ja,.class_name {
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+#content {
+  display: flex;
+}
+#content_right {
+  width: 100%;
+}
+/* -- 全ページ共通 ここまで消してOK!! -- */
+
+
+
+/* パンくずリスト */
+#panav {
+  margin: 0 0 20px;
+}
+#panav a {
+  color: #808798;
+  font-size: 16px;
+  font-weight: 100;
+}
+#panav a:last-child {
+  color: #272C32;
+}
+.breadcrumb:before {
+  color: #808798;
+  vertical-align: middle;
+}
+/* -- パンくずリスト -- */
+
+
+
+/* 教室詳細ページ */
+#details {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+#class_detail {
+  padding: 25px 60px;
+  width: 80%;
+}
+#account_detail {
+  background: #272C32;
+  height: 100%;
+  padding: 40px 25px;
+  position: relative;
+  width: 310px;
+}
+#account_detail::after {
+  background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(0,0,0,1) 100%);
+  bottom: 0;
+  content: "";
+  height: 260px;
+  left: 0;
+  position: absolute;
+  width: 310px;
+}
+#class_detail_box {
+  display: flex;
+}
+#class_detail_left {
+  margin: 0 30px 0 0;
+}
+#class_detail_right h2 {
+  margin: 0 0 60px;
+}
+#price_box {
+  margin: 0 0 30px;
+  text-align: right;
+}
+#price_box i {
+  font-size: 40px;
+  vertical-align: bottom;
+}
+#price {
+  font-size: 40px;
+  font-weight: 600;
+}
+#price .tax {
+  font-size: 14px;
+  font-weight: normal;
+}
+#class_detail_txt {
+  border-bottom: 1px solid #DBDBDB;
+  display: flex;
+  margin-bottom: 20px;
+}
+#class_detail_txt li {
+  margin-bottom: 5px;
+  width: 100px;
+}
+#class_detail_txt li a {
+  color: #808798;
+}
+#class_detail_txt li .active {
+  color: #272C32;
+  font-weight: bold;
+}
+#txt_box {
+  margin: 0 0 60px;
+}
+#detail_txt {
+  font-size: 16px;
+}
+#tag {
+  color: #575A61;
+  margin: 20px 0;
+}
+#tag span {
+  margin: 0 20px 0 0;
+}
+#tag span i {
+  vertical-align: middle;
+}
+
+
+
+/* 受講ボタン・キャンセルボタン */
+#buy {
+  text-align: right;
+}
+.buy_btn {
+  background: #F7745D;
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  font-size: 21px;
+  padding: 5px 0;
+  text-align: center;
+  width: 200px;
+}
+.cancel_btn {
+  background: #575A61;
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  font-size: 21px;
+  margin: 0 20px 0 0;
+  padding: 5px 0;
+  text-align: center;
+  width: 200px;
+}
+/* -- 受講ボタン・キャンセルボタン -- */
+
+
+
+/* レーティング */
+#star_rating {
+  display: -webkit-inline-box;
+  font-size: 20px;
+  letter-spacing: 5px;
+  position: relative;
+  width: 120px;
+}
+#star_rating span {
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: normal;
+  margin: 0 0 0 5px;
+}
+#star_rating_front {
+  color: #ffcc33;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+#star_rating_back {
+  color: #eee;
+}
+/* -- レーティング -- */
+
+
+
+/* 開講日 */
+#class_detail_left .date {
+  color: #808798;
+  font-size: 13px;
+}
+/* -- 開講日 --  */
+
+
+
+/* 開講者アカウント */
+#account img {
+  float: left;
+  margin: 0 20px 0 0;
+}
+#account_top {
+  margin: 0 0 40px;
+  padding: 10px 0 0;
+}
+#account_top .account_name {
+  color: #C7C7C7;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+#assessment {
+  color: #575A61;
+  display: flex;
+}
+#assessment p {
+  font-size: 17px;
+  margin: 0 15px 0 0;
+  padding: 4px 0 0;
+}
+#assessment p i {
+  font-size: 17px;
+  margin: 0 5px 0 0;
+  vertical-align: text-top;
+}
+#assessment .add_account {
+  color: #C7C7C7;
+  margin: 0 0 0 5px;
+}
+#prof_txt {
+  color: #646a71;
+  font-size: 13px;
+  font-weight: 100;
+  margin: 0 0 40px;
+}
+#prof_class_box {
+  height: 340px;
+  overflow: scroll;
+}
+.img_x2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+}
+.prof_class {
+  height: 100%;
+  width: 46%;
+}
+.prof_class img {
+  width: 100%;
+}
+.prof_class p,
+.img_x1 p {
+  color: #646a71;
+  font-size: 13px;
+  font-weight: 100;
+}
+.img_x1 {
+  margin: 0 0 20px;
+}
+.img_x1 img {
+  width: 100%;
+}
+/* -- 開講者アカウント -- */

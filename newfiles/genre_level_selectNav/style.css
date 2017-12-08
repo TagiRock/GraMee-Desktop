@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/* 全ページ共通 消してOK!! */
+html {
+  line-height: normal;
+}
+html,body,
+#content,#content_right,
+main {
+  height: 100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+ul {
+  margin: 0;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+p {
+  margin: 0;
+}
+h2,h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+}
+button {
+  border: none;
+}
+button:focus {
+  background: none;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.en {
+  font-family: 'Montserrat', sans-serif;
+}
+.ja,.class_name {
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+#content {
+  display: flex;
+}
+#content_right {
+  width: 100%;
+}
+/* -- 全ページ共通 ここまで消してOK!! -- */
+
+
+/* ジャンル選択 ここからコピペ */
+#select_nav {
+  border-bottom: 1px solid #DBDBDB;
+  display: flex;
+  justify-content: center;
+}
+#genre_active,#level_active {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0;
+}
+#genre_active {
+  margin-right: 20px;
+}
+#genre_active li {
+  margin: 0 10px;
+}
+#genre_active li a {
+  color: #575A61;
+  display: block;
+  font-size: 14px;
+  padding: 5px 16px;
+}
+#genre_active li .active {
+  background: #F7745D;
+  border-radius: 6px;
+  color: #fff;
+}
+#level_active .dropdown-button {
+  background: none;
+  border: 1px solid #DBDBDB;
+  border-radius: 6px;
+  box-shadow: none;
+  color: #575A61;
+  font-size: 14px;
+  height: auto;
+  line-height: normal;
+  padding: 5px 16px;
+}
+#level_active .dropdown-button i {
+  float: right;
+  font-size: 21px;
+  margin-left: 8px;
+}
+#dropdown1 {
+  border-radius: 2px;
+}
+.dropdown-content li>a, .dropdown-content li>span {
+  color: #575A61;
+}
+.dropdown-content li:hover, .dropdown-content li.active, .dropdown-content li.selected {
+  background: #F1F1F1;
+}
+/* -- ジャンル選択 ここまでコピペ -- */
