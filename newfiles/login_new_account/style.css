@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/* 全ページ共通 */
+html {
+  line-height: normal;
+}
+html,body,
+#content,#content_right,
+main {
+  height: 100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  transition: color 0.35s ease;
+  -webkit-transition: color 0.35s ease;
+  -moz-transition: color 0.35s ease;
+}
+p {
+  margin: 0;
+}
+h2,h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+button,input,textarea {
+  outline: none;
+}
+button {
+  border: none;
+}
+button:focus {
+  background: none;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.en {
+  font-family: 'Montserrat', sans-serif;
+}
+.ja,.class_name {
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+/* -- 全ページ共通 -- */
+
+/* ここからコピペ */
+
+#login_box {
+  height: 100%;
+  position: relative;
+}
+#login_box img {
+  width: 100%;
+}
+#login_box h1 {
+  color: #fff;
+  font-size: 105px;
+  left: 5%;
+  position: absolute;
+  top: 25%;
+}
+#login_box h1 span {
+  font-size: 60px;
+  display: block;
+}
+#login {
+  background: #272C32;
+  height: 100%;
+  padding: 160px 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 23%;
+}
+#login h2 {
+  color: #fff;
+  font-size: 30px;
+  margin: 0 0 40px;
+  text-align: center;
+}
+#login input {
+  border: none;
+  border-radius: 50px;
+  display: block;
+  font-size: 16px;
+  height: 50px;
+  margin: 0 0 20px;
+  padding: 0 20px;
+  width: 88%;
+}
+#login input::placeholder {
+  color: #C6C6C6;
+}
+.login {
+  text-align: center;
+}
+.sns {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+.sns li {
+  border-radius: 50%;
+  height: 60px;
+  margin: 0 10px;
+  width: 60px;
+}
+.sns li a {
+  display: block;
+  height: 60px;
+}
+.login button {
+  background: #F7745D;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: bold;
+  height: 50px;
+  margin: 0 auto;
+  width: 260px;
+}
+.login > a {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  margin: 25px 0 -10px;
+}
+.login > a:hover {
+  color: #838383;
+}
+
+/* -- ここからコピペ -- */

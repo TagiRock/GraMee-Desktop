@@ -20,6 +20,11 @@ ul {
 a {
   text-decoration: none;
 }
+a:hover {
+  transition: color 0.35s ease;
+  -webkit-transition: color 0.35s ease;
+  -moz-transition: color 0.35s ease;
+}
 p {
   margin: 0;
 }
