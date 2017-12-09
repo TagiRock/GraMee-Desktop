@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/* 全ページ共通 */
+html {
+  line-height: normal;
+}
+html,body,
+#content,#content_right,
+main {
+  height: 100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+p {
+  margin: 0;
+}
+h2,h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+button,input,textarea {
+  outline: none;
+}
+button {
+  border: none;
+}
+button:focus {
+  background: none;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.en {
+  font-family: 'Montserrat', sans-serif;
+}
+.ja,.class_name {
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+#content {
+  display: flex;
+}
+#content_right {
+  width: 100%;
+}
+
+/* ここからコピペ */
+
+#display_box {
+  background: #363D45;
+  height: 100%;
+  position: relative;
+}
+#display_head {
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 10px 30px;
+  position: relative;
+}
+#display_head img {
+  float: left;
+  margin: 0 10px 0 0;
+  width: 40px;
+}
+#display_head h3 {
+  font-size: 15px;
+}
+.time {
+  font-weight: 100;
+}
+.message_box {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+#display {
+  margin: 0 auto;
+  width: 80%;
+}
+#call_icons {
+  bottom: 20px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.call_end {
+  background: #F75D5D;
+  border-radius: 50%;
+  color: #fff;
+  height: 60px;
+  margin: 0 auto;
+  width: 60px;
+}
+.call_end v-icon {
+  font-size: 40px;
+  margin: 10px 0 0;
+}
+
+/* ここまでコピペ */
