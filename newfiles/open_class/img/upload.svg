@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1881 161 230 230">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-アートボード_1);
+      }
+
+      .cls-2 {
+        fill: #f1f1f1;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #575a61;
+      }
+
+      .cls-4 {
+        font-size: 15px;
+        font-family: HiraginoSans-W6, Hiragino Sans;
+      }
+    </style>
+    <clipPath id="clip-アートボード_1">
+      <rect x="-1881" y="161" width="230" height="230"/>
+    </clipPath>
+  </defs>
+  <g id="アートボード_1" data-name="アートボード – 1" class="cls-1">
+    <g id="グループ化_587" data-name="グループ化 587" transform="translate(-2097 -35)">
+      <rect id="computer-1245714_1920" class="cls-2" width="230" height="230" transform="translate(216.351 196)"/>
+      <g id="グループ化_581" data-name="グループ化 581" transform="translate(260.336 269.884)">
+        <g id="グループ化_580" data-name="グループ化 580" transform="translate(40.363 0)">
+          <ellipse id="楕円形_12" data-name="楕円形 12" class="cls-3" cx="9.922" cy="9.922" rx="9.922" ry="9.922" transform="translate(21.085 21.085)"/>
+          <path id="パス_129" data-name="パス 129" class="cls-3" d="M23.705,2,18.031,8.2H8.2A6.22,6.22,0,0,0,2,14.4V51.612a6.22,6.22,0,0,0,6.2,6.2H57.813a6.22,6.22,0,0,0,6.2-6.2V14.4a6.22,6.22,0,0,0-6.2-6.2H47.984L42.31,2Zm9.3,46.511a15.5,15.5,0,1,1,15.5-15.5A15.509,15.509,0,0,1,33.007,48.511Z" transform="translate(-2 -2)"/>
+        </g>
+        <text id="画像をアップロード" class="cls-4" transform="translate(0 79.003)"><tspan x="0" y="0">画像をアップロード</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
