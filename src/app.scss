@@ -10,10 +10,12 @@ html,body {
 }
 body {
   font-family: 'Montserrat', sans-serif;
+  margin: 0;
 }
 ul {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -26,11 +28,17 @@ h1,h2,h3 {
   font-weight: 600;
   margin: 0;
 }
+button,input,textarea {
+  outline: none;
+}
 button {
   border: none;
 }
 button:focus {
   background: none;
+}
+textarea {
+  resize: none;
 }
 .cf:before,
 .cf:after {
