@@ -63,8 +63,7 @@ const rules: NewUseRule[] = [
   }
 ];
 const config: Config = {
-  context: workdir,
-  entry: "./src/app.ts",
+  entry: path.join(workdir, "./src/app.ts"),
   output: {
     path: path.join(workdir, "./dist"),
     filename: "bundle.js"

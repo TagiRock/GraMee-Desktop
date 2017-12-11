@@ -1,23 +1,29 @@
-<template lang="html">
-  <div>
-    <vue-card></vue-card>
-    <vue-section-header></vue-section-header>
-  </div>
+<template lang="pug">
+vue-genre(:genre="genreType")
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import VueCard from "../common/Card.vue";
-import VueSectionHeader from "./SectionHeader.vue";
+import VueGenre from "./Genre.vue";
+import VueScreenShare from "./ScreenShare.vue";
+import GenreType from "./domain/GenreType";
+import LevelType from "./domain/LevelType";
 @Component({
   components: {
-    VueCard,
-    VueSectionHeader
+    VueGenre,
+    VueScreenShare
   }
 })
 export default class Home extends Vue {
-  public badgeCount = 0;
+  public genreType = "web";
+  public levelType = LevelType.Easy;
+
+  constructor(){
+    super()
+    console.log(this);
+    console.log(typeof this.genreType);
+  }
 }
 </script>
 

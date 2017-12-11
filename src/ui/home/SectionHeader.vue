@@ -1,5 +1,9 @@
-<template lang="html">
-  <h2>RECOMMEND<span class="view"><a href="#">ALL VIEW<i class="material-icons"><i class="material-icons">keyboard_arrow_right</i></i></a></span></h2>
+<template lang="pug">
+  h2 {}
+    span.view
+      a(href='#') ALL VIEW
+        v-icon keyboard_arrow_right
+
 </template>
 
 <script lang="ts">

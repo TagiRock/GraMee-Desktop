@@ -1,15 +1,13 @@
-<template lang="html">
-  <header>
-        <h1><img src="img/logo.svg" alt="GraMee" class="logo"></h1>
-        <ul id="header_links">
-          <li id="alart"><v-icon>notifications</v-icon>
-            <v-badge overlap left color="red">
-              <span slot="badge">6</span>
-            </v-badge>
-          </li>
-          <li id="search"><v-icon>search</v-icon></li>
-        </ul>
-  </header>
+<template lang="pug">
+header
+    img#logo(src="asset/images/logo.svg")
+    ul#header_links
+      li#alart
+        v-icon notifications
+        v-badge(left overlap color="red")
+          span(slot="badge") 6
+      li#search
+        v-icon search
 </template>
 
 <script lang="ts">
@@ -25,13 +23,13 @@ export default class Header extends Vue {
 
 <style lang="scss" scoped>
 header {
-  background: #F1F1F1;
+  background: #f1f1f1;
   padding: 10px 30px;
   position: relative;
   text-align: center;
 }
 
-.logo {
+#logo {
   width: 100px;
 }
 #header_links {
@@ -42,12 +40,12 @@ header {
   top: 10px;
   width: 100px;
 }
-#alart {
+.alart {
   position: relative;
   width: 40px;
 }
 #header_links li {
-  color: #272C32;
+  color: #272c32;
   display: block;
 }
 #alart i {
@@ -56,13 +54,4 @@ header {
 #search i {
   font-size: 33px;
 }
-.badge {
-  position: static !important;
-}
-
-
-
-
-
-
 </style>
