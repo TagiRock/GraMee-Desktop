@@ -32,7 +32,7 @@ export default Vue.component(
                     break;
             }
             data.style = { fontSize, ...data.style };
-            data.staticClass = "material-icons";
+            data.staticClass = "material-icons md-icon";
             return createElement("i", data, children);
         }
     });

@@ -1,11 +1,7 @@
 <template lang="pug">
-v-app
-  v-layout(fill-height)
+el-container.content
+  el-aside(width="100px")
     vue-sidebar
-    div
-      vue-header
-      v-content
-        vue-home
 </template>
 
 <script lang="ts">
@@ -26,8 +22,15 @@ import Peer from "skyway-js";
 export default class App extends Vue {}
 </script>
 
-<style lang="css" scoped>
-div{
-  width: 100%;
+<style lang="css">
+html{
+  height:100%;
+}
+body{
+  height:100%;
+  margin: 0;
+}
+section {
+  height: 100%;
 }
 </style>

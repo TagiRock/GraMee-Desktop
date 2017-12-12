@@ -1,16 +1,11 @@
-<template lang="html">
-  <aside>
-    <nav>
-      <ul class="collection">
-        <li class="prof"><img src="img/account/account01.png" alt="プロフィール画像"></li>
-        <li class="active"><v-icon>school</v-icon>Schoole</li>
-        <li><v-icon>home</v-icon>Home</li>
-        <li><v-icon>textsms</v-icon>Message</li>
-        <li><v-icon>favorite</v-icon>Favorite</li>
-        <li><v-icon>settings</v-icon>Setting</li>
-      </ul>
-    </nav>
-  </aside>
+<template lang="pug">
+nav
+  ul
+    li
+      img(alt='プロフィール画像')
+    li(v-for="item in items" @click="clickSidebarItem(item)" :class='{active:item.isActive}' )
+      md-icon {{item.iconNeme}}
+      | {{ item.type}}
 </template>
 
 <script lang="ts">
@@ -19,48 +14,91 @@ import Vue from "vue";
 
 @Component
 export default class Sidebar extends Vue {
-  public badgeCount = 0;
+  public items: [ISidebarItem] = [
+    {
+      type: SidebarItemType.School,
+      iconNeme: "school",
+      isActive: true
+    },
+    {
+      type: SidebarItemType.Home,
+      iconNeme: "home",
+      isActive: false
+    },
+    {
+      type: SidebarItemType.Message,
+      iconNeme: "textsms",
+      isActive: false
+    },
+    {
+      type: SidebarItemType.Favorite,
+      iconNeme: "favorite",
+      isActive: false
+    },
+    {
+      type: SidebarItemType.Setting,
+      iconNeme: "settings",
+      isActive: false
+    }
+  ];
+
+  public clickSidebarItem(selected: ISidebarItem) {
+    for (const item of this.items) {
+      item.isActive = false;
+    }
+    selected.isActive = true;
+  }
+}
+interface ISidebarItem {
+  type: SidebarItemType;
+  iconNeme: string;
+  isActive: boolean;
+}
+enum SidebarItemType {
+  School = "School",
+  Home = "Home",
+  Message = "Message",
+  Favorite = "Favorite",
+  Setting = "Setting"
 }
 </script>
 
-<style lang="css" scoped>
-
-/* サイドナビ */
-aside {
-  height: 100%;
-  background: #272C32;
+<style lang="scss" scoped>
+nav {
+  background: #272c32;
   padding: 20px 0 0;
+  height: 100%;
+  width: 100%;
 }
-.collection {
+ul {
+  list-style: none;
+  padding: 0;
   border: none;
   margin: 0;
 }
-.collection li {
-  color: #575A61;
+
+li {
+  color: #575a61;
   font-size: 13px;
   padding: 15px 12px;
   text-align: center;
 }
-.collection .prof {
-  margin: 0 0 20px;
-}
-.collection li img {
-  width: 80%;
-}
-.collection li i {
+
+.md-icon {
   display: block;
 }
-/* 選択中 */
-.collection .active {
+
+ul .active {
   background: none;
   color: #fff;
   position: relative;
 }
-.collection .active i {
-  color: #F7745D;
+ul .active .md-icon {
+  color: #f7745d;
 }
-.collection .active::before{
-  background: #F7745D;
+
+ul .active::before {
+  background: #f7745d;
   border-radius: 20px;
   content: "";
   display: block;
@@ -70,6 +108,4 @@ aside {
   top: 0;
   width: 2px;
 }
-/* -- 選択中 -- */
-/* -- サイドナビ -- */
 </style>

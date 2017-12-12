@@ -4,7 +4,9 @@ import VueRouter from "vue-router";
 import Vuetify from "vuetify";
 import Vuex from "vuex";
 import App from "./ui/App.vue";
+import Element from "element-ui";
 import "../lib/vue-material-design-icons-plugin/MaterialIcons";
+import locale from "element-ui/lib/locale/lang/ja";
 // import components
 import Favorite from "./ui/favorite/Favorite.vue";
 import Message from "./ui/message/Message.vue";
@@ -24,8 +26,8 @@ const router = new VueRouter({
   routes: routes
 });
 Vue.use(Vuex);
-Vue.use(Vuetify);
 Vue.use(VueRouter);
+Vue.use(Element, { locale });
 /* tslint:disable:no-unused-expression*/
 new Vue({
   router: router,

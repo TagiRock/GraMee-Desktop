@@ -1,13 +1,12 @@
 <template lang="pug">
-header
-    img#logo(src="asset/images/logo.svg")
-    ul#header_links
-      li#alart
-        v-icon notifications
-        v-badge(left overlap color="red")
-          span(slot="badge") 6
-      li#search
-        v-icon search
+div
+  img#logo(src="asset/images/logo.svg")
+  ul#header_links
+    li#alart
+      el-badge(:value="6")
+          md-icon(medium) notifications
+    li#search
+      md-icon(medium) search       
 </template>
 
 <script lang="ts">
@@ -22,13 +21,12 @@ export default class Header extends Vue {
 </script>
 
 <style lang="scss" scoped>
-header {
+div {
   background: #f1f1f1;
   padding: 10px 30px;
   position: relative;
   text-align: center;
 }
-
 #logo {
   width: 100px;
 }
