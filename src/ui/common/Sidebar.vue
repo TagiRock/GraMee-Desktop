@@ -71,7 +71,6 @@ nav {
   width: 100%;
 }
 ul {
-  list-style: none;
   padding: 0;
   border: none;
   margin: 0;
@@ -82,6 +81,7 @@ li {
   font-size: 13px;
   padding: 15px 12px;
   text-align: center;
+  display: block;
 }
 
 .md-icon {

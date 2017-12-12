@@ -2,6 +2,11 @@
 el-container.content
   el-aside(width="100px")
     vue-sidebar
+  el-container
+    el-header
+      vue-header  
+    el-main
+      vue-home  
 </template>
 
 <script lang="ts">
@@ -31,6 +36,13 @@ body{
   margin: 0;
 }
 section {
+  min-width: 500px;
   height: 100%;
+}
+.el-header{
+  padding: 0;
+}
+.el-main{
+  padding: 0;
 }
 </style>

@@ -1,11 +1,11 @@
 <template lang="pug">
-div
-  img#logo(src="asset/images/logo.svg")
-  ul#header_links
-    li#alart
+div#header
+  img(src="asset/images/logo.svg")
+  ul
+    li
       el-badge(:value="6")
-          md-icon(medium) notifications
-    li#search
+        md-icon(medium) notifications
+    li
       md-icon(medium) search       
 </template>
 
@@ -21,35 +21,28 @@ export default class Header extends Vue {
 </script>
 
 <style lang="scss" scoped>
-div {
+#header{
   background: #f1f1f1;
   padding: 10px 30px;
   position: relative;
   text-align: center;
 }
-#logo {
+img {
   width: 100px;
 }
-#header_links {
+ul {
   display: flex;
   justify-content: space-between;
   position: absolute;
+  margin: 0;
   right: 30px;
   top: 10px;
   width: 100px;
 }
-.alart {
-  position: relative;
-  width: 40px;
-}
-#header_links li {
+ul li {
   color: #272c32;
   display: block;
-}
-#alart i {
-  font-size: 30px;
-}
-#search i {
-  font-size: 33px;
+  bottom: 0;
+  position: relative;
 }
 </style>
