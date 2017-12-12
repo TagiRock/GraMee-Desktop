@@ -1,0 +1,21 @@
+{
+    "name" : "Gramee Screen Screen",
+    "author": "Tagirock",
+    "version" : "0.1",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "Capture full-screen or specific application's screen!",
+    "background": {
+        "scripts": ["background-script.js","chrome-extension-binding.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content-script.js" ],
+       "run_at": "document_end",
+       "all_frames": true,
+       "matches": ["http://localhost:3000/*"]
+    }],
+    "permissions": [
+        "desktopCapture"
+    ]
+}

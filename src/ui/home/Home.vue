@@ -16,14 +16,8 @@ import LevelType from "./domain/LevelType";
   }
 })
 export default class Home extends Vue {
-  public genreType = "web";
-  public levelType = LevelType.Easy;
-
-  constructor(){
-    super()
-    console.log(this);
-    console.log(typeof this.genreType);
-  }
+  public genreType: GenreType = GenreType.Web;
+  public levelType: LevelType = LevelType.Easy;
 }
 </script>
 

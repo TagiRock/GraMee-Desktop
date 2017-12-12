@@ -2,6 +2,7 @@ import "./app.scss";
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Vuetify from "vuetify";
+import Vuex from "vuex";
 import App from "./ui/App.vue";
 // import components
 import Favorite from "./ui/favorite/Favorite.vue";
@@ -21,6 +22,7 @@ const router = new VueRouter({
   base: __dirname,
   routes: routes
 });
+Vue.use(Vuex);
 Vue.use(Vuetify);
 Vue.use(VueRouter);
 /* tslint:disable:no-unused-expression*/
