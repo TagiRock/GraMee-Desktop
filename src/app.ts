@@ -4,6 +4,7 @@ import VueRouter from "vue-router";
 import Vuetify from "vuetify";
 import Vuex from "vuex";
 import App from "./ui/App.vue";
+import "../lib/vue-material-design-icons-plugin/MaterialIcons";
 // import components
 import Favorite from "./ui/favorite/Favorite.vue";
 import Message from "./ui/message/Message.vue";

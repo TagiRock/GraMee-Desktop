@@ -2,7 +2,7 @@
 v-app
   v-layout(fill-height)
     vue-sidebar
-    div#contents-main
+    div
       vue-header
       v-content
         vue-home
@@ -27,7 +27,7 @@ export default class App extends Vue {}
 </script>
 
 <style lang="css" scoped>
-#contents-main{
+div{
   width: 100%;
 }
 </style>

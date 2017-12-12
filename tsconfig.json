@@ -17,18 +17,12 @@
     ],
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,    
-    "experimentalDecorators": true,
-    "typeRoots": [
-      "./types"
-    ],
-    "types": [
-      "node",
-      "skyway-js"
-    ]
+    "experimentalDecorators": true
   },
   "include": [
     "./src/**/*.ts",
-    "./types/**/*/ts"
+    "./types/**/*.ts",
+    "./lib/**/*.ts"
   ],
   "exclude": [
     "node_modules",

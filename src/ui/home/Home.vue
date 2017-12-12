@@ -1,18 +1,21 @@
 <template lang="pug">
-vue-genre(:genre="genreType")
+div
+  vue-genre-navigation
+  vue-genre(:genre="genreType")
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
 import VueGenre from "./Genre.vue";
-import VueScreenShare from "./ScreenShare.vue";
+
+import VueGenreNavigation from "./GenreNavigation.vue";
 import GenreType from "./domain/GenreType";
 import LevelType from "./domain/LevelType";
 @Component({
   components: {
     VueGenre,
-    VueScreenShare
+    VueGenreNavigation
   }
 })
 export default class Home extends Vue {
