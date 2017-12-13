@@ -1,20 +1,32 @@
 <template lang="pug">
-div school
+div
+  //vue-genre-navigation
+  vue-genre
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
+import VueGenre from "./Genre.vue";
+import VueGenreNavigation from "./GenreNavigation.vue";
+import { Getter } from "vuex-class";
+import { Getters } from "store/home";
 
-@Component
-export default class Header extends Vue {
-  public badgeCount = 0;
+import { GenreType } from "domain/model/GenreType";
+import { LevelType } from "domain/model/LevelType";
+
+@Component({
+  components: {
+    VueGenre,
+    VueGenreNavigation
+  }
+})
+export default class School extends Vue {
+ //
 }
 </script>
 
 <style lang="scss" scoped>
-header {
-    background: #F1F1F1;
-}
+
 </style>
 

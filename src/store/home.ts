@@ -18,7 +18,6 @@ const getters: DefineGetters<HomeGetters, HomeState> = {
     level: state => state.level
 };
 
-
 const mutations: DefineMutations<HomeMutations, HomeState> = {
     changeGenre(state, { genre }) {
         state.genre = genre;

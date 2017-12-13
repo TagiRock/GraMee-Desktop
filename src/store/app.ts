@@ -10,11 +10,10 @@ import Vuex, { createNamespacedHelpers } from "vuex";
 import { DefineGetters, DefineMutations, DefineActions } from "vuex-type-helper";
 const state: AppState = {
     sidebars: [
-        { type: SidebarItemType.School, iconName: "school", active: true },
-        { type: SidebarItemType.Home, iconName: "home", active: false },
-        { type: SidebarItemType.Message, iconName: "textsms", active: false },
-        { type: SidebarItemType.Favorite, iconName: "favorite", active: false },
-        { type: SidebarItemType.Setting, iconName: "settings", active: false }
+        { type: SidebarItemType.School, iconName: "school", active: true, path: "/" },
+        { type: SidebarItemType.Home, iconName: "home", active: false, path: "/home" },
+        { type: SidebarItemType.Message, iconName: "textsms", active: false, path: "/message" },
+        { type: SidebarItemType.Setting, iconName: "settings", active: false, path: "/stting" }
     ]
 };
 

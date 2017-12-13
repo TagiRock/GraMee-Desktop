@@ -6,7 +6,7 @@ el-container.content
     el-header
       vue-header  
     el-main
-      vue-home  
+      router-view
 </template>
 
 <script lang="ts">

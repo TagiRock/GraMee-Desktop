@@ -6,6 +6,7 @@ export interface AppState {
 
 export interface SidebarState {
     type: SidebarItemType;
+    path: string;
     iconName: string;
     active: boolean;
 }

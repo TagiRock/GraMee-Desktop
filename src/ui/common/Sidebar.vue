@@ -3,7 +3,12 @@ nav
   ul
     li
       img(alt='プロフィール画像')
-    li(v-for="item in items" @click="clickSidebarItem(item)" :class='{active:item.active}' )
+    router-link(tag="li",
+      v-for="item in items",
+      @click="clickSidebarItem(item)",
+      :class='{active:item.active}',
+      
+      )
       md-icon {{item.iconName}}
       | {{ item.type}}
 </template>
