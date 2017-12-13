@@ -89,7 +89,7 @@ const config: Config = {
   ],
   devServer: {
     inline: true,
-    contentBase: path.join(workdir, "./dist")
+    publicPath: "/"
   },
   devtool: "inline-source-map"
 };

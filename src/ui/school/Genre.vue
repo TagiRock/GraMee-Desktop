@@ -26,7 +26,7 @@ import { GenreType } from "domain/model/GenreType";
 export default class Genre extends Vue {
   @Getter(Getters.genre) public genre: string;
   @Getter(Getters.level) public level: LevelType;
-  public imageUrl = "asset/images/mainv/mainv01.jpg";
+  public imageUrl = "assets/images/mainv/mainv01.jpg";
 }
 </script>
 
