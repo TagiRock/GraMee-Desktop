@@ -18,7 +18,8 @@
     "baseUrl": "./",
     "paths": {
       "domain/*": ["./src/domain/*"],
-      "store/*": ["./src/store/*"]
+      "store/*": ["./src/store/*"],
+      "components/*": ["./src/components/*"]
     },
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,    
