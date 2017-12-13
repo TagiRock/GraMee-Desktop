@@ -1,6 +1,6 @@
 <template lang="pug">
 el-container.content
-  el-aside(width="85px")
+  el-aside(width="110px")
     vue-sidebar
   el-container
     el-header
@@ -28,21 +28,23 @@ export default class App extends Vue {}
 </script>
 
 <style lang="css">
-html{
-  height:100%;
+html {
+  height: 100%;
+  overflow: hidden;
 }
-body{
-  height:100%;
+body {
+  height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 section {
   min-width: 500px;
   height: 100%;
 }
-.el-header{
+.el-header {
   padding: 0;
 }
-.el-main{
+.el-main {
   padding: 0;
 }
 </style>

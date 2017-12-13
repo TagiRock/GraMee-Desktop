@@ -1,8 +1,8 @@
 <template lang="pug">
 div 
   img#first-view-image(v-bind:src="imageUrl") 
-  vue-section-header
   div#genre-box
+    vue-section-header
     vue-card
     
 </template>
