@@ -15,6 +15,10 @@
       "dom",
       "es2015.promise"
     ],
+    "baseUrl": "./",
+    "paths": {
+      "domain/*": ["./src/domain/*"]
+    },
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,    
     "experimentalDecorators": true

@@ -28,12 +28,15 @@ const rules: NewUseRule[] = [
   {
     test: /\.tsx?$/,
     exclude: /node_modules/,
-    use: {
-      loader: "ts-loader",
-      options: {
-        appendTsSuffixTo: [/\.vue$/]
-      }
-    }
+    use: [
+      {
+        loader: "ts-loader",
+        options: {
+          appendTsSuffixTo: [/\.vue$/]
+        }
+      },
+      { loader: "tslint-loader" }
+    ]
   },
   {
     test: /\.pug$/,
@@ -44,9 +47,9 @@ const rules: NewUseRule[] = [
   {
     test: /\.scss$/,
     use: [
-      {loader: "style-loader"},
-      {loader: "css-loader"},
-      {loader: "sass-loader"}
+      { loader: "style-loader" },
+      { loader: "css-loader" },
+      { loader: "sass-loader" }
     ]
   },
   {
@@ -71,7 +74,8 @@ const config: Config = {
   resolve: {
     extensions: [".ts", ".vue", ".js", ".json"],
     alias: {
-      "vue$": "vue/dist/vue.esm.js"
+      "vue$": "vue/dist/vue.esm.js",
+      domain: path.resolve(workdir, "./src/domain")
     }
   },
   module: { rules },

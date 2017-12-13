@@ -60,11 +60,6 @@
               }
             }
         ],
-        "interface-name": {
-            "options": [
-                "always-prefix"
-            ]
-        },
         "interface-over-type-literal": true,
         "jsdoc-format": true,
         "label-position": true,

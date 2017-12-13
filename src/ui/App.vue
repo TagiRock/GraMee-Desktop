@@ -1,6 +1,6 @@
 <template lang="pug">
 el-container.content
-  el-aside(width="100px")
+  el-aside(width="85px")
     vue-sidebar
   el-container
     el-header

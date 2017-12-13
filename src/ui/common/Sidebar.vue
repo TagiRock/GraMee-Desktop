@@ -15,31 +15,11 @@ import Vue from "vue";
 @Component
 export default class Sidebar extends Vue {
   public items: [ISidebarItem] = [
-    {
-      type: SidebarItemType.School,
-      iconNeme: "school",
-      isActive: true
-    },
-    {
-      type: SidebarItemType.Home,
-      iconNeme: "home",
-      isActive: false
-    },
-    {
-      type: SidebarItemType.Message,
-      iconNeme: "textsms",
-      isActive: false
-    },
-    {
-      type: SidebarItemType.Favorite,
-      iconNeme: "favorite",
-      isActive: false
-    },
-    {
-      type: SidebarItemType.Setting,
-      iconNeme: "settings",
-      isActive: false
-    }
+    { type: SidebarItemType.School, iconNeme: "school", isActive: true },
+    { type: SidebarItemType.Home, iconNeme: "home", isActive: false },
+    { type: SidebarItemType.Message, iconNeme: "textsms", isActive: false },
+    { type: SidebarItemType.Favorite, iconNeme: "favorite", isActive: false },
+    { type: SidebarItemType.Setting, iconNeme: "settings", isActive: false }
   ];
 
   public clickSidebarItem(selected: ISidebarItem) {
