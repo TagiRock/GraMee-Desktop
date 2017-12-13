@@ -3,43 +3,26 @@ nav
   ul
     li
       img(alt='プロフィール画像')
-    li(v-for="item in items" @click="clickSidebarItem(item)" :class='{active:item.isActive}' )
-      md-icon {{item.iconNeme}}
+    li(v-for="item in items" @click="clickSidebarItem(item)" :class='{active:item.active}' )
+      md-icon {{item.iconName}}
       | {{ item.type}}
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-
+import { SidebarState } from "store/app/state";
+import { Actions, Getters } from "store/app";
+import { Dispatcher } from "vuex-type-helper";
+import { Getter, Action } from "vuex-class";
 @Component
 export default class Sidebar extends Vue {
-  public items: [ISidebarItem] = [
-    { type: SidebarItemType.School, iconNeme: "school", isActive: true },
-    { type: SidebarItemType.Home, iconNeme: "home", isActive: false },
-    { type: SidebarItemType.Message, iconNeme: "textsms", isActive: false },
-    { type: SidebarItemType.Favorite, iconNeme: "favorite", isActive: false },
-    { type: SidebarItemType.Setting, iconNeme: "settings", isActive: false }
-  ];
-
-  public clickSidebarItem(selected: ISidebarItem) {
-    for (const item of this.items) {
-      item.isActive = false;
-    }
-    selected.isActive = true;
+  @Getter(Getters.sidebars) public items: SidebarState[];
+  @Action(Actions.selectSidebarItem)
+  public action: (payload: { item: SidebarState }) => void;
+  public clickSidebarItem(selected: SidebarState) {
+    this.action({ item: selected });
   }
-}
-interface ISidebarItem {
-  type: SidebarItemType;
-  iconNeme: string;
-  isActive: boolean;
-}
-enum SidebarItemType {
-  School = "School",
-  Home = "Home",
-  Message = "Message",
-  Favorite = "Favorite",
-  Setting = "Setting"
 }
 </script>
 

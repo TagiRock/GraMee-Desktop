@@ -27,7 +27,6 @@ const router = new VueRouter({
   base: __dirname,
   routes: routes
 });
-Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(Element, { locale });
 
@@ -35,6 +34,6 @@ Vue.use(Element, { locale });
 new Vue({
   el: "#app",
   template: "<App/>",
-  store: store,
+  store,
   components: { App }
 });

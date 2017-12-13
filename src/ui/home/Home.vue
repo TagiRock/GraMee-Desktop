@@ -1,7 +1,7 @@
 <template lang="pug">
 div
-  //vue-genre-navigation
-  vue-genre(:genre="genreType")
+  vue-genre-navigation
+  //vue-genre(:genre="genreType")
 </template>
 
 <script lang="ts">
@@ -10,8 +10,10 @@ import Vue from "vue";
 import VueGenre from "./Genre.vue";
 
 import VueGenreNavigation from "./GenreNavigation.vue";
-import GenreType from "./domain/GenreType";
-import LevelType from "./domain/LevelType";
+import { GenreType } from "domain/model/GenreType";
+import { LevelType } from "domain/model/LevelType";
+import { Getter } from "vuex-class";
+
 @Component({
   components: {
     VueGenre,
@@ -19,8 +21,13 @@ import LevelType from "./domain/LevelType";
   }
 })
 export default class Home extends Vue {
-  public genreType: GenreType = GenreType.Web;
-  public levelType: LevelType = LevelType.Easy;
+  @Getter("home/genre") public genre: string;
+  @Getter("home/level") public level: LevelType;
+
+  public created() {
+    console.log(this.genre);
+    console.log(this.level);
+  }
 }
 </script>
 

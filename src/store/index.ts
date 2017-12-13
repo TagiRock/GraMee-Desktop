@@ -1,10 +1,13 @@
 import Vuex from "vuex";
-import {Home} from "./home";
-import { debug } from "util";
+import { home } from "./home";
+import { app } from "./app";
+import Vue from "vue";
 
+Vue.use(Vuex);
 export default new Vuex.Store({
     modules: {
-       Home
+        home,
+        app
     },
     strict: true
 });

@@ -1,6 +1,6 @@
-import LevelType from "domain/model/LevelType";
-import GenreType from "domain/model/GenreType";
-import Genre from "domain/model/Genre";
+import { LevelType } from "domain/model/LevelType";
+import { GenreType } from "domain/model/GenreType";
+import { Genre } from "domain/model/Genre";
 
 export interface HomeState {
     level: LevelType;
@@ -9,5 +9,6 @@ export interface HomeState {
 
 export interface GenreState {
     type: GenreType;
+    active: boolean;
     genre: Genre;
 }

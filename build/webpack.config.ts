@@ -75,7 +75,8 @@ const config: Config = {
     extensions: [".ts", ".vue", ".js", ".json"],
     alias: {
       "vue$": "vue/dist/vue.esm.js",
-      domain: path.resolve(workdir, "./src/domain")
+      domain: path.resolve(workdir, "./src/domain"),
+      store: path.resolve(workdir, "./src/store")
     }
   },
   module: { rules },

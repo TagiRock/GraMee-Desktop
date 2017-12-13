@@ -1,4 +1,4 @@
-import GenreType from "./GenreType";
-export default class Genre {
+import { GenreType } from "./GenreType";
+export class Genre {
     public type: GenreType;
 }
