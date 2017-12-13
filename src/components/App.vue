@@ -27,16 +27,7 @@ import Peer from "skyway-js";
 export default class App extends Vue {}
 </script>
 
-<style lang="css">
-html {
-  height: 100%;
-  overflow: hidden;
-}
-body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-}
+<style lang="css" scoped>
 section {
   min-width: 500px;
   height: 100%;

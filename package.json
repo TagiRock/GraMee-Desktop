@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "skyway-js": "^1.1.2",
+    "typeface-montserrat": "0.0.45",
     "vue": "^2.5.9",
     "vue-class-component": "^6.1.0",
     "vue-property-decorator": "^6.0.0",

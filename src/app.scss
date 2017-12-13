@@ -1,2 +1,25 @@
 @import "~material-design-icons/iconfont/material-icons.css";
 @import "~element-ui/lib/theme-chalk/index.css";
+
+/* montserrat-400normal - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src:
+      local('Montserrat Regular '),
+      url('../assets/fonts/montserrat-latin-400.woff2') format('woff2')
+  }
+  
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}

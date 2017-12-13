@@ -4,13 +4,14 @@ nav
     li
       img(alt='プロフィール画像')
     li(v-for="item in items" @click="clickSidebarItem(item)" :class='{active:item.active}' )
-      md-icon {{item.iconName}}
+      md-icon(medium) {{item.iconName}}
       | {{ item.type}}
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
+import { SidebarItemType } from "domain/model/SidebarItemType";
 import { SidebarState } from "store/app/state";
 import { Actions, Getters } from "store/app";
 import { Dispatcher } from "vuex-type-helper";
@@ -20,8 +21,8 @@ export default class Sidebar extends Vue {
   @Getter(Getters.sidebars) public items: SidebarState[];
   @Action(Actions.selectSidebarItem)
   public action: (payload: { item: SidebarState }) => void;
-  public clickSidebarItem(selected: SidebarState) {
-    this.action({ item: selected });
+  public clickSidebarItem(item: SidebarState) {
+    this.action({ item: item });
   }
 }
 </script>
@@ -31,12 +32,12 @@ nav {
   background: #272c32;
   padding: 20px 0 0;
   height: 100%;
-  width: 100%;
 }
+
 ul {
   padding: 0;
   border: none;
-  margin: 0;
+  margin-top: 30%;
 }
 
 li {
@@ -45,6 +46,7 @@ li {
   padding: 15px 12px;
   text-align: center;
   display: block;
+  margin-bottom: 30px;
 }
 
 .md-icon {

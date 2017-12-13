@@ -1,10 +1,9 @@
 <template lang="pug">
 div 
-  img#first-view-image(v-bind:src="imageUrl") 
-  div#genre-box
+  img#first_view_image(v-bind:src="imageUrl") 
+  div#genre_box
     vue-section-header
     vue-card
-    
 </template>
 
 <script lang="ts">
@@ -32,10 +31,10 @@ export default class Genre extends Vue {
 </script>
 
 <style lang="scss" scoped>
-#first-view-image {
+#first_view_image {
   width: 100%;
 }
-#genre-box {
+#genre_box {
   padding: 40px 5%;
 }
 </style>

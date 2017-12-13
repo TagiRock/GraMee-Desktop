@@ -1,5 +1,5 @@
 <template lang="pug">
-div#header
+header#header_main
   img#logo(src="assets/images/logo.png")
   md-icon#search(medium) search       
 </template>
@@ -16,7 +16,7 @@ export default class Header extends Vue {
 </script>
 
 <style lang="scss" scoped>
-#header {
+#header_main {
   background: #f1f1f1;
   padding: 10px 30px;
   position: relative;

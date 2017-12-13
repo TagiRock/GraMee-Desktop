@@ -2,11 +2,6 @@
 div#genre-nav
   ul
     li.active(v-for="genre in genres") {{genre}}
-  el-dropdown(size="medium")
-    el-button Level選択
-      md-icon(small) keyboard_arrow_down
-    el-dropdown-menu(slot="dropdown")
-      el-dropdown-item(v-for="level in levels") {{level}}
 </template>
 
 <script lang="ts">
@@ -38,7 +33,7 @@ ul {
 ul li {
   color: #575a61;
   display: block;
-  margin: 0 10px;
+  margin: 0 30px;
   font-size: 14px;
   padding: 5px 16px;
 }
