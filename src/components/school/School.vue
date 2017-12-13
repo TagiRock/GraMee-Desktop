@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  //vue-genre-navigation
+  vue-genre-navigation
   vue-genre
 </template>
 

@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Message from "../ui/message/Message.vue";
-import School from "../ui/school/School.vue";
-import Setting from "../ui/setting/Setting.vue";
-import Home from "../ui/home/Home.vue";
+import Message from "components/message/Message.vue";
+import School from "components/school/School.vue";
+import Setting from "components/setting/Setting.vue";
+import Home from "components/home/Home.vue";
 
 Vue.use(VueRouter);
 const routes = [

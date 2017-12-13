@@ -12,8 +12,8 @@ div#genre-nav
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import LevelType from "./domain/LevelType";
-import GenreType from "./domain/GenreType";
+import { GenreType } from "domain/model/GenreType";
+import { LevelType } from "domain/model/LevelType";
 @Component
 export default class GenreNavigation extends Vue {
   public levels = LevelType;
@@ -29,7 +29,7 @@ export default class GenreNavigation extends Vue {
   margin-top: 10px;
 }
 
-ul{
+ul {
   display: flex;
   margin-right: 30px;
   margin-top: 10px;
