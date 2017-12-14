@@ -12,7 +12,7 @@ import Vue from "vue";
 import VueCard from "../common/Card.vue";
 import VueSectionHeader from "./SectionHeader.vue";
 import { Getter } from "vuex-class";
-import { Getters } from "store/home";
+import { Getters } from "store/school";
 
 import { LevelType } from "domain/model/LevelType";
 import { GenreType } from "domain/model/GenreType";

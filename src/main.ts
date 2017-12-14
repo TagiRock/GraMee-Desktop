@@ -1,4 +1,4 @@
-import "./app.scss";
+import "./main.scss";
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Vuetify from "vuetify";

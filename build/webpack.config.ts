@@ -66,7 +66,7 @@ const rules: NewUseRule[] = [
   }
 ];
 const config: Config = {
-  entry: path.join(workdir, "./src/app.ts"),
+  entry: path.join(workdir, "./src/main.ts"),
   output: {
     path: path.join(workdir, "./dist"),
     filename: "bundle.js"
@@ -84,7 +84,7 @@ const config: Config = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: path.join(workdir, "./src/app.pug"),
+      template: path.join(workdir, "./src/main.pug"),
       inject: "body"
     })
   ],

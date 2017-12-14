@@ -10,7 +10,6 @@ import Vue from "vue";
 import VueGenre from "./Genre.vue";
 import VueGenreNavigation from "./GenreNavigation.vue";
 import { Getter } from "vuex-class";
-import { Getters } from "store/home";
 
 import { GenreType } from "domain/model/GenreType";
 import { LevelType } from "domain/model/LevelType";

@@ -1,3 +1,2 @@
-export interface AppMutations {
-  
+export interface AppMutations { 
 }
