@@ -3,28 +3,29 @@ nav
   ul
     li
       img(alt='プロフィール画像')
-    li(v-for="item in items" @click="clickSidebarItem(item)" :class='{active:item.active}' )
-      md-icon(medium) {{item.iconName}}
-      | {{ item.type}}
+    router-link(tag="li" to="/" exact)
+      a
+        md-icon(medium) school
+        | School
+    router-link(tag="li" to="/home")
+      a
+        md-icon(medium) home
+        | Home
+    router-link(tag="li" to="/message")
+      a
+        md-icon(medium) textsms
+        | Message 
+    router-link(tag="li" to="/setting")
+      a
+        md-icon(medium) settings
+        | Setting
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import { SidebarItemType } from "domain/model/SidebarItemType";
-import { SidebarState } from "store/app/state";
-import { Actions, Getters } from "store/app";
-import { Dispatcher } from "vuex-type-helper";
-import { Getter, Action } from "vuex-class";
 @Component
-export default class Sidebar extends Vue {
-  @Getter(Getters.sidebars) public items: SidebarState[];
-  @Action(Actions.selectSidebarItem)
-  public action: (payload: { item: SidebarState }) => void;
-  public clickSidebarItem(item: SidebarState) {
-    this.action({ item: item });
-  }
-}
+export default class Sidebar extends Vue {}
 </script>
 
 <style lang="scss" scoped>
@@ -40,25 +41,33 @@ ul {
   margin-top: 30%;
 }
 
-li {
-  color: #575a61;
-  font-size: 13px;
+ul > li {
   padding: 15px 12px;
   text-align: center;
   display: block;
   margin-bottom: 30px;
 }
 
-.md-icon {
+ul > li > a {
+  display: block;
+  text-decoration: none;
+  color: #575a61;
+  transition: all 500ms ease-in-out;
+  font-size: 13px;
+}
+
+ul > li > a > .md-icon{
   display: block;
 }
 
-ul .active {
+.router-link-active > a,
+ul > li > a:hover {
   background: none;
   color: #fff;
   position: relative;
 }
-ul .active .md-icon {
+.router-link-active > a > .md-icon,
+ul > li > a:hover > .md-icon  {
   color: #f7745d;
 }
 
