@@ -1,24 +1,25 @@
 <template lang="pug">
-nav
-  ul
-    li
-      img(alt='プロフィール画像')
-    router-link(tag="li" to="/" exact)
-      a
-        md-icon(medium) school
-        | School
-    router-link(tag="li" to="/home")
-      a
-        md-icon(medium) home
-        | Home
-    router-link(tag="li" to="/message")
-      a
-        md-icon(medium) textsms
-        | Message 
-    router-link(tag="li" to="/setting")
-      a
-        md-icon(medium) settings
-        | Setting
+aside
+  nav
+    ul
+      li
+        img(alt='プロフィール画像')
+      router-link(tag="li" to="/" exact)
+        a
+          md-icon(medium) school
+          | School
+      router-link(tag="li" to="/home")
+        a
+          md-icon(medium) home
+          | Home
+      router-link(tag="li" to="/message")
+        a
+          md-icon(medium) textsms
+          | Message 
+      router-link(tag="li" to="/setting")
+        a
+          md-icon(medium) settings
+          | Setting
 </template>
 
 <script lang="ts">
@@ -29,10 +30,17 @@ export default class Sidebar extends Vue {}
 </script>
 
 <style lang="scss" scoped>
+aside {
+  height: 100%;
+  background: #272c32;
+  padding: 20px 0 0; 
+  width: 90px;
+}
+
 nav {
   background: #272c32;
-  padding: 20px 0 0;
-  height: 100%;
+  height: auto;
+  box-shadow:none;
 }
 
 ul {

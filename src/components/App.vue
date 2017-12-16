@@ -1,12 +1,9 @@
 <template lang="pug">
-el-container.content
-  el-aside(width="110px")
-    vue-sidebar
-  el-container
-    el-header
-      vue-header  
-    el-main
-      vue-home
+div#content
+  vue-sidebar
+  div#content_right
+    vue-header
+    vue-home
 </template>
 
 <script lang="ts">
@@ -39,6 +36,12 @@ main {
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
+}
+#content {
+  display: flex;
+}
+#content_right {
+  width: 100%;
 }
 ul {
   margin: 0;
