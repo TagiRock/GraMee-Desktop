@@ -30,10 +30,17 @@ export default class Sidebar extends Vue {}
 </script>
 
 <style lang="scss" scoped>
+aside {
+  height: 100%;
+  background: #272c32;
+  padding: 20px 0 0; 
+  width: 90px;
+}
+
 nav {
   background: #272c32;
-  padding: 20px 0 0;
-  height: 100%;
+  height: auto;
+  box-shadow:none;
 }
 
 ul {

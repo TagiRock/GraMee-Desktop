@@ -1,8 +1,9 @@
 <template lang="pug">
-div
+div#content
   vue-sidebar
-  vue-header  
-  vue-home
+  div#content_right
+    vue-header
+    vue-home
 </template>
 
 <script lang="ts">
@@ -35,6 +36,12 @@ main {
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
+}
+#content {
+  display: flex;
+}
+#content_right {
+  width: 100%;
 }
 ul {
   margin: 0;
