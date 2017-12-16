@@ -1,25 +1,25 @@
 <template lang="pug">
-
-nav
-  ul
-    li
-      img(alt='プロフィール画像')
-    router-link(tag="li" to="/" exact)
-      a
-        md-icon(medium) school
-        | School
-    router-link(tag="li" to="/home")
-      a
-        md-icon(medium) home
-        | Home
-    router-link(tag="li" to="/message")
-      a
-        md-icon(medium) textsms
-        | Message 
-    router-link(tag="li" to="/setting")
-      a
-        md-icon(medium) settings
-        | Setting
+aside
+  nav
+    ul
+      li
+        img(alt='プロフィール画像')
+      router-link(tag="li" to="/" exact)
+        a
+          md-icon(medium) school
+          | School
+      router-link(tag="li" to="/home")
+        a
+          md-icon(medium) home
+          | Home
+      router-link(tag="li" to="/message")
+        a
+          md-icon(medium) textsms
+          | Message 
+      router-link(tag="li" to="/setting")
+        a
+          md-icon(medium) settings
+          | Setting
 </template>
 
 <script lang="ts">

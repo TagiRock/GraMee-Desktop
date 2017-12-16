@@ -1,12 +1,8 @@
 <template lang="pug">
-el-container.content
-  el-aside(width="110px")
-    vue-sidebar
-  el-container
-    el-header
-      vue-header  
-    el-main
-      vue-home
+div
+  vue-sidebar
+  vue-header  
+  vue-home
 </template>
 
 <script lang="ts">
