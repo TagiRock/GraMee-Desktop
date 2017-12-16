@@ -1,15 +1,15 @@
 import * as admin from "firebase-admin";
-import { User } from "../model/User";
+import { UserRecord } from "../model/User";
 import { firestore } from "../index";
-function createUser(uid: string, newUser: User) {
-    return firestore.collection("users").doc(uid).create(newUser);
+function createUser(uid: string, user: UserRecord) {
+    return firestore.collection("users").doc(uid).create(user);
 }
 
 function deleteUser(uid: string) {
     return firestore.collection("users").doc(uid).delete();
 }
 
-export const user = {
+export const userDao = {
     createUser,
     deleteUser
 };
