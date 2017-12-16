@@ -3,6 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "module": "es2015",
     "target": "es5",
+    "noImplicitReturns": true,
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,

@@ -13,30 +13,7 @@
             true,
             "array-simple"
         ],
-        "arrow-parens": true,
         "arrow-return-shorthand": true,
-        "ban-types": {
-            "options": [
-                [
-                    "Object","Avoid using the `Object` type. Did you mean `object`?"
-                ],
-                [
-                    "Function","Avoid using the `Function` type. Prefer a specific function type, like `() => void`."
-                ],
-                [
-                    "Boolean","Avoid using the `Boolean` type. Did you mean `boolean`?"
-                ],
-                [
-                    "Number","Avoid using the `Number` type. Did you mean `number`?"
-                ],
-                [
-                    "String","Avoid using the `String` type. Did you mean `string`?"
-                ],
-                [
-                    "Symbol","Avoid using the `Symbol` type. Did you mean `symbol`?"
-                ]
-            ]
-        },
         "callable-types": true,
         "class-name": true,
         "comment-format": {
@@ -44,22 +21,10 @@
                 "check-space"
             ]
         },
-        "curly": true,
-        "cyclomatic-complexity": false,
+        "indent": [true, "spaces", 4],
         "eofline": true,
         "forin": true,
         "import-spacing": true,
-        "indent": [true,"spaces"],
-        "ter-indent": [
-            true,
-            2,
-            {
-              "FunctionExpression": {
-                "parameters": 1,
-                "body": 1
-              }
-            }
-        ],
         "interface-over-type-literal": true,
         "jsdoc-format": true,
         "label-position": true,
@@ -67,7 +32,7 @@
         "member-access": true,
         "new-parens": true,
         "no-angle-bracket-type-assertion": true,
-        "no-any": false,
+        "no-any": true,
         "no-arg": true,
         "no-conditional-assignment": true,
         "no-consecutive-blank-lines": true,

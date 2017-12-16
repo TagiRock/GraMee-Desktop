@@ -3,6 +3,11 @@
     "lib": ["es6"],
     "module": "commonjs",
     "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "skipLibCheck": false,
     "outDir": "lib",
     "sourceMap": true,
     "target": "es6"
@@ -10,5 +15,9 @@
   "compileOnSave": true,
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib"
   ]
 }
