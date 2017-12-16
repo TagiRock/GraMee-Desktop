@@ -51,8 +51,8 @@ const rules: NewUseRule[] = [
       { loader: "css-loader" },
       { loader: "sass-loader" }
     ]
-  },
-  {
+  }
+  /*{
     test: /\.(jpeg|jpg|png|gif|svg)$/,
     use: {
       loader: "file-loader?name=[hash].[ext]"
@@ -63,7 +63,7 @@ const rules: NewUseRule[] = [
     use: {
       loader: "file-loader?name=[hash].[ext]"
     }
-  }
+  }*/
 ];
 const config: Config = {
   entry: path.join(workdir, "./src/main.ts"),
