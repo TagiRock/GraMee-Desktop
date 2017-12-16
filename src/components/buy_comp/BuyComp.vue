@@ -12,7 +12,7 @@ html
       h2.comp_ttl
         | 受講が確定しました！
         span.comp_txt 開講者からのMessageをお待ちください。
-      img(src='./img/step.svg', alt='')
+      img(src='assets/images/buy_comp/step.svg', alt='')
       .btnbox.cf
         button.back(type='button', name='button') Schoolに戻る
         button.message(type='button', name='button') Message

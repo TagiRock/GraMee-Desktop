@@ -17,7 +17,7 @@ html
           label(for='') Password
           input(type='text', name='', value='')
         .class
-          img(src='img/class/class01.jpg', alt='')
+          img(src='assets/images/buy/class/class01.jpg', alt='')
           h2.class_name EnterClassTitle. EnterClassTitle.
           #tag
             span.en
