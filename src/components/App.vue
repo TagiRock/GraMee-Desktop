@@ -6,7 +6,7 @@ el-container.content
     el-header
       vue-header  
     el-main
-      router-view
+      vue-home
 </template>
 
 <script lang="ts">
@@ -27,7 +27,72 @@ import Peer from "skyway-js";
 export default class App extends Vue {}
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
+html {
+  line-height: normal;
+}
+html,body,
+#content,#content_right,
+main {
+  height: 100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  transition: color 0.35s ease;
+  -webkit-transition: color 0.35s ease;
+  -moz-transition: color 0.35s ease;
+}
+p {
+  margin: 0;
+}
+h2,h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+button,input,textarea {
+  outline: none;
+}
+button {
+  border: none;
+}
+button:focus {
+  background: none;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.en {
+  font-family: 'Montserrat', sans-serif;
+}
+.ja,.class_name {
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+
+
 section {
   min-width: 500px;
   height: 100%;
