@@ -9,14 +9,13 @@ import "vue-material-design-icons-plugin";
 import locale from "element-ui/lib/locale/lang/ja";
 import store from "./store";
 import router from "./router";
-import VueHeader from "./components/common/Header.vue";
 Vue.use(Element, { locale });
 
 /* tslint:disable:no-unused-expression*/
 new Vue({
   el: "#app",
-  template: "<VueHeader/>",
+  template: "<App/>",
   store,
   router,
-  components: {App, VueHeader}
+  components: {App}
 });
