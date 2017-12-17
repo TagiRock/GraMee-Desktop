@@ -14,6 +14,11 @@ export class AuthUseCase {
                         // console.log("SuccessCreateUser");
                         // user.uid
                         // AccountModel
+                        const account = new AccountModel();
+                        // account.name = user.displayName;
+                        account.id = user.uid;
+                        // account.token = user.getToken().then;
+                        emitter.next(account);
                     }
                 }).catch(error => emitter.error(error));
         });

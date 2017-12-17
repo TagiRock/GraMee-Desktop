@@ -1,5 +1,6 @@
 <template lang="pug">
   //- vue-login
+  vue-new-account
   //- vue-buy
   //- vue-buy-comp
   //- vue-genre-level-select-nav
@@ -9,7 +10,7 @@
   //- vue-message-display
   //- vue-school
   //- vue-open-class
-  vue-test-modal
+  //- vue-test-modal
   //- vue-test-user-auth
 </template>
 
@@ -17,6 +18,7 @@
 import Component from "vue-class-component";
 import Vue from "vue";
 import VueLogin from "../login/Login.vue";
+import VueNewAccount from "../new_account/NewAccount.vue";
 import VueBuy from "../buy/Buy.vue";
 import VueBuyComp from "../buy_comp/BuyComp.vue";
 import VueGenreLevelSelectNav from "../genre_level_select_nav/GenreLevelSelectNav.vue";
@@ -32,6 +34,7 @@ import VueTestUserAuth from "../test/TestUserAuth.vue";
 @Component({
   components: {
     VueLogin,
+    VueNewAccount,
     VueBuy,
     VueBuyComp,
     VueGenreLevelSelectNav,
