@@ -12,9 +12,7 @@
         textarea(name='name', rows='8', cols='80', v-model="classModel.description")
       .genre_select
         label(for='') ジャンルを選ぶ
-        a.dropdown-button.btn.ja(href='#', data-activates='dropdown1', )
         v-select(v-model='classModel.genre', :options="['web','app','game']")
-          i.material-icons keyboard_arrow_down
       .language_select
         label(for='') 言語を選ぶ
         a.dropdown-button.btn.ja(href='#', data-activates='dropdown1', v-model="classModel.language")
@@ -35,7 +33,7 @@
           span ¥-
   .btnbox.cf
     button.cancel(type='button', name='button', @click="clickCancel()") キャンセル
-    button.open(type='button', name='button', @click="clickTransmit()") 開講する
+    button.open_btn(type='button', name='button', @click="clickTransmit()") 開講する
 
 </template>
 
@@ -166,7 +164,13 @@ button {
 .cancel {
   background: #575a61;
 }
-.open {
+.open_btn {
   background: #f7745d;
 }
+
+.v-select {
+  border-radius: 50px;
+}
+
+/* .dropdown */
 </style>
