@@ -1,5 +1,5 @@
 import * as admin from "firebase-admin";
-import { UserRecord } from "../model/User";
+import { UserRecord } from "../model/UserRecord";
 import { firestore } from "../index";
 function createUser(uid: string, user: UserRecord) {
     return firestore.collection("users").doc(uid).create(user);
