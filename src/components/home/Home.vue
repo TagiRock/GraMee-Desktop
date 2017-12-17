@@ -9,7 +9,7 @@
   //- vue-message-display
   //- vue-open-class
   //- vue-test-modal
-  vue-test-user-auth
+  //- vue-test-user-auth
 </template>
 
 <script lang="ts">

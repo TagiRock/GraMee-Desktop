@@ -1,4 +1,7 @@
-export interface UserRecord {
+import { UserRecord } from "./UserRecord";
+
+export interface SchoolRecord {
+    UserRecord: object;
     id: string;
     name: string;
     about: string;
