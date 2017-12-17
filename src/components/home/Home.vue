@@ -1,5 +1,5 @@
 <template lang="pug">
-  vue-login
+  //- vue-login
   //- vue-buy
   //- vue-buy-comp
   //- vue-genre-level-select-nav
@@ -9,7 +9,7 @@
   //- vue-message-display
   //- vue-school
   //- vue-open-class
-  //- vue-test-modal
+  vue-test-modal
   //- vue-test-user-auth
 </template>
 

@@ -10,10 +10,10 @@ export class AuthUseCase {
                 .then(() => {
                     const user = firebase.auth().currentUser;
                     if (user !== null) {
-                        //mapping here
-                        // emitter.next(user);
+                        // user => emitter.next(user);
+                        // console.log("SuccessCreateUser");
                         // user.uid
-                        AccountModel
+                        // AccountModel
                     }
                 }).catch(error => emitter.error(error));
         });
@@ -25,7 +25,9 @@ export class AuthUseCase {
                 .then(() => {
                     const user = firebase.auth().currentUser;
                     if (user !== null) {
-                        this.signinEmail(email, password);
+                        // this.signinEmail(email, password);
+                        console.log("SuccessLogin");
+
                     }
                 }).catch(error => emitter.error(error));
         });
