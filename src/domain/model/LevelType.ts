@@ -1,5 +1,1 @@
-export enum LevelType {
-    Easy = "Easy",
-    Midle = "Midle",
-    Hard = "Hard"
-}
+export type LevelType = "Easy" | "Middle" | "Hard";

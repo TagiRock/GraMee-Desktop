@@ -15,7 +15,7 @@ html
         #open_class_form
           .class_name
             label(for='') 教室名を入力
-            input(type='text', name='', value='')
+            input(type='text', name='', v-model="classModel.name")
           .class_txt
             label(for='') 教室の説明文
             textarea(name='name', rows='8', cols='80')
@@ -42,7 +42,7 @@ html
               | 授業料利益
               span ¥-
       .btnbox.cf
-        button.cancel(type='button', name='button') キャンセル
+        button.cancel(type='button', name='button', @click="clickCancel()") キャンセル
         button.open(type='button', name='button') 開講する
 
 </template>
@@ -50,9 +50,21 @@ html
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
+import { ClassModel } from "domain/model/ClassModel";
 
 @Component
 export default class OpenClass extends Vue {
+  public classModel = new ClassModel();
+
+  public clickCancel() {
+    console.log("cancel");
+    console.log(this.classModel.name);
+  }
+
+  public clickCancel2() {
+    console.log("cancel");
+  }
+
 }
 </script>
 
@@ -69,13 +81,13 @@ export default class OpenClass extends Vue {
   justify-content: center;
 }
 label {
-  color: #575A61;
+  color: #575a61;
   display: inline-block;
   font-size: 15px;
   width: 135px;
 }
 input {
-  border: 1px solid #CECECE;
+  border: 1px solid #cecece;
   border-radius: 50px;
   font-size: 15px;
   outline: none;
@@ -83,30 +95,37 @@ input {
   width: 418px;
 }
 input:focus {
-  border: 1px solid #F7745D;
+  border: 1px solid #f7745d;
   box-shadow: none;
 }
-.class_name,.class_txt,
-.genre_select,.language_select,.level_select,
+.class_name,
+.class_txt,
+.genre_select,
+.language_select,
+.level_select,
 .price {
   margin: 0 0 20px;
 }
 .class_txt textarea {
-  border: 1px solid #CECECE;
+  border: 1px solid #cecece;
   border-radius: 15px;
   vertical-align: top;
   width: 454px;
 }
-.genre_select a,.language_select a,.level_select a {
-  border: 1px solid #CECECE;
+.genre_select a,
+.language_select a,
+.level_select a {
+  border: 1px solid #cecece;
   border-radius: 50px;
   display: inline-block;
   padding: 7px 20px;
   vertical-align: middle;
   width: 418px;
 }
-.genre_select i,.language_select i,.level_select i {
-  color: #575A61;
+.genre_select i,
+.language_select i,
+.level_select i {
+  color: #575a61;
   float: right;
 }
 .all_price {
@@ -114,7 +133,7 @@ input:focus {
   width: 595px;
 }
 .all_price li {
-  color: #575A61;
+  color: #575a61;
   font-size: 14px;
   margin: 0 0 20px;
   text-align: right;
@@ -123,7 +142,7 @@ input:focus {
   margin: 0 0 0 200px;
 }
 .all_price .profits {
-  color: #272C32;
+  color: #272c32;
   font-size: 20px;
   font-weight: bold;
 }
@@ -148,9 +167,9 @@ button {
   width: 200px;
 }
 .cancel {
-  background: #575A61;
+  background: #575a61;
 }
 .open {
-  background: #F7745D;
+  background: #f7745d;
 }
 </style>

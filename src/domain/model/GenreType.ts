@@ -1,5 +1,1 @@
-export enum GenreType {
-    Web = "Web",
-    App = "App",
-    Game = "Game"
-}
+export type GenreType = "web" | "app" | "game";

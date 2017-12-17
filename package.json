@@ -45,6 +45,8 @@
   },
   "dependencies": {
     "firebase": "^4.8.0",
+    "firebase-admin": "^5.5.1",
+    "javascript-to-typescript": "^1.0.2",
     "skyway-js": "^1.1.2",
     "typeface-montserrat": "0.0.45",
     "url-loader": "^0.6.2",

@@ -10,10 +10,7 @@ import Vue from "vue";
 import { GenreType } from "domain/model/GenreType";
 import { LevelType } from "domain/model/LevelType";
 @Component
-export default class GenreNavigation extends Vue {
-  public levels = LevelType;
-  public genres = GenreType;
-}
+export default class GenreNavigation extends Vue {}
 </script>
 
 <style lang="scss" scoped>

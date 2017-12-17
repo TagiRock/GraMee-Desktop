@@ -1,10 +1,10 @@
 import { UserRecord } from "./UserRecord";
 
-export interface SchoolRecord {
-    UserRecord: object;
+export interface ClassRecord {
+    user: UserRecord;
     id: string;
     name: string;
-    about: string;
+    description: string;
     language: string;
     level: string;
     price: string;

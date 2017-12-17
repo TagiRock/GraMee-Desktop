@@ -7,7 +7,7 @@
   //- vue-message-account-list
   //- vue-message-chat
   //- vue-message-display
-  //- vue-open-class
+  vue-open-class
   //- vue-test-modal
   //- vue-test-user-auth
 </template>

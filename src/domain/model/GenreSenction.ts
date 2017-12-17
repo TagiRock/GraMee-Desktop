@@ -1,6 +1,6 @@
-import SchoolInfo from "./Schoolnfo";
+import {ClassModel} from "./ClassModel";
 
 export default class GenreSection {
     public name: string;
-    public classes: SchoolInfo[];
+    public classes: ClassModel[];
 }

@@ -8,8 +8,8 @@ import Vuex, { createNamespacedHelpers } from "vuex";
 import { DefineGetters, DefineMutations, DefineActions } from "vuex-type-helper";
 
 const state: SchoolState = {
-    genre: GenreType.Web,
-    level: LevelType.Easy
+    genre: "web",
+    level: "Easy"
 };
 
 /*tslint:disable　no-shadowed-variable　arrow-parens*/
