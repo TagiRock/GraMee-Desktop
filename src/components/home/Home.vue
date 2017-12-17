@@ -8,6 +8,8 @@
   //- vue-message-chat
   //- vue-message-display
   //- vue-open-class
+  //- vue-test-modal
+  vue-test-user-auth
 </template>
 
 <script lang="ts">
@@ -22,6 +24,8 @@ import VueMessageAccountList from "../message_account_list/MessageAccountList.vu
 import VueMessageChat from "../message_chat/MessageChat.vue";
 import VueMessageDisplay from "../message_display/MessageDisplay.vue";
 import VueOpenClass from "../open_class/OpenClass.vue";
+import VueTestModal from "../test/TestModal.vue";
+import VueTestUserAuth from "../test/TestUserAuth.vue";
 
 @Component({
   components: {
@@ -33,7 +37,9 @@ import VueOpenClass from "../open_class/OpenClass.vue";
     VueMessageAccountList,
     VueMessageChat,
     VueMessageDisplay,
-    VueOpenClass
+    VueOpenClass,
+    VueTestModal,
+    VueTestUserAuth
   }
 })
 export default class Home extends Vue {
