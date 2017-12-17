@@ -37,9 +37,15 @@ html
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-
+import { Actions } from "store/app";
+import { Action } from "vuex-class";
 @Component
 export default class Login extends Vue {
+  @Action(Actions.signinEmail)
+  private signinAction: (email: string, password: string) => void;
+  public hoge() {
+    this.signinAction("sadf", "da");
+  }
 }
 </script>
 
@@ -63,7 +69,7 @@ export default class Login extends Vue {
   display: block;
 }
 #login {
-  background: #272C32;
+  background: #272c32;
   height: 100%;
   padding: 160px 40px;
   position: absolute;
@@ -88,7 +94,7 @@ export default class Login extends Vue {
   width: 88%;
 }
 #login input::placeholder {
-  color: #C6C6C6;
+  color: #c6c6c6;
 }
 .login {
   text-align: center;
@@ -109,7 +115,7 @@ export default class Login extends Vue {
   height: 60px;
 }
 .login button {
-  background: #F7745D;
+  background: #f7745d;
   border-radius: 50px;
   color: #fff;
   font-size: 21px;

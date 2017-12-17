@@ -24,8 +24,8 @@ const actions: DefineActions<AppActions, AppState, AppMutations, AppGetters> = {
     signinEmail({ commit }, payload) {
         const usecase = new AuthUseCase();
         usecase.signinEmail(payload.email, payload.password)
-            .subscribe((user) => {
-                commit("signinEmail", { user });
+            .subscribe((account) => {
+                commit("signinEmail", { account });
             });
     }
 };
@@ -46,8 +46,8 @@ export const app = {
 };
 
 export const Getters = {
-    // user: "app/userModel"
+     user: "app/account"
 };
 export const Actions = {
-    // signinEmail: "app/signinEmail"
+    signinEmail: "app/signinEmail"
 };
