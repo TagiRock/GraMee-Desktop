@@ -8,7 +8,18 @@ import "vue-material-design-icons-plugin";
 import store from "./store";
 import router from "./router";
 import vSelect from "vue-select";
+import firebase from "firebase";
 Vue.component("v-select", vSelect);
+
+const config = {
+  apiKey: "AIzaSyC8ZvlolrXFQMT6erOenz5w5o1en7JzW_8",
+  authDomain: "gramee-80657.firebaseapp.com",
+  databaseURL: "https://gramee-80657.firebaseio.com",
+  projectId: "gramee-80657",
+  storageBucket: "gramee-80657.appspot.com",
+  messagingSenderId: "1039831704009"
+};
+firebase.initializeApp(config);
 
 /* tslint:disable:no-unused-expression*/
 new Vue({

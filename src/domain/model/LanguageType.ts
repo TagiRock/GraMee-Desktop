@@ -1,0 +1,1 @@
+// export type LaunguageType = ("asd" | "sdfs")

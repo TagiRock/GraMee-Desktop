@@ -15,8 +15,7 @@
         v-select(v-model='classModel.genre', :options="['web','app','game']")
       .language_select
         label(for='') 言語を選ぶ
-        a.dropdown-button.btn.ja(href='#', data-activates='dropdown1', v-model="classModel.language")
-          i.material-icons keyboard_arrow_down
+        v-select(v-model='classModel.language', :options="['web','app','game']")
       .level_select
         label(for='') レベルを選ぶ
         a.dropdown-button.btn.ja(href='#', data-activates='dropdown1', v-model="classModel.level")

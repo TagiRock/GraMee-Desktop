@@ -1,6 +1,6 @@
-import {User} from "./User";
+import {UserModel} from "./UserModel";
 export class ClassModel {
-    public user: User;
+    public user: UserModel;
     public id: number;
     public name: string;
     public description: string;
