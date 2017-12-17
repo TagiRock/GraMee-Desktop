@@ -1,5 +1,5 @@
 export class AccountModel {
-    public uid: string;
+    public id: string;
     public token: string;
-    public name: string;
+    public name: string | undefined;
 }

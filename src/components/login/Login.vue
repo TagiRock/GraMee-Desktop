@@ -1,37 +1,29 @@
 <template lang="pug">
-html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title GraMee
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800', rel='stylesheet')
-  body
-    #login_box
-      ul
-        li
-          img(src='assets/images/login/login_mainv01.jpg', alt='')
-      h1
-        span GraMee
-        | WELL COME
-      #login
-        h2 LOGIN
-        form.login(method='post')
-          input(type='text', name='', value='', placeholder='E-mail Address')
-          input(type='text', name='', value='', placeholder='Password')
-          ul.sns
-            li.facebook
-              a(href='#')
-                img(src='assets/images/login/facebook.svg', alt='')
-            li.twitter
-              a(href='#')
-                img(src='assets/images/login/twitter.svg', alt='')
-            li.google_plus
-              a(href='#')
-                img(src='assets/images/login/google_plus.svg', alt='')
-          button.login_btn(type='button', name='button') ログイン
-          a(href='#') 新規アカウントを作成
-          a(href='#') パスワードをお忘れですか？
+#login_box
+  ul
+    li
+      img(src='assets/images/login/login_mainv01.jpg', alt='')
+  h1
+    span GraMee
+    | WELL COME
+  #login
+    h2 LOGIN
+    form.login(method='post')
+      input(type='text', name='', value='', placeholder='E-mail Address', v-model="email")
+      input(type='text', name='', value='', placeholder='Password', v-model="password")
+      ul.sns
+        li.facebook
+          a(href='#')
+            img(src='assets/images/login/facebook.svg', alt='')
+        li.twitter
+          a(href='#')
+            img(src='assets/images/login/twitter.svg', alt='')
+        li.google_plus
+          a(href='#')
+            img(src='assets/images/login/google_plus.svg', alt='')
+      button.login_btn(type='button', name='button', @click="clickLoginBtn()") ログイン
+      a(href='#') 新規アカウントを作成
+      a(href='#') パスワードをお忘れですか？
 </template>
 
 <script lang="ts">
@@ -44,7 +36,10 @@ export default class Login extends Vue {
   @Action(Actions.signinEmail)
   private signinAction: (email: string, password: string) => void;
   public hoge() {
-    this.signinAction("sadf", "da");
+    this.signinAction("", "");
+  }
+  public clickLoginBtn() {
+    //
   }
 }
 </script>
