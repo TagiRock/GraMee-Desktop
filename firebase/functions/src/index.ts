@@ -1,7 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import { config } from "firebase-functions";
-import { UserRecord } from "./model/User";
+import { UserRecord } from "./model/UserRecord";
 import { userDao } from "./database/user";
 
 const option = functions.config().firebase;
