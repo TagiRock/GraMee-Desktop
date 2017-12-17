@@ -7,6 +7,8 @@ import App from "components/App.vue";
 import "vue-material-design-icons-plugin";
 import store from "./store";
 import router from "./router";
+import vSelect from "vue-select";
+Vue.component("v-select", vSelect);
 
 /* tslint:disable:no-unused-expression*/
 new Vue({

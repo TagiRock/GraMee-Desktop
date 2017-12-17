@@ -4,6 +4,7 @@ export class ClassModel {
     public id: number;
     public name: string;
     public description: string;
+    public genre: string;
     public language: string;
     public level: string;
     public price: string;

@@ -1,49 +1,41 @@
 <template lang="pug">
-html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title GraMee
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800', rel='stylesheet')
-    link(rel='stylesheet', href='style.css')
-  body
-    .open_classbox
-      form(method='post')
-        a.upload_img(href='#')
-          img(src='assets/images/open_class/upload.svg', alt='')
-        #open_class_form
-          .class_name
-            label(for='') 教室名を入力
-            input(type='text', name='', v-model="classModel.name")
-          .class_txt
-            label(for='') 教室の説明文
-            textarea(name='name', rows='8', cols='80')
-          .genre_select
-            label(for='') ジャンルを選ぶ
-            a.dropdown-button.btn.ja(href='#', data-activates='dropdown1')
-              i.material-icons keyboard_arrow_down
-          .language_select
-            label(for='') 言語を選ぶ
-            a.dropdown-button.btn.ja(href='#', data-activates='dropdown1')
-              i.material-icons keyboard_arrow_down
-          .level_select
-            label(for='') レベルを選ぶ
-            a.dropdown-button.btn.ja(href='#', data-activates='dropdown1')
-              i.material-icons keyboard_arrow_down
-          .price
-            label(for='') 価格
-            input(type='text', name='', value='')
-          ul.all_price
-            li
-              | 授業料手数料
-              span ¥-
-            li.profits
-              | 授業料利益
-              span ¥-
-      .btnbox.cf
-        button.cancel(type='button', name='button', @click="clickCancel()") キャンセル
-        button.open(type='button', name='button') 開講する
+.open_classbox
+  form(method='post')
+    a.upload_img(href='#')
+      img(src='assets/images/open_class/upload.svg', alt='')
+    #open_class_form
+      .class_name
+        label(for='') 教室名を入力
+        input(type='text', name='', v-model="classModel.name")
+      .class_txt
+        label(for='') 教室の説明文
+        textarea(name='name', rows='8', cols='80', v-model="classModel.description")
+      .genre_select
+        label(for='') ジャンルを選ぶ
+        a.dropdown-button.btn.ja(href='#', data-activates='dropdown1', )
+        v-select(v-model='classModel.genre', :options="['web','app','game']")
+          i.material-icons keyboard_arrow_down
+      .language_select
+        label(for='') 言語を選ぶ
+        a.dropdown-button.btn.ja(href='#', data-activates='dropdown1', v-model="classModel.language")
+          i.material-icons keyboard_arrow_down
+      .level_select
+        label(for='') レベルを選ぶ
+        a.dropdown-button.btn.ja(href='#', data-activates='dropdown1', v-model="classModel.level")
+          i.material-icons keyboard_arrow_down
+      .price
+        label(for='') 価格
+        input(type='text', name='', v-model="classModel.price")
+      ul.all_price
+        li
+          | 授業料手数料
+          span ¥-
+        li.profits
+          | 授業料利益
+          span ¥-
+  .btnbox.cf
+    button.cancel(type='button', name='button', @click="clickCancel()") キャンセル
+    button.open(type='button', name='button', @click="clickTransmit()") 開講する
 
 </template>
 
@@ -61,10 +53,15 @@ export default class OpenClass extends Vue {
     console.log(this.classModel.name);
   }
 
-  public clickCancel2() {
+  public clickTransmit() {
     console.log("cancel");
+    console.log(this.classModel.name);
+    console.log(this.classModel.description);
+    console.log(this.classModel.genre);
+    console.log(this.classModel.language);
+    console.log(this.classModel.level);
+    console.log(this.classModel.price);
   }
-
 }
 </script>
 
