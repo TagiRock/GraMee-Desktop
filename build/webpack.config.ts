@@ -52,12 +52,12 @@ const rules: NewUseRule[] = [
       { loader: "sass-loader" }
     ]
   },
-  /*{
+  {
     test: /\.(jpeg|jpg|png|gif|svg)$/,
     use: {
       loader: "file-loader?name=[hash].[ext]"
     }
-  },*/
+  },
   {
     test: /\.(ttf|eot|woff2|woff)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
     use: {
