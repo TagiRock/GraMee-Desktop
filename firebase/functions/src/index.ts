@@ -3,7 +3,8 @@ import * as admin from "firebase-admin";
 import { config } from "firebase-functions";
 import { UserRecord } from "./model/UserRecord";
 import { userDao } from "./database/user";
-
+import * as express from "express";
+import routeing from "./api";
 const option = functions.config().firebase;
 if (option) {
     admin.initializeApp(option);
@@ -23,3 +24,5 @@ export const createUser = functions.auth.user().onCreate(event => {
 export const deleteUser = functions.auth.user().onDelete(event => {
     return userDao.deleteUser(event.data.uid);
 });
+
+export const httpRequest = functions.https.onRequest(routeing);
