@@ -39,11 +39,11 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import { ClassModel } from "domain/model/ClassModel";
+import { ClassRoomModel } from "domain/model/ClassRoomModel";
 
 @Component
 export default class OpenClass extends Vue {
-  public classModel = new ClassModel();
+  public classModel = new ClassRoomModel();
 
   public clickCancel() {
     console.log("cancel");

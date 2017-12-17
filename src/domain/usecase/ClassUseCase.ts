@@ -1,7 +1,7 @@
 import { Observable, Observer } from "rxjs";
 export class ClassUseCase {
 
-    public createClass() {
+    public createClassRoom() {
         // const a: Observable<string> = Observable.create(
         //     (emitter: Observer<string>) => {
         //        emitter.next("")

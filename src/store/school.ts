@@ -15,7 +15,8 @@ const state: SchoolState = {
 /*tslint:disable　no-shadowed-variable　arrow-parens*/
 const getters: DefineGetters<SchoolGetters, SchoolState> = {
     genre: state => state.genre,
-    level: state => state.level
+    level: state => state.level,
+    // classRoom: state => state.classRoom
 };
 
 const mutations: DefineMutations<SchoolMutations, SchoolState> = {
@@ -24,7 +25,10 @@ const mutations: DefineMutations<SchoolMutations, SchoolState> = {
     },
     changeLevel(state, { level }) {
         state.level = level;
-    }
+    },
+    // createClassRoom() {
+    //     //
+    // }
 };
 
 const actions: DefineActions<SchoolActions, SchoolState, SchoolMutations, SchoolGetters> = {
@@ -34,6 +38,9 @@ const actions: DefineActions<SchoolActions, SchoolState, SchoolMutations, School
     changeLevel({ commit }, payload) {
         commit("changeLevel", payload);
     }
+    // createClassRoom({ commit }, payload) {
+    //     commit("createClass", payload);
+    // }
 };
 
 export const {
@@ -53,10 +60,12 @@ export const school = {
 
 export const Actions = {
     changeGenre: "school/changeGenre",
-    changeLevel: "school/changeLevel"
+    changeLevel: "school/changeLevel",
+    createClassRoom: "school/createClassRoom"
 };
 
 export const Getters = {
    genre: "school/genre",
-   level: "school/level"
+   level: "school/level",
+   classRoom: "school/classRoom"
 };

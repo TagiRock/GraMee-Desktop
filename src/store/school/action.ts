@@ -8,4 +8,13 @@ export interface SchoolActions {
     changeLevel: {
         level: LevelType
     };
+    // createClassRoom: {
+    //     name: string;
+    //     description: string;
+    //     genre: string;
+    //     language: string;
+    //     level: string;
+    //     price: string;
+    //     pictureUrl: string;
+    // };
 }
