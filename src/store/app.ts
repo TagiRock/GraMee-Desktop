@@ -17,6 +17,9 @@ const getters: DefineGetters<AppGetters, AppState> = {
 const mutations: DefineMutations<AppMutations, AppState> = {
     signinEmail(state, { account }) {
         state.account = account;
+    },
+    loginEmail(state, { account }) {
+        state.account = account;
     }
 };
 
@@ -28,6 +31,18 @@ const actions: DefineActions<AppActions, AppState, AppMutations, AppGetters> = {
             .subscribe(
             (account) => {
                 commit("signinEmail", { account });
+            },
+            (error) => {
+                console.log(error);
+            });
+    },
+    loginEmail({ commit }, payload) {
+        const usecase = new AuthUseCase();
+        console.log(payload);
+        usecase.loginEmail(payload.email, payload.password)
+            .subscribe(
+            (account) => {
+                commit("loginEmail", { account });
             },
             (error) => {
                 console.log(error);
@@ -54,5 +69,6 @@ export const Getters = {
     user: "app/account"
 };
 export const Actions = {
-    signinEmail: "app/signinEmail"
+    signinEmail: "app/signinEmail",
+    loginEmail: "app/loginEmail"
 };

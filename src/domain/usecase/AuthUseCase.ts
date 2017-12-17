@@ -10,10 +10,6 @@ export class AuthUseCase {
                 .then(() => {
                     const user = firebase.auth().currentUser;
                     if (user !== null) {
-                        // user => emitter.next(user);
-                        // console.log("SuccessCreateUser");
-                        // user.uid
-                        // AccountModel
                         const account = new AccountModel();
                         // account.name = user.displayName;
                         account.id = user.uid;
@@ -24,14 +20,17 @@ export class AuthUseCase {
         });
     }
 
-    public login(email: string, password: string): Observable<UserModel> {
-        return Observable.create((emitter: Observer<UserModel>) => {
+    public loginEmail(email: string, password: string): Observable<AccountModel> {
+        return Observable.create((emitter: Observer<AccountModel>) => {
             firebase.auth().signInWithEmailAndPassword(email, password)
                 .then(() => {
                     const user = firebase.auth().currentUser;
                     if (user !== null) {
-                        // this.signinEmail(email, password);
-                        console.log("SuccessLogin");
+                        const account = new AccountModel();
+                        // account.name = user.displayName;
+                        account.id = user.uid;
+                        // account.token = user.getToken().then;
+                        emitter.next(account);
 
                     }
                 }).catch(error => emitter.error(error));

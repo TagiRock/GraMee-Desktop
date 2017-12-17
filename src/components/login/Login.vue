@@ -21,7 +21,7 @@
         li.google_plus
           a(href='#')
             img(src='assets/images/login/google_plus.svg', alt='')
-      button.login_btn(type='button', name='button', @click="clickLoginBtn()") ログイン
+      button.login_btn(type='button', name='button', @click="clickLoginBtn(email,password)") ログイン
       a(href='#') 新規アカウントを作成
       a(href='#') パスワードをお忘れですか？
 </template>
@@ -33,13 +33,10 @@ import { Actions } from "store/app";
 import { Action } from "vuex-class";
 @Component
 export default class Login extends Vue {
-  @Action(Actions.signinEmail)
-  private signinAction: (email: string, password: string) => void;
-  public hoge() {
-    this.signinAction("", "");
-  }
-  public clickLoginBtn() {
-    //
+  @Action(Actions.loginEmail)
+  private loginAction: (payload: { email: string, password: string }) => void;
+  public clickLoginBtn(email: string, password: string) {
+      this.loginAction({email , password});
   }
 }
 </script>

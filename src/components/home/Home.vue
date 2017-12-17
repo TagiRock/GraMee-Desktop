@@ -1,6 +1,6 @@
 <template lang="pug">
-  //- vue-login
-  vue-new-account
+  vue-login
+  //- vue-new-account
   //- vue-buy
   //- vue-buy-comp
   //- vue-genre-level-select-nav

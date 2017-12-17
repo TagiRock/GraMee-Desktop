@@ -3,4 +3,8 @@ export interface AppActions {
         email: string;
         password: string;
     };
+    loginEmail: {
+        email: string;
+        password: string;
+    };
 }

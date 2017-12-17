@@ -3,4 +3,7 @@ export interface AppMutations {
     signinEmail: {
        account: AccountModel
     };
+    loginEmail: {
+        account: AccountModel
+     };
 }
