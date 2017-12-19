@@ -1,21 +1,12 @@
 <template lang="pug">
-html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title GraMee
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800', rel='stylesheet')
-    link(rel='stylesheet', href='style.css')
-  body
-    .cartbox
-      h2.comp_ttl
-        | 受講が確定しました！
-        span.comp_txt 開講者からのMessageをお待ちください。
-      img(src='assets/images/buy_comp/step.svg', alt='')
-      .btnbox.cf
-        button.back(type='button', name='button') Schoolに戻る
-        button.message(type='button', name='button') Message
+.cartbox
+  h2.comp_ttl
+    | 受講が確定しました！
+    span.comp_txt 開講者からのMessageをお待ちください。
+  img(src='assets/images/buy_comp/step.svg', alt='')
+  .btnbox.cf
+    button.back(type='button', name='button') Schoolに戻る
+    button.message(type='button', name='button') Message
 
 </template>
 

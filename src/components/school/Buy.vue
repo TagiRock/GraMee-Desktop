@@ -1,35 +1,34 @@
 <template lang="pug">
-body
-    .cartbox
-        form(action='index.html', method='post')
-        .typebox
-            label(for='') E-mail Address
-            input(type='text', name='', value='')
-        .typebox
-            label(for='') Password
-            input(type='text', name='', value='')
-        .class
-            img(src='assets/images/buy/class/class01.jpg', alt='')
-            h2.class_name EnterClassTitle. EnterClassTitle.
-            #tag
-            span.en
-                v-icon local_offer
-                | WEB
-            span.en
-                v-icon local_offer
-                | HTML
-            span.en
-                v-icon local_offer
-                | Easy
-            span#price
-            span.tax.ja 税込
-            | ￥1,600
-        .btnbox.cf
-            button.cancel(type='button', name='button') キャンセル
-            button.buy(type='button', name='button') 受講を確定
-        .help
-        p お支払いは授業後に確定されます
-        v-icon help_outline
+.cartbox
+    form(action='index.html', method='post')
+    .typebox
+        label(for='') E-mail Address
+        input(type='text', name='', value='')
+    .typebox
+        label(for='') Password
+        input(type='text', name='', value='')
+    .class
+        img(src='assets/images/buy/class/class01.jpg', alt='')
+        h2.class_name EnterClassTitle. EnterClassTitle.
+        #tag
+        span.en
+            v-icon local_offer
+            | WEB
+        span.en
+            v-icon local_offer
+            | HTML
+        span.en
+            v-icon local_offer
+            | Easy
+        span#price
+        span.tax.ja 税込
+        | ￥1,600
+    .btnbox.cf
+        button.cancel(type='button', name='button') キャンセル
+        button.buy(type='button', name='button') 受講を確定
+    .help
+    p お支払いは授業後に確定されます
+    v-icon help_outline
 
 </template>
 

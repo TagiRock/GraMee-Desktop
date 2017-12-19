@@ -17,8 +17,12 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
+import VueBuy from "../school/Buy";
+import VueBuyComp from "../school/BuyComp";
 @Component({
   components: {
+    VueBuy,
+    VueBuyComp
   }
 })
 export default class Home extends Vue {
@@ -29,7 +33,7 @@ export default class Home extends Vue {
 
 <style lang="scss" scoped>
 header {
-    background: #F1F1F1;
+  background: #f1f1f1;
 }
 </style>
 
