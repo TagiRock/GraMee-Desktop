@@ -12,27 +12,26 @@
         textarea(name='name', rows='8', cols='80', v-model="classModel.description")
       .genre_select
         label(for='') ジャンルを選ぶ
-        v-select(v-model='classModel.genre', :options="['web','app','game']")
+        v-select(v-model='classModel.genre', :options="['web']")
       .language_select
         label(for='') 言語を選ぶ
-        v-select(v-model='classModel.language', :options="['web','app','game']")
+        v-select(v-model='classModel.language', :options="['html','css','javascript','php']")
       .level_select
         label(for='') レベルを選ぶ
-        a.dropdown-button.btn.ja(href='#', data-activates='dropdown1', v-model="classModel.level")
-          i.material-icons keyboard_arrow_down
+        v-select(v-model="classModel.level", :options="['easy','normal','hard']")
       .price
         label(for='') 価格
-        input(type='text', name='', v-model="classModel.price")
+        input(type="number", min='500', max='50000', name='price', @change='updateMoney()',v-model="classModel.price")
       ul.all_price
         li
           | 授業料手数料
-          span ¥-
+          span ¥{{fee}}
         li.profits
           | 授業料利益
-          span ¥-
+          span ¥{{sum}}
   .btnbox.cf
     button.cancel(type='button', name='button', @click="clickCancel()") キャンセル
-    button.open_btn(type='button', name='button', @click="clickTransmit()") 開講する
+    button.open_btn(type='submit', name='button', @click="clickTransmit()") 開講する
 
 </template>
 
@@ -44,14 +43,21 @@ import { ClassRoomModel } from "domain/model/ClassRoomModel";
 @Component
 export default class CreateClassroom extends Vue {
   public classModel = new ClassRoomModel();
-
+  public fee: number;
+  public sum: number;
+  public updateMoney() {
+    // console.log("sajkfljdlas");
+    // console.log(;
+  }
   public clickCancel() {
     console.log("cancel");
-    console.log(this.classModel.name);
+    //前のページへバック
   }
 
   public clickTransmit() {
-    console.log("cancel");
+    console.log("transmit");
+    //POSTするメソッド呼び出す
+
     console.log(this.classModel.name);
     console.log(this.classModel.description);
     console.log(this.classModel.genre);

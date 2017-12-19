@@ -1,6 +1,6 @@
-import {ClassRoomModel} from "./ClassRoomModel";
+import {ClassroomModel} from "./ClassRoomModel";
 
 export default class GenreSection {
     public name: string;
-    public classes: ClassRoomModel[];
+    public classes: ClassroomModel[];
 }

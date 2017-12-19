@@ -1,5 +1,5 @@
 import {UserModel} from "./UserModel";
-export class ClassRoomModel {
+export class ClassroomModel {
     public user: UserModel;
     public id: number;
     public name: string;

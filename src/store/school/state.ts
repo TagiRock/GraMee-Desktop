@@ -1,7 +1,7 @@
 import { LevelType } from "domain/model/LevelType";
 import { GenreType } from "domain/model/GenreType";
 import { Genre } from "domain/model/Genre";
-import { ClassRoomModel } from "domain/model/ClassRoomModel";
+import { ClassroomModel } from "domain/model/ClassRoomModel";
 
 export interface SchoolState {
     level: LevelType;
@@ -12,5 +12,5 @@ export interface SchoolState {
 export interface GenreState {
     type: GenreType;
     level: LevelType;
-    classRoom: ClassRoomModel;
+    classRoom: ClassroomModel;
 }
