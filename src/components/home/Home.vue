@@ -1,5 +1,5 @@
 <template lang="pug">
-  vue-login
+  //- vue-login
   //- vue-new-account
   //- vue-buy
   //- vue-buy-comp
@@ -9,7 +9,7 @@
   //- vue-message-chat
   //- vue-message-display
   //- vue-school
-  //- vue-open-class
+  vue-create-classroom
   //- vue-test-modal
   //- vue-test-user-auth
 </template>
@@ -26,7 +26,7 @@ import VueClassDetail from "../class_detail/ClassDetail.vue";
 import VueMessageAccountList from "../message_account_list/MessageAccountList.vue";
 import VueMessageChat from "../message_chat/MessageChat.vue";
 import VueMessageDisplay from "../message_display/MessageDisplay.vue";
-import VueOpenClass from "../open_class/OpenClass.vue";
+import VueCreateClassroom from "../school/CreateClassroom.vue";
 import VueSchool from "../school/School.vue";
 import VueTestModal from "../test/TestModal.vue";
 import VueTestUserAuth from "../test/TestUserAuth.vue";
@@ -42,7 +42,7 @@ import VueTestUserAuth from "../test/TestUserAuth.vue";
     VueMessageAccountList,
     VueMessageChat,
     VueMessageDisplay,
-    VueOpenClass,
+    VueCreateClassroom,
     VueSchool,
     VueTestModal,
     VueTestUserAuth
