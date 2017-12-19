@@ -42,7 +42,7 @@ import Vue from "vue";
 import { ClassRoomModel } from "domain/model/ClassRoomModel";
 
 @Component
-export default class OpenClass extends Vue {
+export default class CreateClassroom extends Vue {
   public classModel = new ClassRoomModel();
 
   public clickCancel() {
