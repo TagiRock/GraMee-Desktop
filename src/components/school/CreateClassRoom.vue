@@ -38,11 +38,11 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import { ClassRoomModel } from "domain/model/ClassRoomModel";
+import { ClassroomModel } from "domain/model/ClassroomModel";
 
 @Component
 export default class CreateClassroom extends Vue {
-  public classModel = new ClassRoomModel();
+  public classModel = new ClassroomModel();
   public fee: number;
   public sum: number;
   public updateMoney() {
