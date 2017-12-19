@@ -9,7 +9,7 @@
   //- vue-message-chat
   //- vue-message-display
   //- vue-school
-  //- vue-create-classroom
+  vue-create-classroom
   //- vue-test-modal
   //- vue-test-user-auth
 </template>
@@ -19,10 +19,12 @@ import Component from "vue-class-component";
 import Vue from "vue";
 import VueBuy from "../school/Buy";
 import VueBuyComp from "../school/BuyComp";
+import VueCreateClassroom from "../school/CreateClassroom";
 @Component({
   components: {
     VueBuy,
-    VueBuyComp
+    VueBuyComp,
+    VueCreateClassroom
   }
 })
 export default class Home extends Vue {

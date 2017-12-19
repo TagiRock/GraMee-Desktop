@@ -21,14 +21,14 @@
         v-select(v-model="classModel.level", :options="['easy','normal','hard']")
       .price
         label(for='') 価格
-        input(type="number", min='500', max='50000', name='price', @change='updateMoney()',v-model="classModel.price")
+        input(type="number", min='500', max='50000', name='price', v-model="classModel.price")
       ul.all_price
         li
           | 授業料手数料
-          span ¥{{fee}}
+          span ¥10000
         li.profits
           | 授業料利益
-          span ¥{{sum}}
+          span ¥99999
   .btnbox.cf
     button.cancel(type='button', name='button', @click="clickCancel()") キャンセル
     button.open_btn(type='submit', name='button', @click="clickTransmit()") 開講する
@@ -46,7 +46,7 @@ export default class CreateClassroom extends Vue {
   public fee: number;
   public sum: number;
   public updateMoney() {
-    // console.log("sajkfljdlas");
+    console.log(this.classModel.price);
     // console.log(;
   }
   public clickCancel() {
@@ -57,7 +57,6 @@ export default class CreateClassroom extends Vue {
   public clickTransmit() {
     console.log("transmit");
     //POSTするメソッド呼び出す
-
     console.log(this.classModel.name);
     console.log(this.classModel.description);
     console.log(this.classModel.genre);
