@@ -8,9 +8,8 @@ export interface SchoolState {
     genre: GenreType;
     // classModel?: ClassRoomModel;
 }
-
 export interface GenreState {
     type: GenreType;
     level: LevelType;
-    classRoom: ClassroomModel;
+    active: boolean;
 }

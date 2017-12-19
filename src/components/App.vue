@@ -10,8 +10,8 @@ div#content
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import VueHeader from "./common/Header.vue";
-import VueSidebar from "./common/Sidebar.vue";
+import VueHeader from "./Header.vue";
+import VueSidebar from "./Sidebar.vue";
 import VueHome from "./home/Home.vue";
 import Peer from "skyway-js";
 
