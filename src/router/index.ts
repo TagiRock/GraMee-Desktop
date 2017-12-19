@@ -7,12 +7,12 @@ import Home from "components/home/Home.vue";
 import Login from "components/login/Login.vue";
 
 Vue.use(VueRouter);
-const routes: = [
+const routes = [
   { path: "/", component: School },
   { path: "message", component: Message },
   { path: "home", component: Home },
   { path: "setting", component: Setting },
-  { path: "login", component: }
+  { path: "login", component: Login }
 ];
 
 const router = new VueRouter({
@@ -21,8 +21,8 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  if(to.matched.some(record => record.meta.requiresAuth)) {
+  /*if(to.matched.some(record => record.meta.requiresAuth)) {
 
-  }
+  }*/
 });
 export default router;
