@@ -6,10 +6,10 @@
     #open_class_form
       .class_name
         label(for='') 教室名を入力
-        input(v-model="model.name", type='text', required)
+        input(v-model="model.name", type='text', required, placeholder="Javascript入門")
       .class_txt
         label(for='') 教室の説明文
-        textarea(v-model="model.description", rows='8', cols='80')
+        textarea(v-model="model.description", rows='8', cols='80', placeholder="初めての方でも安心！Web上で動く簡単なプログラムを書いてみましょう")
       .genre_select
         label(for='') ジャンルを選ぶ
         v-select(v-model='model.genre', :options="['web']")
@@ -21,14 +21,14 @@
         v-select(v-model="model.level", :options="['easy','normal','hard']")
       .price
         label(for='') 価格
-        input(v-model="model.price", type="number", min='500', max='50000')
+        input(v-model="model.price", type="number", min='500', max='50000', @change="calculateMoney()")
       ul.all_price
         li
           | 授業料手数料
-          span ¥10000
+          span ¥{{fee}}
         li.profits
           | 授業料利益
-          span ¥99999
+          span ¥{{sum}}
   .btnbox.cf
     button.cancel(type='button', name='button', @click="clickCancel()") キャンセル
     button.open_btn(type='submit', name='button', @click="clickTransmit()") 開講する
@@ -45,19 +45,27 @@ import { ClassroomUseCase } from "domain/usecase/ClassroomUseCase";
 export default class CreateClassroom extends Vue {
   public model = new ClassroomModel();
   public useCase = new ClassroomUseCase();
-  public fee: number;
-  public sum: number;
-  public updateMoney() {
-    console.log(this.model.price);
-    // console.log(;
-  }
+  public fee = 0;
+  public sum = 0;
+  public rate = 10;
+
+
+  
   public clickCancel() {
-    console.log("cancel");
-    //前のページへバック
+    // console.log("cancel");
   }
 
+  public calculateMoney() {
+    this.fee =  Math.floor(Number(this.model.price) / 100 * this.rate);
+    this.sum = Number(this.model.price) - this.fee;
+  }
   public clickTransmit() {
-    useCase.createClassroom();
+    // console.log("transmit");
+    console.log(this.model.name);
+    console.log(this.model.description);
+    console.log(this.model.genre);
+    console.log(this.model.language);
+    console.log(this.model.level);
   }
 
   /*
