@@ -28,15 +28,12 @@ const rules: NewUseRule[] = [
   {
     test: /\.tsx?$/,
     exclude: /node_modules/,
-    use: [
-      {
+    use: {
         loader: "ts-loader",
         options: {
           appendTsSuffixTo: [/\.vue$/]
         }
-      },
-      { loader: "tslint-loader" }
-    ]
+      }
   },
   {
     test: /\.pug$/,
