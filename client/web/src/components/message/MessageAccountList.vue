@@ -1,25 +1,14 @@
 <template lang="pug">
-html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title GraMee
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800', rel='stylesheet')
-    link(rel='stylesheet', href='style.css')
-  body
-    #content
-      #content_right
-        main
-          #message
-            #accounts
-              .account_search
-                v-icon search
-                input(type='text', name='', value='', placeholder='Search')
-              ul.account_list
-                li.cf.active
-                  img(src='assets/images/message_account_list/account01.png', alt='')
-                  h3 Sample Name
+main
+  #message
+    #accounts
+      .account_search
+        v-icon search
+        input(type='text', name='', value='', placeholder='Search')
+      ul.account_list
+        li.cf.active
+          img(src='assets/images/message_account_list/account01.png', alt='')
+          h3 Sample Name
 
 </template>
 
