@@ -10,7 +10,7 @@
     h2 LOGIN
     form.login(method='post')
       input(type='text', name='', value='', placeholder='E-mail Address', v-model="email")
-      input(type='text', name='', value='', placeholder='Password', v-model="password")
+      input(type='password', name='', value='', placeholder='Password', v-model="password")
       ul.sns
         li.facebook
           a(href='#')

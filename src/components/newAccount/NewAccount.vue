@@ -10,7 +10,7 @@
     h2 新規アカウント作成
     form.login(method='post')
       input(type='text', placeholder='E-mail Address', v-model="email")
-      input(type='text', value='', placeholder='Password', v-model="password")
+      input(type='password', value='', placeholder='Password', v-model="password")
       button.login_btn(type='button', @click="clickSigninBtn(email,password)") アカウント作成
       a(href='#') アカウントをお持ちの方はこちら
 
