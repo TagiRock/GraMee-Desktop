@@ -1,27 +1,16 @@
 <template lang="pug">
-html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title GraMee
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800', rel='stylesheet')
-    link(rel='stylesheet', href='style.css')
-  body
-    #content
-      #content_right
-        main
-          #message
-            #chat_box
-              #account
-                img(src='assets/images/message_chat/account01.png', alt='')
-                h3.account_name 田木一郎
-                p.online ログイン
-                .call
-                  v-icon phone
-              #chat
-                form.sent_message(action='index.html', method='post')
-                  textarea(name='name', rows='8', cols='80', placeholder='ここにメッセージを入力')
+main
+  #message
+    #chat_box
+      #account
+        img(src='assets/images/message_chat/account01.png', alt='')
+        h3.account_name 田木一郎
+        p.online ログイン
+        .call
+          v-icon phone
+      #chat
+        form.sent_message(action='index.html', method='post')
+          textarea(name='name', rows='8', cols='80', placeholder='ここにメッセージを入力')
 
 </template>
 
