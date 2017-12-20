@@ -1,27 +1,27 @@
 <template lang="pug">
 .open_classbox
-  form(method='post')
+  form
     a.upload_img(href='#')
       img(src='assets/images/open_class/upload.svg', alt='')
     #open_class_form
       .class_name
         label(for='') 教室名を入力
-        input(type='text', name='', v-model="classModel.name")
+        input(v-model="model.name", type='text', required)
       .class_txt
         label(for='') 教室の説明文
-        textarea(name='name', rows='8', cols='80', v-model="classModel.description")
+        textarea(v-model="model.description", rows='8', cols='80')
       .genre_select
         label(for='') ジャンルを選ぶ
-        v-select(v-model='classModel.genre', :options="['web']")
+        v-select(v-model='model.genre', :options="['web']")
       .language_select
         label(for='') 言語を選ぶ
-        v-select(v-model='classModel.language', :options="['html','css','javascript','php']")
+        v-select(v-model='model.language', :options="['html','css','javascript','php']")
       .level_select
         label(for='') レベルを選ぶ
-        v-select(v-model="classModel.level", :options="['easy','normal','hard']")
+        v-select(v-model="model.level", :options="['easy','normal','hard']")
       .price
         label(for='') 価格
-        input(type="number", min='500', max='50000', name='price', v-model="classModel.price")
+        input(v-model="model.price", type="number", min='500', max='50000')
       ul.all_price
         li
           | 授業料手数料
@@ -39,14 +39,16 @@
 import Component from "vue-class-component";
 import Vue from "vue";
 import { ClassroomModel } from "domain/model/ClassroomModel";
+import { ClassroomUseCase } from "domain/usecase/ClassroomUseCase";
 
 @Component
 export default class CreateClassroom extends Vue {
-  public classModel = new ClassroomModel();
+  public model = new ClassroomModel();
+  public useCase = new ClassroomUseCase();
   public fee: number;
   public sum: number;
   public updateMoney() {
-    console.log(this.classModel.price);
+    console.log(this.model.price);
     // console.log(;
   }
   public clickCancel() {
@@ -55,15 +57,12 @@ export default class CreateClassroom extends Vue {
   }
 
   public clickTransmit() {
-    console.log("transmit");
-    //POSTするメソッド呼び出す
-    console.log(this.classModel.name);
-    console.log(this.classModel.description);
-    console.log(this.classModel.genre);
-    console.log(this.classModel.language);
-    console.log(this.classModel.level);
-    console.log(this.classModel.price);
+    useCase.createClassroom();
   }
+
+  /*
+    clik usecese valudate →　post
+  */
 }
 </script>
 

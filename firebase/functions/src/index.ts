@@ -4,7 +4,7 @@ import { config } from "firebase-functions";
 import { UserRecord } from "./model/UserRecord";
 import { userDao } from "./database/user";
 import * as express from "express";
-import routeing from "./api";
+import routing from "./api";
 const option = functions.config().firebase;
 if (option) {
     admin.initializeApp(option);
@@ -25,4 +25,4 @@ export const deleteUser = functions.auth.user().onDelete(event => {
     return userDao.deleteUser(event.data.uid);
 });
 
-export const httpRequest = functions.https.onRequest(routeing);
+export const httpRequest = functions.https.onRequest(routing);
