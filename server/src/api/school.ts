@@ -18,9 +18,3 @@ function deleteClassroom(request: express.Request, response: express.Response, n
 
     response.status(400).send("invalid prarms");
 }
-
-export ClassroomApi = {
-    classrooms,
-    createClassroom,
-    deleteClassroom
-};
