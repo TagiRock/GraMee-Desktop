@@ -3,14 +3,14 @@
   form
     a.upload_img(href='#')
       img(src='assets/images/open_class/upload.svg', alt='')
-      input(type='file')
+      input.select-img(type='file')
     #open_class_form
       .class_name
         label(for='') 教室名を入力
-        input(v-model="model.name", type='text', required, placeholder="Javascript入門")
+        input(v-model="model.name", type='text', required, placeholder="例：HTML5とCS3で簡単Webサイト制作！")
       .class_txt
         label(for='') 教室の説明文
-        textarea(v-model="model.description", rows='8', cols='80', placeholder="初めての方でも安心！Web上で動く簡単なプログラムを書いてみましょう")
+        textarea(v-model="model.description", rows='8', cols='80', maxlength='1000',required , placeholder="例：初めての方でも安心！かっこいいWebデザインを学びましょう")
       .genre_select
         label(for='') ジャンルを選ぶ
         v-select(v-model='model.genre', :options="['web']")
@@ -32,7 +32,7 @@
           span ¥{{sum}}
   .btnbox.cf
     button.cancel(type='button', name='button', @click="clickCancel()") キャンセル
-    button.open_btn(type='submit', name='button', @click="clickTransmit()") 開講する
+    button.open_btn(type='submit', name='button', @click="clickCreateClassroom()") 開講する
 
 </template>
 
@@ -49,17 +49,23 @@ export default class CreateClassroom extends Vue {
   public fee = 0;
   public sum = 0;
   public rate = 10;
+  public priceMin = 500;
+  public priceMax = 50000;
 
   public clickCancel() {
-    // console.log("cancel");
+    // 元のページにバックする
   }
 
   public calculateMoney() {
+    if (Number(this.model.price) < this.priceMin) {
+      this.model.price = this.priceMin.toString();
+    } else if (Number(this.model.price) > this.priceMax) {
+      this.model.price = this.priceMax.toString();
+    }
     this.fee = Math.floor(Number(this.model.price) / 100 * this.rate);
     this.sum = Number(this.model.price) - this.fee;
   }
-  public clickTransmit() {
-    // console.log("transmit");
+  public clickCreateClassroom() {
     console.log(this.model.name);
     console.log(this.model.description);
     console.log(this.model.genre);
@@ -93,7 +99,7 @@ label {
 }
 input {
   border: 1px solid #cecece;
-  border-radius: 50px;
+  border-radius: 4px;
   font-size: 15px;
   outline: none;
   padding: 10px 20px;
@@ -103,6 +109,13 @@ input:focus {
   border: 1px solid #f7745d;
   box-shadow: none;
 }
+
+input.select-img {
+  border: none;
+  padding: 0;
+  color: #222222;
+  width: 230px;
+}
 .class_name,
 .class_txt,
 .genre_select,
@@ -111,11 +124,23 @@ input:focus {
 .price {
   margin: 0 0 20px;
 }
+.genre_select {
+  float: left;
+}
+.language_select {
+  float: right;
+}
+.genre_select,
+.language_select {
+  width: 285px;
+}
 .class_txt textarea {
   border: 1px solid #cecece;
-  border-radius: 15px;
+  border-radius: 4px;
   vertical-align: top;
-  width: 454px;
+  padding: 10px 20px;
+  font-size: 15px;
+  width: 418px;
 }
 .genre_select a,
 .language_select a,
