@@ -3,6 +3,7 @@
   form
     a.upload_img(href='#')
       img(src='assets/images/open_class/upload.svg', alt='')
+      input(type='file')
     #open_class_form
       .class_name
         label(for='') 教室名を入力
@@ -49,14 +50,12 @@ export default class CreateClassroom extends Vue {
   public sum = 0;
   public rate = 10;
 
-
-  
   public clickCancel() {
     // console.log("cancel");
   }
 
   public calculateMoney() {
-    this.fee =  Math.floor(Number(this.model.price) / 100 * this.rate);
+    this.fee = Math.floor(Number(this.model.price) / 100 * this.rate);
     this.sum = Number(this.model.price) - this.fee;
   }
   public clickTransmit() {
