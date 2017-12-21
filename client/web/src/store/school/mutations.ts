@@ -1,6 +1,6 @@
 import { LevelType } from "domain/model/LevelType";
 import { GenreType } from "domain/model/GenreType";
-import { ClassroomModel } from "domain/model/ClassRoomModel";
+import { Classroom } from "domain/model/ClassRoom";
 export interface SchoolMutations {
     changeGenre: {
         genre: GenreType

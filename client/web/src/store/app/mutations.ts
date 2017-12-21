@@ -1,9 +1,9 @@
-import { AccountModel } from "domain/model/AccountModel";
+import { Account } from "domain/model/Account";
 export interface AppMutations {
     signinEmail: {
-       account: AccountModel
+       account: Account
     };
     loginEmail: {
-        account: AccountModel
+        account: Account
      };
 }

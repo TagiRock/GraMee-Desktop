@@ -1,15 +1,15 @@
 import firebase from "firebase";
 import { Observable, Observer } from "rxjs";
-import { UserModel } from "domain/model/UserModel";
-import { AccountModel } from "domain/model/AccountModel";
+import { User } from "domain/model/User";
+import { Account } from "domain/model/Account";
 export class AuthUseCase {
-    public signinEmail(email: string, password: string): Observable<AccountModel> {
-        return Observable.create((emitter: Observer<AccountModel>) => {
+    public signinEmail(email: string, password: string): Observable<Account> {
+        return Observable.create((emitter: Observer<Account>) => {
             /*firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then(() => {
                     const user = firebase.auth().currentUser;
                     if (user !== null) {
-                        const account = new AccountModel();
+                        const account = new Account();
                         // account.name = user.displayName;
                         account.id = user.uid;
                         // account.token = user.getToken().then;
@@ -19,13 +19,13 @@ export class AuthUseCase {
         });
     }
     //FIXME 
-    public loginEmail(email: string, password: string): Observable<AccountModel> {
-        return Observable.create((emitter: Observer<AccountModel>) => {
+    public loginEmail(email: string, password: string): Observable<Account> {
+        return Observable.create((emitter: Observer<Account>) => {
             /*firebase.auth().signInWithEmailAndPassword(email, password)
                 .then(() => {
                     const user = firebase.auth().currentUser;
                     if (user !== null) {
-                        const account = new AccountModel();
+                        const account = new Account();
                         // account.name = user.displayName;
                         account.id = user.uid;
                         // account.token = user.getToken().then;

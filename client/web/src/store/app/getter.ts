@@ -1,6 +1,6 @@
-import { AccountModel } from "domain/model/AccountModel";
+import { Account } from "domain/model/Account";
 
 export interface AppGetters {
-    account?: AccountModel;
+    account?: Account;
 
 }
