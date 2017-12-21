@@ -1,17 +1,8 @@
 <template lang="pug">
-  //- vue-login
-  //- vue-new-account
-  //- vue-buy
-  //- vue-buy-comp
-  //- vue-genre-level-select-nav
-  //- vue-class-detail
+ariticle
   //- vue-message-account-list
-  //- vue-message-chat
+  vue-message-chat
   //- vue-message-display
-  //- vue-school
-  vue-create-classroom
-  //- vue-test-modal
-  //- vue-test-user-auth
 </template>
 
 <script lang="ts">
@@ -19,11 +10,19 @@ import Component from "vue-class-component";
 import Vue from "vue";
 import VueBuy from "../school/Buy";
 import VueBuyComp from "../school/BuyComp";
+import VueSchool from "../school/School";
+import VueMessageAccountList from "../message/MessageAccountList";
+import VueMessageChat from "../message/MessageChat";
+import VueMessageDisplay from "../message/MessageDisplay";
 import VueCreateClassroom from "../school/CreateClassroom";
 @Component({
   components: {
     VueBuy,
     VueBuyComp,
+    VueSchool,
+    VueMessageAccountList,
+    VueMessageChat,
+    VueMessageDisplay,
     VueCreateClassroom
   }
 })

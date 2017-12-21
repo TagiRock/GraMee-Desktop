@@ -1,27 +1,15 @@
 <template lang="pug">
-html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title GraMee
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800', rel='stylesheet')
-    link(rel='stylesheet', href='style.css')
-  body
-    #content
-      #content_right
-        main
-          #message
-            #chat_box
-              #account
-                img(src='assets/images/message_chat/account01.png', alt='')
-                h3.account_name 田木一郎
-                p.online ログイン
-                .call
-                  v-icon phone
-              #chat
-                form.sent_message(action='index.html', method='post')
-                  textarea(name='name', rows='8', cols='80', placeholder='ここにメッセージを入力')
+#message
+  #chat_box
+    #account
+      img(src='assets/images/message_chat/account01.png', alt='')
+      h3.account_name 田木一郎
+      p.online ログイン
+      .call
+        v-icon phone
+    #chat
+      form.sent_message
+        textarea(name='name', rows='8', cols='80', placeholder='ここにメッセージを入力')
 
 </template>
 
@@ -30,8 +18,7 @@ import Component from "vue-class-component";
 import Vue from "vue";
 
 @Component
-export default class MessageChat extends Vue {
-}
+export default class MessageChat extends Vue {}
 </script>
 
 <style lang="css" scoped>
@@ -43,7 +30,7 @@ export default class MessageChat extends Vue {
   width: 100%;
 }
 #account {
-  border-bottom: 1px solid #DBDBDB;
+  border-bottom: 1px solid #dbdbdb;
   padding: 20px 30px 20px 20px;
   position: relative;
 }
@@ -52,11 +39,11 @@ export default class MessageChat extends Vue {
   margin: 0 10px 0 0;
 }
 #account .account_name {
-  color: #272C32;
+  color: #272c32;
   font-size: 20px;
 }
 .call {
-  background: #3074FF;
+  background: #3074ff;
   border-radius: 50%;
   height: 60px;
   position: absolute;
@@ -75,10 +62,11 @@ export default class MessageChat extends Vue {
   position: relative;
   width: 80%;
 }
+
 .sent_message textarea {
   border: none;
-  border-top: 1px solid #E5E5E5;
-  bottom: 95px;
+  border-top: 1px solid #e5e5e5;
+  top: 450px;
   font-size: 16px;
   height: 100px;
   padding: 20px 0;
@@ -86,6 +74,6 @@ export default class MessageChat extends Vue {
   width: 100%;
 }
 .sent_message textarea::placeholder {
-  color: #A5A2A2;
+  color: #a5a2a2;
 }
 </style>

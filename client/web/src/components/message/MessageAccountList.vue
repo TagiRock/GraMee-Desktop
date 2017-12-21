@@ -1,25 +1,13 @@
 <template lang="pug">
-html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title GraMee
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800', rel='stylesheet')
-    link(rel='stylesheet', href='style.css')
-  body
-    #content
-      #content_right
-        main
-          #message
-            #accounts
-              .account_search
-                v-icon search
-                input(type='text', name='', value='', placeholder='Search')
-              ul.account_list
-                li.cf.active
-                  img(src='assets/images/message_account_list/account01.png', alt='')
-                  h3 Sample Name
+#message
+  #accounts
+    .account_search
+      v-icon search
+      input(type='text', name='', value='', placeholder='Search')
+    ul.account_list
+      li.cf.active
+        img(src='assets/images/message_account_list/account01.png', alt='')
+        h3 Sample Name
 
 </template>
 
@@ -28,23 +16,26 @@ import Component from "vue-class-component";
 import Vue from "vue";
 
 @Component
-export default class MessageAccountList extends Vue {
-}
+export default class MessageAccountList extends Vue {}
 </script>
 
 <style lang="css" scoped>
+.message_box {
+  height: 100%;
+}
+
 #message {
   display: flex;
   height: 100%;
 }
 #accounts {
-  background: #363D45;
+  background: #363d45;
   color: #fff;
   padding: 80px 0 30px;
   width: 230px;
 }
 .account_search {
-  color: #272C32;
+  color: #272c32;
   margin: 0 10px 40px;
   position: relative;
 }
@@ -55,7 +46,7 @@ export default class MessageAccountList extends Vue {
 .account_search input {
   background: none;
   border: none;
-  border-bottom: 2px solid #272C32;
+  border-bottom: 2px solid #272c32;
   bottom: -3px;
   color: #fff;
   font-size: 16px;
@@ -65,7 +56,7 @@ export default class MessageAccountList extends Vue {
   width: 150px;
 }
 .account_search input::placeholder {
-  color: #272C32;
+  color: #272c32;
 }
 
 .account_list li {
@@ -74,7 +65,7 @@ export default class MessageAccountList extends Vue {
   width: 190px;
 }
 .active {
-  background: #272C32;
+  background: #272c32;
 }
 .account_list li h3 {
   font-size: 16px;
@@ -86,6 +77,4 @@ export default class MessageAccountList extends Vue {
   margin: 0 10px 0 0;
   width: 40px;
 }
-
-
 </style>

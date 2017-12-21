@@ -1,116 +1,103 @@
 <template lang="pug">
-html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title GraMee
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800', rel='stylesheet')
-    link(type='text/css', rel='stylesheet', href='css/materialize.min.css', media='screen,projection')
-    link(rel='stylesheet', href='style.css')
-  body
-    #content
-      #content_right
-        main
-          #details
-            // 商品詳細
-            #class_detail
-              #panav
-                .col.s12
-                  a.breadcrumb(href='#') WEB
-                  a.breadcrumb(href='#') Easy
-                  a.breadcrumb(href='#') HTML
-                  a.breadcrumb EnterClassTitle. EnterClassTitle.
-              #class_detail_box
-                #class_detail_left
-                  img(src='img/class/class01.jpg', alt='')
-                  #star_rating
-                    #star_rating_front(style='width: 90%') ★★★★★
-                    #star_rating_back ★★★★★
-                    span (4.3)
-                  p.date.ja 2017 11.29 開講
-                #class_detail_right
-                  h2.class_name EnterClassTitle. EnterClassTitle.
-                  #price_box
-                    button(type='button', name='favorite')
-                      v-icon favorite_border
-                    span#price
-                      span.tax.ja (税込)
-                      | ￥1,600
-                  ul#class_detail_txt
-                    li
-                      a.active.ja(href='#') 教室説明
-                    li
-                      a(href='#') Review
-                    li
-                      a(href='#') Comment
-                  #txt_box
-                    #detail_txt.ja
-                      | webサイトを作るにはHTMLというプログラミング言語を
-                      | まず学ぶ必要があります。この教室では、HTMLを学ぶために必要な環境を
-                      | 教えます。HTMLこれからやるという方はご気軽に受講してください！
-                      #tag
-                        span.en
-                          v-icon local_offer
-                          | WEB
-                        span.en
-                          v-icon local_offer
-                          | HTML
-                        span.en
-                          v-icon local_offer
-                          | Easy
-                    //
-                      <ul id="review">
-                      <li></li>
-                      </ul>
-                      <ul id="comment">
-                      <li></li>
-                      </ul>
-                  #buy
-                    a.cancel_btn.ja(href='#') キャンセル
-                    a.buy_btn.ja(href='#') 受講する
-            // 商品詳細
-            // 出品者情報
-            #account_detail
-              #account
-                img(src='img/account/account02.png', alt='')
-                #account_top
-                  a.account_name.ja(href='#') Sample Name
-                  #assessment
-                    p
-                      v-icon thumb_up
-                      | 23
-                    p
-                      v-icon thumb_down
-                      | 3
-                    a.add_account(href='#')
-                      v-icon person_add
-                p#prof_txt.ja
-                  | よろしくお願いします！主にWEB開発を中心にHTMLやCSSの基礎を
-                  | 安く教えます。これからはじめたいという初心者の方はご気軽に受講してください！
-                #prof_class_box
-                  .img_x2
-                    .prof_class
-                      a(href='#')
-                        img(src='img/class/class02.jpg', alt='')
-                      p.ja EnterClassTitle. EnterClassTitle.
-                    .prof_class
-                      a(href='#')
-                        img(src='img/class/class10.jpg', alt='')
-                      p.ja EnterClassTitle. EnterClassTitle.
-                  .img_x1
-                    a(href='#')
-                      img(src='img/class/class04.jpg', alt='')
-                    p.ja EnterClassTitle. EnterClassTitle.
-                  .img_x2
-                    .prof_class
-                      a(href='#')
-                        img(src='img/class/class06.jpg', alt='')
-                      p.ja EnterClassTitle. EnterClassTitle.
-                    .prof_class
-                      a(href='#')
-                        img(src='img/class/class09.jpg', alt='')
-                      p.ja EnterClassTitle. EnterClassTitle.
+#details
+  // 商品詳細
+  #class_detail
+    #panav
+      .col.s12
+        a.breadcrumb(href='#') WEB
+        a.breadcrumb(href='#') Easy
+        a.breadcrumb(href='#') HTML
+        a.breadcrumb EnterClassTitle. EnterClassTitle.
+    #class_detail_box
+      #class_detail_left
+        img(src='img/class/class01.jpg', alt='')
+        #star_rating
+          #star_rating_front(style='width: 90%') ★★★★★
+          #star_rating_back ★★★★★
+          span (4.3)
+        p.date.ja 2017 11.29 開講
+      #class_detail_right
+        h2.class_name EnterClassTitle. EnterClassTitle.
+        #price_box
+          button(type='button', name='favorite')
+            v-icon favorite_border
+          span#price
+            span.tax.ja (税込)
+            | ￥1,600
+        ul#class_detail_txt
+          li
+            a.active.ja(href='#') 教室説明
+          li
+            a(href='#') Review
+          li
+            a(href='#') Comment
+        #txt_box
+          #detail_txt.ja
+            | webサイトを作るにはHTMLというプログラミング言語を
+            | まず学ぶ必要があります。この教室では、HTMLを学ぶために必要な環境を
+            | 教えます。HTMLこれからやるという方はご気軽に受講してください！
+            #tag
+              span.en
+                v-icon local_offer
+                | WEB
+              span.en
+                v-icon local_offer
+                | HTML
+              span.en
+                v-icon local_offer
+                | Easy
+          //
+            <ul id="review">
+            <li></li>
+            </ul>
+            <ul id="comment">
+            <li></li>
+            </ul>
+        #buy
+          a.cancel_btn.ja(href='#') キャンセル
+          a.buy_btn.ja(href='#') 受講する
+  // 商品詳細
+  // 出品者情報
+  #account_detail
+    #account
+      img(src='img/account/account02.png', alt='')
+      #account_top
+        a.account_name.ja(href='#') Sample Name
+        #assessment
+          p
+            v-icon thumb_up
+            | 23
+          p
+            v-icon thumb_down
+            | 3
+          a.add_account(href='#')
+            v-icon person_add
+      p#prof_txt.ja
+        | よろしくお願いします！主にWEB開発を中心にHTMLやCSSの基礎を
+        | 安く教えます。これからはじめたいという初心者の方はご気軽に受講してください！
+      #prof_class_box
+        .img_x2
+          .prof_class
+            a(href='#')
+              img(src='img/class/class02.jpg', alt='')
+            p.ja EnterClassTitle. EnterClassTitle.
+          .prof_class
+            a(href='#')
+              img(src='img/class/class10.jpg', alt='')
+            p.ja EnterClassTitle. EnterClassTitle.
+        .img_x1
+          a(href='#')
+            img(src='img/class/class04.jpg', alt='')
+          p.ja EnterClassTitle. EnterClassTitle.
+        .img_x2
+          .prof_class
+            a(href='#')
+              img(src='img/class/class06.jpg', alt='')
+            p.ja EnterClassTitle. EnterClassTitle.
+          .prof_class
+            a(href='#')
+              img(src='img/class/class09.jpg', alt='')
+            p.ja EnterClassTitle. EnterClassTitle.
             // 出品者情報
 
 </template>
