@@ -69,7 +69,7 @@ function createModel(): ClassroomModel {
   model.genre = "Web";
   model.language = "javascript";
   model.level = "easy";
-  model.price = "500";
+  model.price = 500;
   //開設日も欲しい
   return model;
 }

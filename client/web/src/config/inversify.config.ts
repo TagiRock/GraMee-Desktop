@@ -8,8 +8,3 @@ import "firebase/firestore";
 import { FirebaseFirestore } from "@firebase/firestore-types";
 export const container = new Container();
 container.bind<ISchoolRepository>(Identifer.SchoolRepository).to(SchoolRepository);
-
-const firestore: FirebaseFirestore | undefined = firebase.firestore();
-if (!firestore) {
-    //container.bind<FirebaseFirestore>(Identifer.FireStore).to(firestore);
-}
