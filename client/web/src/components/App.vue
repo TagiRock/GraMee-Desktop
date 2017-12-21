@@ -4,7 +4,7 @@ div#content
   div#content_right
     vue-header
     vue-home
-    //- v-select(v-model='class.genre', :options="['web','app','game']")
+    //- v-select(v-model='classModel.genre', :options="['web','app','game']")
 </template>
 
 <script lang="ts">
