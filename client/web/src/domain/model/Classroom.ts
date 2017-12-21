@@ -7,7 +7,7 @@ export class Classroom {
     public genre: string;
     public language: string;
     public level: string;
-    public price: string;
+    public price: number;
     public pictureUrl: string;
     public rating: number;
 }
