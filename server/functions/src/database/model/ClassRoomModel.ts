@@ -1,7 +1,6 @@
-import { UserRecord } from "./UserRecord";
+import { UserModel } from "./UserModel";
 
-export interface ClassRecord {
-    user: UserRecord;
+export interface ClassRoomModel {
     id: string;
     name: string;
     description: string;
@@ -9,6 +8,5 @@ export interface ClassRecord {
     level: string;
     price: string;
     picture_url: string;
-    rating: string;
-    create_at?: string;
+    user: UserModel;
 }

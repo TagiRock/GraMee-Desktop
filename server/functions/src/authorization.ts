@@ -1,7 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import { UserRecord } from "./model/UserRecord";
-import { userDao } from "./database/user";
+import userDao from "./database/user";
 
 const createUser = functions.auth.user().onCreate(event => {
     const user: UserRecord = {
