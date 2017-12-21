@@ -1,13 +1,12 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { UserRecord } from "./model/UserRecord";
 import userDao from "./database/user";
 
 const createUser = functions.auth.user().onCreate(event => {
-    const user: UserRecord = {
+    const user = {
         id: event.data.uid,
         email: event.data.email,
-        name: event.data.displayName || "",
+        name: event.data.displayName,
     };
     return userDao.createUser(user.id, user);
 });
