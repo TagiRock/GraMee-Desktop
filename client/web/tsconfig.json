@@ -11,16 +11,20 @@
     "skipLibCheck": false,
     "sourceMap": true,
     "strict": true,
+    "allowJs": true,
+    "outDir": "./dist",
     "lib": [
-      "es5",
+      "es6",
       "dom",
       "es2015.promise"
     ],
     "baseUrl": "./",
+    "types": ["reflect-metadata"],
     "paths": {
       "domain/*": ["./src/domain/*"],
       "store/*": ["./src/store/*"],
-      "components/*": ["./src/components/*"]
+      "components/*": ["./src/components/*"],
+      "repository/*": ["./src/repository/*"]
     },
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,    

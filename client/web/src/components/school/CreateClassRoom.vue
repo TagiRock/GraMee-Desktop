@@ -54,13 +54,14 @@ export default class CreateClassroom extends Vue {
 
   public clickCancel() {
     // 元のページにバックする
+
   }
 
   public calculateMoney() {
-    if (Number(this.model.price) < this.priceMin) {
-      this.model.price = this.priceMin.toString();
-    } else if (Number(this.model.price) > this.priceMax) {
-      this.model.price = this.priceMax.toString();
+    if (this.model.price < this.priceMin) {
+      this.model.price = this.priceMin;
+    } else if (this.model.price > this.priceMax) {
+      this.model.price = this.priceMax;
     }
     this.fee = Math.floor(Number(this.model.price) / 100 * this.rate);
     this.sum = Number(this.model.price) - this.fee;

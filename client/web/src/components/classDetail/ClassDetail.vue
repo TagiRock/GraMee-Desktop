@@ -102,12 +102,12 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import { Classroom } from "domain/model/Classroom";
+import { ClassroomModel } from "src/domain/model/ClassroomModel";
 import { ClassroomUseCase } from "domain/usecase/ClassroomUseCase";
 @Component
 export default class ClassDetail extends Vue {
-  public model = new Classroom();
-  public model.name = "あああああ";
+  public model = new ClassroomModel();
+  //public model.name = "あああああ";
 }
 </script>
 

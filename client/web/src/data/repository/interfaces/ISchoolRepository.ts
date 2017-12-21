@@ -1,5 +1,6 @@
-import { Classroom } from "src/domain/model/ClassRoom";
+import { ClassroomModel } from "src/domain/model/ClassRoomModel";
 import { Observable } from "rxjs/Observable";
+
 export interface ISchoolRepository {
-    createClassRoom(model: Classroom): Observable<void>;
+    createClassRoom(model: ClassroomModel): Observable<void>;
 }

@@ -74,7 +74,8 @@ const config: Config = {
       "vue$": "vue/dist/vue.esm.js",
       domain: path.resolve(workdir, "./src/domain"),
       store: path.resolve(workdir, "./src/store"),
-      components: path.resolve(workdir, "./src/components")
+      components: path.resolve(workdir, "./src/components"),
+      repository: path.resolve(workdir, "./src/repository")
     }
   },
   module: { rules },
