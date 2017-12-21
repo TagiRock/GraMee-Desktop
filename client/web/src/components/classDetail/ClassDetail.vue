@@ -17,13 +17,13 @@
           span (4.3)
         p.date.ja 2017 11.29 開講
       #class_detail_right
-        h2.class_name EnterClassTitle. EnterClassTitle.
+        h2.class_name model.name
         #price_box
           button(type='button', name='favorite')
             v-icon favorite_border
           span#price
             span.tax.ja (税込)
-            | ￥1,600
+            | ￥{{model.price}}
         ul#class_detail_txt
           li
             a.active.ja(href='#') 教室説明
@@ -32,20 +32,17 @@
           li
             a(href='#') Comment
         #txt_box
-          #detail_txt.ja
-            | webサイトを作るにはHTMLというプログラミング言語を
-            | まず学ぶ必要があります。この教室では、HTMLを学ぶために必要な環境を
-            | 教えます。HTMLこれからやるという方はご気軽に受講してください！
+          #detail_txt.ja  {{model.description}}
             #tag
               span.en
                 v-icon local_offer
-                | WEB
+                | {{model.genre}}
               span.en
                 v-icon local_offer
-                | HTML
+                | {{model.language}}
               span.en
                 v-icon local_offer
-                | Easy
+                | {{model.level}}
           //
             <ul id="review">
             <li></li>
@@ -58,7 +55,7 @@
           a.buy_btn.ja(href='#') 受講する
   // 商品詳細
   // 出品者情報
-  #account_detail
+  //- #account_detail
     #account
       img(src='img/account/account02.png', alt='')
       #account_top
@@ -105,9 +102,12 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-
+import { Classroom } from "domain/model/Classroom";
+import { ClassroomUseCase } from "domain/usecase/ClassroomUseCase";
 @Component
 export default class ClassDetail extends Vue {
+  public model = new Classroom();
+  public model.name = "あああああ";
 }
 </script>
 
@@ -121,15 +121,13 @@ export default class ClassDetail extends Vue {
   font-weight: 100;
 }
 #panav a:last-child {
-  color: #272C32;
+  color: #272c32;
 }
 .breadcrumb:before {
   color: #808798;
   vertical-align: middle;
 }
 /* -- パンくずリスト -- */
-
-
 
 /* 教室詳細ページ */
 #details {
@@ -142,16 +140,28 @@ export default class ClassDetail extends Vue {
   width: 80%;
 }
 #account_detail {
-  background: #272C32;
+  background: #272c32;
   height: 100%;
   padding: 40px 25px;
   position: relative;
   width: 310px;
 }
 #account_detail::after {
-  background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(0,0,0,1) 100%);
-  background: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(0,0,0,1) 100%);
-  background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(0,0,0,1) 100%);
+  background: -moz-linear-gradient(
+    top,
+    rgba(30, 87, 153, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(30, 87, 153, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 87, 153, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
   bottom: 0;
   content: "";
   height: 260px;
@@ -185,7 +195,7 @@ export default class ClassDetail extends Vue {
   font-weight: normal;
 }
 #class_detail_txt {
-  border-bottom: 1px solid #DBDBDB;
+  border-bottom: 1px solid #dbdbdb;
   display: flex;
   margin-bottom: 20px;
 }
@@ -197,7 +207,7 @@ export default class ClassDetail extends Vue {
   color: #808798;
 }
 #class_detail_txt li .active {
-  color: #272C32;
+  color: #272c32;
   font-weight: bold;
 }
 #txt_box {
@@ -207,7 +217,7 @@ export default class ClassDetail extends Vue {
   font-size: 16px;
 }
 #tag {
-  color: #575A61;
+  color: #575a61;
   margin: 20px 0;
 }
 #tag span {
@@ -217,14 +227,12 @@ export default class ClassDetail extends Vue {
   vertical-align: middle;
 }
 
-
-
 /* 受講ボタン・キャンセルボタン */
 #buy {
   text-align: right;
 }
 .buy_btn {
-  background: #F7745D;
+  background: #f7745d;
   border-radius: 50px;
   color: #fff;
   display: inline-block;
@@ -234,7 +242,7 @@ export default class ClassDetail extends Vue {
   width: 200px;
 }
 .cancel_btn {
-  background: #575A61;
+  background: #575a61;
   border-radius: 50px;
   color: #fff;
   display: inline-block;
@@ -245,8 +253,6 @@ export default class ClassDetail extends Vue {
   width: 200px;
 }
 /* -- 受講ボタン・キャンセルボタン -- */
-
-
 
 /* レーティング */
 #star_rating {
@@ -274,16 +280,12 @@ export default class ClassDetail extends Vue {
 }
 /* -- レーティング -- */
 
-
-
 /* 開講日 */
 #class_detail_left .date {
   color: #808798;
   font-size: 13px;
 }
 /* -- 開講日 --  */
-
-
 
 /* 開講者アカウント */
 #account img {
@@ -295,13 +297,13 @@ export default class ClassDetail extends Vue {
   padding: 10px 0 0;
 }
 #account_top .account_name {
-  color: #C7C7C7;
+  color: #c7c7c7;
   display: block;
   font-size: 18px;
   margin-bottom: 7px;
 }
 #assessment {
-  color: #575A61;
+  color: #575a61;
   display: flex;
 }
 #assessment p {
@@ -315,7 +317,7 @@ export default class ClassDetail extends Vue {
   vertical-align: text-top;
 }
 #assessment .add_account {
-  color: #C7C7C7;
+  color: #c7c7c7;
   margin: 0 0 0 5px;
 }
 #prof_txt {

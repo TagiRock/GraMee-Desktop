@@ -1,8 +1,9 @@
 <template lang="pug">
 ariticle
   //- vue-message-account-list
-  vue-message-chat
+  //- vue-message-chat
   //- vue-message-display
+  vue-class-detail
 </template>
 
 <script lang="ts">
@@ -15,6 +16,7 @@ import VueMessageAccountList from "../message/MessageAccountList";
 import VueMessageChat from "../message/MessageChat";
 import VueMessageDisplay from "../message/MessageDisplay";
 import VueCreateClassroom from "../school/CreateClassroom";
+import VueClassDetail from "../classDetail/ClassDetail"
 @Component({
   components: {
     VueBuy,
@@ -23,7 +25,8 @@ import VueCreateClassroom from "../school/CreateClassroom";
     VueMessageAccountList,
     VueMessageChat,
     VueMessageDisplay,
-    VueCreateClassroom
+    VueCreateClassroom,
+    VueClassDetail
   }
 })
 export default class Home extends Vue {

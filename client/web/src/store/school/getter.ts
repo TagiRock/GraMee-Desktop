@@ -1,8 +1,8 @@
 import { LevelType } from "domain/model/LevelType";
 import { GenreType } from "domain/model/GenreType";
-import { Classroom } from "domain/model/ClassRoom";
+import { ClassroomModel } from "domain/model/ClassRoomModel";
 export interface SchoolGetters {
     level: LevelType;
     genre: GenreType;
-    // classRoom: Classroom;
+    // classRoom: ClassroomModel;
 }

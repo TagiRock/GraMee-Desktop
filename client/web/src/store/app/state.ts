@@ -1,4 +1,4 @@
-import { Account } from "domain/model/Account";
+import { AccountModel } from "domain/model/AccountModel";
 export interface AppState {
-    account?: Account;
+    account?: AccountModel;
 }
