@@ -7,7 +7,7 @@
         a.breadcrumb(href='#') WEB
         a.breadcrumb(href='#') Easy
         a.breadcrumb(href='#') HTML
-        a.breadcrumb EnterClassTitle. EnterClassTitle.
+        a.breadcrumb {{model.name}}
     #class_detail_box
       #class_detail_left
         img(src='img/class/class01.jpg', alt='')
@@ -51,7 +51,7 @@
             <li></li>
             </ul>
         #buy
-          a.cancel_btn.ja(href='#') キャンセル
+          a.cancel_btn.ja(href='#', @click="clickCancel()") キャンセル
           a.buy_btn.ja(href='#', @click="clickTakeClassroom()") 受講する
 
 </template>
@@ -70,6 +70,7 @@ function createModel(): ClassroomModel {
   model.language = "javascript";
   model.level = "easy";
   model.price = "500";
+  //開設日も欲しい
   return model;
 }
 
@@ -77,8 +78,14 @@ function createModel(): ClassroomModel {
 export default class ClassDetail extends Vue {
   public model = createModel(); //テスト用のモデルを作成し初期化
 
+  public clickCancel() {
+    //前のページに戻る処理
+    console.log("clickCancel!");
+  }
+
   public clickTakeClassroom() {
     //受講するメソッド
+    console.log("clickTakeClassroom!");
   }
 }
 </script>
