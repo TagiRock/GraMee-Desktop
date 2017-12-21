@@ -17,7 +17,7 @@
           span (4.3)
         p.date.ja 2017 11.29 開講
       #class_detail_right
-        h2.class_name model.name
+        h2.class_name {{model.name}}
         #price_box
           button(type='button', name='favorite')
             v-icon favorite_border
@@ -52,62 +52,34 @@
             </ul>
         #buy
           a.cancel_btn.ja(href='#') キャンセル
-          a.buy_btn.ja(href='#') 受講する
-  // 商品詳細
-  // 出品者情報
-  //- #account_detail
-    #account
-      img(src='img/account/account02.png', alt='')
-      #account_top
-        a.account_name.ja(href='#') Sample Name
-        #assessment
-          p
-            v-icon thumb_up
-            | 23
-          p
-            v-icon thumb_down
-            | 3
-          a.add_account(href='#')
-            v-icon person_add
-      p#prof_txt.ja
-        | よろしくお願いします！主にWEB開発を中心にHTMLやCSSの基礎を
-        | 安く教えます。これからはじめたいという初心者の方はご気軽に受講してください！
-      #prof_class_box
-        .img_x2
-          .prof_class
-            a(href='#')
-              img(src='img/class/class02.jpg', alt='')
-            p.ja EnterClassTitle. EnterClassTitle.
-          .prof_class
-            a(href='#')
-              img(src='img/class/class10.jpg', alt='')
-            p.ja EnterClassTitle. EnterClassTitle.
-        .img_x1
-          a(href='#')
-            img(src='img/class/class04.jpg', alt='')
-          p.ja EnterClassTitle. EnterClassTitle.
-        .img_x2
-          .prof_class
-            a(href='#')
-              img(src='img/class/class06.jpg', alt='')
-            p.ja EnterClassTitle. EnterClassTitle.
-          .prof_class
-            a(href='#')
-              img(src='img/class/class09.jpg', alt='')
-            p.ja EnterClassTitle. EnterClassTitle.
-            // 出品者情報
+          a.buy_btn.ja(href='#', @click="clickTakeClassroom()") 受講する
 
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import { Classroom } from "domain/model/Classroom";
+import { ClassroomModel } from "domain/model/ClassroomModel";
 import { ClassroomUseCase } from "domain/usecase/ClassroomUseCase";
+
+function createModel(): ClassroomModel {
+  const model = new ClassroomModel();
+  model.name = "Jquery入門";
+  model.description = "説明だよ説明だよ説明だよ説明だよ説明だよ";
+  model.genre = "Web";
+  model.language = "javascript";
+  model.level = "easy";
+  model.price = "500";
+  return model;
+}
+
 @Component
 export default class ClassDetail extends Vue {
-  public model = new Classroom();
-  public model.name = "あああああ";
+  public model = createModel(); //テスト用のモデルを作成し初期化
+
+  public clickTakeClassroom() {
+    //受講するメソッド
+  }
 }
 </script>
 
@@ -355,4 +327,3 @@ export default class ClassDetail extends Vue {
   width: 100%;
 }
 </style>
-
