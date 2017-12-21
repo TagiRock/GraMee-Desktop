@@ -1,4 +1,4 @@
-node_modules/*
-lib/*
+functions/node_modules/*
+functions/lib/*
 firebase-debug.log
-package-lock.json
+functions/package-lock.json
