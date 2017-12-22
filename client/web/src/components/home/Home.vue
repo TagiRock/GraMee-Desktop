@@ -2,8 +2,10 @@
 ariticle
   //- vue-message-account-list
   //- vue-message-chat
+  //- vue-buy
+  vue-buy-comp
   //- vue-message-display
-  vue-class-detail
+  //- vue-class-detail
 </template>
 
 <script lang="ts">
@@ -16,7 +18,7 @@ import VueMessageAccountList from "../message/MessageAccountList";
 import VueMessageChat from "../message/MessageChat";
 import VueMessageDisplay from "../message/MessageDisplay";
 import VueCreateClassroom from "../school/CreateClassroom";
-import VueClassDetail from "../classDetail/ClassDetail"
+import VueClassDetail from "../classDetail/ClassDetail";
 @Component({
   components: {
     VueBuy,

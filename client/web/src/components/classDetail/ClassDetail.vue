@@ -77,7 +77,7 @@ function createModel(): ClassroomModel {
 @Component
 export default class ClassDetail extends Vue {
   public model = createModel(); //テスト用のモデルを作成し初期化
-
+ 
   public clickCancel() {
     //前のページに戻る処理
     console.log("clickCancel!");
