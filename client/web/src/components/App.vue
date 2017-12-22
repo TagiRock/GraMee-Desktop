@@ -1,24 +1,15 @@
 <template lang="pug">
-div#content
-  vue-sidebar
-  div#content_right
-    vue-header
-    router-view
+  router-view
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import VueHeader from "./Header.vue";
-import VueSidebar from "./Sidebar.vue";
-import VueHome from "./home/Home.vue";
-import Peer from "skyway-js";
+import VMain from "./main/Main.vue";
 
 @Component({
   components: {
-    VueHeader,
-    VueSidebar,
-    VueHome
+    VMain
   }
 })
 export default class App extends Vue {}
@@ -28,13 +19,15 @@ export default class App extends Vue {}
 html {
   line-height: normal;
 }
-html,body,
-#content,#content_right,
+html,
+body,
+#content,
+#content_right,
 main {
   height: 100%;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 #content {
@@ -64,7 +57,8 @@ a:hover {
 p {
   margin: 0;
 }
-h2,h3 {
+h2,
+h3 {
   font-size: 25px;
   font-weight: 600;
   margin: 0;
@@ -72,7 +66,9 @@ h2,h3 {
 textarea {
   resize: none;
 }
-button,input,textarea {
+button,
+input,
+textarea {
   outline: none;
 }
 button {
@@ -88,22 +84,17 @@ button:focus {
   zoom: 1;
 }
 .en {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-.ja,.class_name {
-  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+.ja,
+.class_name {
+  font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro",
+    "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic",
+    sans-serif;
 }
-
-
 
 section {
   min-width: 500px;
   height: 100%;
-}
-.el-header {
-  padding: 0;
-}
-.el-main {
-  padding: 0;
 }
 </style>

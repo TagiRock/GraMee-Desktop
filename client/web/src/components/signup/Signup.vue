@@ -2,7 +2,7 @@
 #login_box
   ul
     li
-      img(src='assets/images/login/login_mainv01.jpg', alt='')
+      img(src="assets/images/login/login_mainv01.jpg")
   h1
     span GraMee
     | WELL COME

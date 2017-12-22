@@ -87,7 +87,8 @@ const config: Config = {
   ],
   devServer: {
     inline: true,
-    publicPath: "/"
+    publicPath: "/",
+    historyApiFallback: true
   },
   devtool: "inline-source-map"
 };
