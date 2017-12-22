@@ -1,15 +1,9 @@
 <template lang="pug">
 #message
   #chat_box
-    #account
-      img(src='assets/images/message_chat/account01.png', alt='')
-      h3.account_name 田木一郎
-      p.online ログイン
-      .call
-        md-icon phone
     #chat
       form.sent_message
-        textarea(name='name', rows='8', cols='80', placeholder='ここにメッセージを入力')
+        textarea(v-model="textMessage",v-on:keyup.enter="submit()",name='name', rows='1', cols='10', placeholder='ここにメッセージを入力')
 
 </template>
  
@@ -18,13 +12,25 @@ import Component from "vue-class-component";
 import Vue from "vue";
 
 @Component
-export default class MessageChat extends Vue {}
+export default class MessageChat extends Vue {
+  public textMessage: string = "";
+  public submit() {
+    //メッセージ送信
+    console.log(this.textMessage);
+    this.textMessage = "";
+  }
+}
 </script>
 
 <style lang="css" scoped>
 #message {
   display: flex;
+  position: absolute;
+  background-color: #fff;
+  z-index: 900;
   height: 100%;
+  right: 0;
+  width: 28%;
 }
 #chat_box {
   width: 100%;
@@ -68,7 +74,7 @@ export default class MessageChat extends Vue {}
   border-top: 1px solid #e5e5e5;
   top: 450px;
   font-size: 16px;
-  height: 100px;
+  height: 80px;
   padding: 20px 0;
   position: absolute;
   width: 100%;
