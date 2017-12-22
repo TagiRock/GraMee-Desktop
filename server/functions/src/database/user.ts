@@ -1,14 +1,14 @@
-import * as admin from "firebase-admin";
-//import { UserModel } from "./model/UserModel";
-function createUser(uid: string) {
-    //return admin.firestore().collection("users").doc(uid).create(user);
-}
+import { ClassroomRecord } from "./classroom";
+import { Pring, property } from "pring";
 
-function deleteUser(uid: string) {
-    return admin.firestore().collection("users").doc(uid).delete();
+export class UserRecord extends Pring.Base {
+    @property public id: string;
+    @property public email: string;
+    @property public name?: string;
+    @property public discription?: string;
+    @property public profileImageUrl?: string;
+    @property public rateing: number;
+    @property public possessionPoint: number;
+    @property public teacherHistory = new Pring.ReferenceCollection<ClassroomRecord>(this);
+    @property public studentHistory = new Pring.ReferenceCollection<ClassroomRecord>(this);
 }
-
-export default {
-    createUser,
-    deleteUser
-};
