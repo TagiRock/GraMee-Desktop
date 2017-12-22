@@ -21,7 +21,7 @@ import VueMessageChat from "../message/MessageChat";
 import VueMessageDisplay from "../message/MessageDisplay";
 import VueCreateClassroom from "../school/CreateClassroom";
 import VueClassroom from "../classroom/Classroom";
-import VueModalTest from "../school/ModalTest"
+import VueModalTest from "../school/ModalTest";
 @Component({
   components: {
     VueBuy,

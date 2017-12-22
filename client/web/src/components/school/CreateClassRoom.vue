@@ -15,11 +15,11 @@
         label(for='') ジャンルを選ぶ
         v-select(v-model='model.genre', :options="['web']")
       .language_select
-        label(for='') 言語を選ぶ
-        v-select(v-model='model.language', v-select multiple :options="['html','css','javascript','php']")
-      .level_select
         label(for='') レベルを選ぶ
         v-select(v-model="model.level", :options="['easy','normal','hard']")
+      .level_select
+        label(for='') 言語を選ぶ
+        v-select(v-model='model.language', v-select multiple :options="['html','css','javascript','php']")
       .price
         label(for='') 価格
         input(v-model="model.price", type="number", min='500', max='50000', @change="calculateMoney()")

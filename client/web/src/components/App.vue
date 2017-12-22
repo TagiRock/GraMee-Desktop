@@ -1,15 +1,18 @@
 <template lang="pug">
-  router-view
+  //- router-view
+  v-home
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
 import VMain from "./main/Main.vue";
+import VHome from "./home/Home";
 
 @Component({
   components: {
-    VMain
+    VMain,
+    VHome
   }
 })
 export default class App extends Vue {}
