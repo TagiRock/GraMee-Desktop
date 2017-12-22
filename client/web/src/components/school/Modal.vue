@@ -9,7 +9,7 @@
             img(src='assets/images/buy_comp/step.svg', alt='')
             .btnbox.cf
                 button.back(type='button', name='button',@click="$emit('close')") Schoolに戻る
-                button.message(type='button', name='button', @click="clickMessageButton()") Message
+                router-link.message(tag="button" to="/message" type='button') Message
 
 
 </template>

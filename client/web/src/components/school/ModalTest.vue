@@ -22,7 +22,7 @@ import VueModal from "./Modal";
 export default class ModalTest extends Vue {
   public active: boolean = false;
   public Hub = new Vue();
-  public showModal: boolean = true;
+
   public tasks: {
     id: "1";
     name: "adasfa";

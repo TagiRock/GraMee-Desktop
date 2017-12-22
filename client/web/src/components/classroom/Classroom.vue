@@ -1,6 +1,7 @@
 <template lang="pug">
 #details
   // 商品詳細
+  vue-modal(v-if='showModal', @close='showModal = false')
   #class_detail
     #panav
       .col.s12
@@ -59,12 +60,13 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-
 import { ClassroomModel } from "domain/model/ClassroomModel";
 import { ClassroomUseCase } from "domain/usecase/ClassroomUseCase";
+import VueModal from "../school/Modal";
 
 function createModel(): ClassroomModel {
   const model = new ClassroomModel();
+
   model.name = "Jquery入門";
   model.description = "説明だよ説明だよ説明だよ説明だよ説明だよ";
   model.genre = "Web";
@@ -75,10 +77,14 @@ function createModel(): ClassroomModel {
   return model;
 }
 
-@Component
+@Component({
+  components: {
+    VueModal
+  }
+})
 export default class Classroom extends Vue {
   public model = createModel(); //テスト用のモデルを作成し初期化
- 
+  public showModal: boolean = false;
   public clickCancel() {
     //前のページに戻る処理
     console.log("clickCancel!");
@@ -87,6 +93,10 @@ export default class Classroom extends Vue {
   public clickTakeClassroom() {
     //受講するメソッド
     console.log("clickTakeClassroom!");
+    //受講処理(サーバ側)
+
+    //モーダル表示
+    this.showModal = true;
   }
 }
 </script>
