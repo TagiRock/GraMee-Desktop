@@ -8,7 +8,7 @@ const createUser = functions.auth.user().onCreate(event => {
         email: event.data.email,
         name: event.data.displayName,
     };
-    return userDao.createUser(user.id, user);
+    //return userDao.createUser(user.id, user);
 });
 
 const deleteUser = functions.auth.user().onDelete(event => {

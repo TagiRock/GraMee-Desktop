@@ -5,8 +5,8 @@ ariticle
   //- vue-buy
   //- vue-buy-comp
   //- vue-message-display
-  vue-create-classroom
-  //- vue-classroom
+  //- vue-create-classroom
+  vue-classroom
   //- vue-modal-test
 </template>
 
