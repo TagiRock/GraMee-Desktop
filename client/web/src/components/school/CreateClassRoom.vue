@@ -65,7 +65,7 @@ export default class CreateClassroom extends Vue {
     this.fee = Math.floor(Number(this.model.price) / 100 * this.rate);
     this.sum = Number(this.model.price) - this.fee;
   }
-  public clickCreateClassroom() {
+  public clickCreateClassroom() { 
     console.log(this.model.name);
     console.log(this.model.description);
     console.log(this.model.genre);

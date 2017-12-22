@@ -12,7 +12,7 @@
         textarea(name='name', rows='8', cols='80', placeholder='ここにメッセージを入力')
 
 </template>
-
+ 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";

@@ -7,7 +7,7 @@ import Component from "vue-class-component";
 import Vue from "vue";
 
 @Component
-export default class Massage extends Vue {
+export default class Message extends Vue {
   public badgeCount = 0;
 }
 </script>
