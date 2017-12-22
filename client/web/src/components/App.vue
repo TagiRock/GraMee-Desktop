@@ -3,6 +3,7 @@ div#content
   vue-sidebar
   div#content_right
     vue-header
+    //- vue-home
     router-view
 </template>
 

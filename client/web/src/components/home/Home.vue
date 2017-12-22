@@ -3,9 +3,10 @@ ariticle
   //- vue-message-account-list
   //- vue-message-chat
   //- vue-buy
-  vue-buy-comp
+  //- vue-buy-comp
   //- vue-message-display
   //- vue-class-detail
+  vue-modal-test
 </template>
 
 <script lang="ts">
@@ -19,6 +20,7 @@ import VueMessageChat from "../message/MessageChat";
 import VueMessageDisplay from "../message/MessageDisplay";
 import VueCreateClassroom from "../school/CreateClassroom";
 import VueClassDetail from "../classDetail/ClassDetail";
+import VueModalTest from "../school/ModalTest"
 @Component({
   components: {
     VueBuy,
@@ -28,14 +30,14 @@ import VueClassDetail from "../classDetail/ClassDetail";
     VueMessageChat,
     VueMessageDisplay,
     VueCreateClassroom,
-    VueClassDetail
+    VueClassDetail,
+    VueModalTest
   }
 })
 export default class Home extends Vue {
   public badgeCount = 0;
 }
 </script>
-
 
 <style lang="scss" scoped>
 header {

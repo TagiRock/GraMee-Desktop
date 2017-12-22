@@ -59,6 +59,7 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
+
 import { ClassroomModel } from "domain/model/ClassroomModel";
 import { ClassroomUseCase } from "domain/usecase/ClassroomUseCase";
 
