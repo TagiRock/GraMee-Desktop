@@ -18,7 +18,7 @@ const routes: RouteConfig[] = [
       { path: "", component: School },
       { path: "message", component: Message, },
       { path: "home", component: Home },
-      { path: "setting", component: Setting, meta: { requiresAuth: true } },
+      { path: "setting", component: Setting },
     ]
   },
   { path: "/login", component: Login },
@@ -32,11 +32,9 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   const account = store.getters[AppGetters.user];
-  if (to.matched.some(record => record.meta.requiresAuth)) {
-    if (account) {
-      next({ path: "/login", query: {} });
-    }
-  } else if (to.path === "/login" || to.path === "/signin") {
+  if (to.matched.some(record => record.meta.requiresAuth) && !account) {
+    next({ path: "/login", query: {} });
+  } else if ((to.path === "/login" || to.path === "/signin") && account) {
     if (account) {
       next({ path: "/", query: {} });
     }

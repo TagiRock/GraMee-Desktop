@@ -12,7 +12,7 @@
       input(type='text', placeholder='E-mail Address', v-model="email")
       input(type='password', value='', placeholder='Password', v-model="password")
       button.login_btn(type='button', @click="clickSigninBtn(email,password)") アカウント作成
-      a(href='#') アカウントをお持ちの方はこちら
+      router-link(to="/login") アカウントをお持ちの方はこちら
 
 </template>
 

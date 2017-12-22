@@ -11,18 +11,8 @@
     form.login(method='post')
       input(type='text', name='', value='', placeholder='E-mail Address', v-model="email")
       input(type='password', name='', value='', placeholder='Password', v-model="password")
-      ul.sns
-        li.facebook
-          a(href='#')
-            img(src='assets/images/login/facebook.svg', alt='')
-        li.twitter
-          a(href='#')
-            img(src='assets/images/login/twitter.svg', alt='')
-        li.google_plus
-          a(href='#')
-            img(src='assets/images/login/google_plus.svg', alt='')
       button.login_btn(type='button', name='button', @click="clickLoginBtn(email,password)") ログイン
-      a(href='#') 新規アカウントを作成
+      router-link(to="/signup") 新規アカウントを作成
       a(href='#') パスワードをお忘れですか？
 </template>
 
@@ -91,21 +81,7 @@ export default class Login extends Vue {
 .login {
   text-align: center;
 }
-.sns {
-  display: flex;
-  justify-content: center;
-  margin: 60px 0;
-}
-.sns li {
-  border-radius: 50%;
-  height: 60px;
-  margin: 0 10px;
-  width: 60px;
-}
-.sns li a {
-  display: block;
-  height: 60px;
-}
+
 .login button {
   background: #f7745d;
   border-radius: 50px;

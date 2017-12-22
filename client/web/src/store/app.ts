@@ -8,7 +8,11 @@ import { AuthUseCase } from "domain/usecase/AuthUseCase";
 import Vuex, { createNamespacedHelpers } from "vuex";
 import { DefineGetters, DefineMutations, DefineActions } from "vuex-type-helper";
 const state: AppState = {
-    
+    /*account: {
+        id: "12345",
+        token: "token",
+        name: "hoge"
+    }*/
 };
 
 /*tslint:disable　no-shadowed-variable　arrow-parens*/
