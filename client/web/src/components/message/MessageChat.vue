@@ -6,7 +6,7 @@
       h3.account_name 田木一郎
       p.online ログイン
       .call
-        v-icon phone
+        md-icon phone
     #chat
       form.sent_message
         textarea(name='name', rows='8', cols='80', placeholder='ここにメッセージを入力')
