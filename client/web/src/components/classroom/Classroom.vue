@@ -11,11 +11,8 @@
         a.breadcrumb {{model.name}}
     #class_detail_box
       #class_detail_left
-        img(src='img/class/class01.jpg', alt='')
-        #star_rating
-          #star_rating_front(style='width: 90%') ★★★★★
-          #star_rating_back ★★★★★
-          span (4.3)
+        img(src='assets/images/card/class01.jpg', alt='')
+
         p.date.ja 2017 11.29 開講
       #class_detail_right
         h2.class_name {{model.name}}
@@ -342,6 +339,13 @@ export default class Classroom extends Vue {
   margin: 0 0 20px;
 }
 .img_x1 img {
+  width: 100%;
+}
+
+#class_detail_right {
+  width: 100%;
+}
+#class_detail {
   width: 100%;
 }
 </style>
