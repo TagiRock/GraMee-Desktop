@@ -1,5 +1,8 @@
-export interface Account {
+export interface AccountModel {
     id: string;
-    email: string;
     name?: string;
+    discription?: string;
+    profileImageUrl?: string;
+    rateing: number;
+    possessionPoint: number;
 }

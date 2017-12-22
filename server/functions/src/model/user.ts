@@ -1,5 +1,7 @@
-
-export interface User {
+export interface UserModel {
     id: string;
-    email: string;
+    name?: string;
+    discription?: string;
+    profileImageUrl?: string;
+    lateing: number;
 }

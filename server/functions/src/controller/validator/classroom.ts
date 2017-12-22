@@ -15,7 +15,8 @@ const schema = {
             "uniqueItems": true
         },
         "price": { "type": "number", "minimum": 500, "maximum": 50000 }
-    }
+    },
+    "minProperties": 4
 };
 
 const validater = ajv.compile(schema);
