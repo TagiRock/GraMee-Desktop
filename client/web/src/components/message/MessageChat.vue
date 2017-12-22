@@ -2,6 +2,8 @@
 #message
   #chat_box
     #chat
+      .chat_message
+        vue-message-text
       form.sent_message
         textarea(v-model="textMessage",v-on:keyup.enter="submit()",name='name', rows='1', cols='10', placeholder='ここにメッセージを入力')
 
@@ -10,14 +12,20 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
+import VueMessageText from "./MessageText";
 
-@Component
+@Component({
+  components: {
+    VueMessageText
+  }
+})
 export default class MessageChat extends Vue {
   public textMessage: string = "";
   public submit() {
     //メッセージ送信
     console.log(this.textMessage);
     this.textMessage = "";
+
   }
 }
 </script>
@@ -81,5 +89,9 @@ export default class MessageChat extends Vue {
 }
 .sent_message textarea::placeholder {
   color: #a5a2a2;
+}
+
+.chat_message{
+  padding: 20px 0;
 }
 </style>
