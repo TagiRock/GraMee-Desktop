@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="2530 -806 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-アートボード_3);
+      }
+
+      .cls-2 {
+        fill: #bcbcbc;
+      }
+
+      .cls-3 {
+        fill: #272c32;
+      }
+    </style>
+    <clipPath id="clip-アートボード_3">
+      <rect x="2530" y="-806" width="80" height="80"/>
+    </clipPath>
+  </defs>
+  <g id="アートボード_3" data-name="アートボード – 3" class="cls-1">
+    <g id="グループ化_617" data-name="グループ化 617" transform="translate(4188.244 -1759.756)">
+      <rect id="長方形_371" data-name="長方形 371" class="cls-2" width="80" height="80" rx="40" transform="translate(-1658 954)"/>
+      <path id="パス_143" data-name="パス 143" class="cls-3" d="M31.112,31.112A13.556,13.556,0,1,0,17.556,17.556,13.552,13.552,0,0,0,31.112,31.112Zm0,6.778C22.064,37.89,4,42.432,4,51.447v6.778H58.225V51.447C58.225,42.432,40.161,37.89,31.112,37.89Z" transform="translate(-1649.112 961.288)"/>
+    </g>
+  </g>
+</svg>
