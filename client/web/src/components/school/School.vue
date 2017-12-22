@@ -1,6 +1,5 @@
 <template lang="pug">
 div
-  vue-genre-navigation
   vue-genre
 </template>
 
@@ -28,4 +27,3 @@ export default class School extends Vue {
 <style lang="scss" scoped>
 
 </style>
-

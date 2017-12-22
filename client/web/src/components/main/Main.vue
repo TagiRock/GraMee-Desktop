@@ -28,6 +28,7 @@ export default class App extends Vue {}
 }
 
 #content-right {
+  overflow: scroll;
   width: 100%;
   height: 100%;
 }
