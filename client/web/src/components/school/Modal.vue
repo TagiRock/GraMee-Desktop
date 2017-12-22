@@ -11,7 +11,6 @@
                 button.back(type='button', name='button',@click="$emit('close')") Schoolに戻る
                 router-link.message(tag="button" to="/message" type='button') Message
 
-
 </template>
 
 <script lang="ts">

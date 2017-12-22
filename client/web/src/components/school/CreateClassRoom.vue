@@ -16,7 +16,7 @@
         v-select(v-model='model.genre', :options="['web']")
       .language_select
         label(for='') 言語を選ぶ
-        v-select(v-model='model.language', :options="['html','css','javascript','php']")
+        v-select(v-model='model.language', v-select multiple :options="['html','css','javascript','php']")
       .level_select
         label(for='') レベルを選ぶ
         v-select(v-model="model.level", :options="['easy','normal','hard']")
@@ -65,7 +65,7 @@ export default class CreateClassroom extends Vue {
     this.fee = Math.floor(Number(this.model.price) / 100 * this.rate);
     this.sum = Number(this.model.price) - this.fee;
   }
-  public clickCreateClassroom() { 
+  public clickCreateClassroom() {
     console.log(this.model.name);
     console.log(this.model.description);
     console.log(this.model.genre);
