@@ -3,8 +3,7 @@ div#content
   vue-sidebar
   div#content_right
     vue-header
-    vue-home
-    //- v-select(v-model='classModel.genre', :options="['web','app','game']")
+    router-view
 </template>
 
 <script lang="ts">
