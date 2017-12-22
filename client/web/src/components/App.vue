@@ -1,4 +1,5 @@
 <template lang="pug">
+div#app
   router-view
 </template>
 
@@ -6,97 +7,25 @@
 import Component from "vue-class-component";
 import Vue from "vue";
 import VMain from "./main/Main.vue";
-import VHome from "./home/Home";
 
 @Component({
   components: {
-    VMain,
-    VHome
+    VMain
   }
 })
 export default class App extends Vue {}
 </script>
 
-<style lang="css">
-html {
-  line-height: normal;
-}
-html,
-body,
-#content,
-#content_right,
-main {
-  height: 100%;
-}
+<style lang="css" scoped>
+
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
-#content {
-  display: flex;
-}
-#content_right {
-  width: 100%;
-}
-ul {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-a {
-  text-decoration: none;
-}
-a:hover {
-  transition: color 0.35s ease;
-  -webkit-transition: color 0.35s ease;
-  -moz-transition: color 0.35s ease;
-}
-p {
-  margin: 0;
-}
-h2,
-h3 {
-  font-size: 25px;
-  font-weight: 600;
-  margin: 0;
-}
-textarea {
-  resize: none;
-}
-button,
-input,
-textarea {
-  outline: none;
-}
-button {
-  border: none;
-}
-button:focus {
-  background: none;
-}
-.cf:after {
-  clear: both;
-}
-.cf {
-  zoom: 1;
-}
-.en {
-  font-family: "Montserrat", sans-serif;
-}
-.ja,
-.class_name {
-  font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro",
-    "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic",
-    sans-serif;
-}
 
-section {
-  min-width: 500px;
+#app {
+  width: 100%;
   height: 100%;
 }
 </style>

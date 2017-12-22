@@ -24,6 +24,7 @@ export default class App extends Vue {}
 <style lang="css" scoped>
 #content {
   height: 100%;
+  display: flex;
 }
 
 #content-right {
