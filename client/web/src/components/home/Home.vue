@@ -9,7 +9,7 @@
   //- vue-message-chat
   //- vue-message-display
   //- vue-school
-  vue-create-classroom
+  //- vue-create-classroom
   //- vue-test-modal
   //- vue-test-user-auth
 </template>
