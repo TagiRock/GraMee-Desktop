@@ -18,7 +18,7 @@
         h2.class_name {{model.name}}
         #price_box
           button(type='button', name='favorite')
-            v-icon favorite_border
+            md-icon favorite_border
           span#price
             span.tax.ja (税込)
             | ￥{{model.price}}
@@ -33,13 +33,13 @@
           #detail_txt.ja  {{model.description}}
             #tag
               span.en
-                v-icon local_offer
+                md-icon local_offer
                 | {{model.genre}}
               span.en
-                v-icon local_offer
+                md-icon local_offer
                 | {{model.language}}
               span.en
-                v-icon local_offer
+                md-icon local_offer
                 | {{model.level}}
           //
             <ul id="review">
