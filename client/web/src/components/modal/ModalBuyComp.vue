@@ -18,11 +18,7 @@ import Component from "vue-class-component";
 import Vue from "vue";
 
 @Component
-export default class Modal extends Vue {
-  public clickMessageButton() {
-    //メッセージ画面へのルーティング
-  }
-}
+export default class ModalBuyComp extends Vue {}
 </script>
 
 <style lang="css" scoped>

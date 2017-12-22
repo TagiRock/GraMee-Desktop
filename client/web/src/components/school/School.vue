@@ -17,7 +17,7 @@ import { Getter } from "vuex-class";
   }
 })
 export default class School extends Vue {
- //
+  //
 }
 </script>
 

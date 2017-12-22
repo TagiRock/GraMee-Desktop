@@ -4,7 +4,7 @@ div aslkfdlsakf;lksal;fkas;l
     li(v-for='task in tasks')
       | {{ task.id }}: {{ task.name }} 
       button(@click='open()', @keyup.esc='showModal = false') more
-  vue-modal(v-if='showModal', @close='showModal = false')
+  //- vue-modal(v-if='showModal', @close='showModal = false')
 
 
 </template>
@@ -12,11 +12,9 @@ div aslkfdlsakf;lksal;fkas;l
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import VueModal from "./Modal";
-
 @Component({
   components: {
-    VueModal
+
   }
 })
 export default class ModalTest extends Vue {
