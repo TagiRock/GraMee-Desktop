@@ -1,6 +1,5 @@
 <template lang="pug">
-  //- router-view
-  v-home
+  router-view
 </template>
 
 <script lang="ts">
