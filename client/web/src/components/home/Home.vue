@@ -5,8 +5,8 @@ ariticle
   //- vue-buy
   //- vue-buy-comp
   //- vue-message-display
-  //- vue-class-detail
-  vue-modal-test
+  vue-classroom
+  //- vue-modal-test
 </template>
 
 <script lang="ts">
@@ -19,7 +19,7 @@ import VueMessageAccountList from "../message/MessageAccountList";
 import VueMessageChat from "../message/MessageChat";
 import VueMessageDisplay from "../message/MessageDisplay";
 import VueCreateClassroom from "../school/CreateClassroom";
-import VueClassDetail from "../classDetail/ClassDetail";
+import VueClassroom from "../classroom/Classroom";
 import VueModalTest from "../school/ModalTest"
 @Component({
   components: {
@@ -30,7 +30,7 @@ import VueModalTest from "../school/ModalTest"
     VueMessageChat,
     VueMessageDisplay,
     VueCreateClassroom,
-    VueClassDetail,
+    VueClassroom,
     VueModalTest
   }
 })

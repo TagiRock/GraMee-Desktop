@@ -76,7 +76,7 @@ function createModel(): ClassroomModel {
 }
 
 @Component
-export default class ClassDetail extends Vue {
+export default class Classroom extends Vue {
   public model = createModel(); //テスト用のモデルを作成し初期化
  
   public clickCancel() {
