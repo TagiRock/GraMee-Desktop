@@ -10,7 +10,7 @@
     h1 aaaaaaaaaaaaaaa
   #call_icons
     .call_end
-      v-icon call_end
+      md-icon(large) call_end
 
 </template>
 
