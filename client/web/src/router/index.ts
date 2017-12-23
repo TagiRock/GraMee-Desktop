@@ -20,11 +20,11 @@ const routes: RouteConfig[] = [
       { path: "message", component: Message, },
       { path: "home", component: Home },
       { path: "setting", component: Setting },
+      { path: "create", component: CreateClassroom },
     ]
   },
   { path: "/login", component: Login },
   { path: "/signup", component: Signup },
-  { path: "/create", component: CreateClassroom },
 ];
 
 const router = new VueRouter({
