@@ -19,6 +19,7 @@
 import Component from "vue-class-component";
 import Vue from "vue";
 import VueMessageChat from "./MessageChat";
+import { Usecase } from "./Usecase";
 
 @Component({
   components: {
@@ -27,9 +28,21 @@ import VueMessageChat from "./MessageChat";
 })
 export default class MessageDisplay extends Vue {
   public showChat: boolean = false;
-
+  public usecase = new Usecase();
+  public remoteStream: MediaStream;
+  public playerEnable = false;
   public changeShowChat() {
     this.showChat = !this.showChat;
+  }
+  public created() {
+    this.usecase.init();
+    this.usecase.callback = (stream: MediaStream) => {
+      const video = this.$el.querySelector("video");
+      if (video) {
+        video.srcObject = stream;
+        video.play();
+      }
+    };
   }
 }
 </script>
@@ -95,5 +108,4 @@ export default class MessageDisplay extends Vue {
   font-size: 40px;
   margin: 10px 0 0;
 }
-
 </style>

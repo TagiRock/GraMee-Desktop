@@ -5,7 +5,8 @@ port.onMessage.addListener(function (message) {
 });
 
 window.addEventListener('message', function (event) {
+    console.log(event);
     if (event.source === window) {
-        port.postMessage( event.data );
+        port.postMessage( event.data ,function(res){});
     }
 });

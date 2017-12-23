@@ -451,6 +451,13 @@ declare namespace Peer {
         * @param cb Callback function
         */
         on(event: 'data', cb: (stream: MediaStream) => void): void;
+    
+        /**
+        * MediaStream received from peer in the room.
+        * @param event Event name
+        * @param cb Callback function
+        */
+        on(event: 'stream', cb: (stream: MediaStream) => void): void;
     }
 
     interface MeshRoom {
@@ -475,12 +482,6 @@ declare namespace Peer {
          * @param The data to send.
          */
         send(data: any): void;
-
-        /**
-        * @param event Event name
-        * @param cb Callback function
-        */
-        on(event: string, cb: () => void): void;
 
         /**
          * All connections in the room has closed.
@@ -537,6 +538,12 @@ declare namespace Peer {
         * @param cb Callback function
         */
         on(event: 'data', cb: (stream: MediaStream) => void): void;
+        
+        /**
+        * MediaStream received from peer in the room.
+        * @param event Event name
+        * @param cb Callback function
+        */
+        on(event: 'stream', cb: (stream: MediaStream) => void): void;
     }
-
 }
