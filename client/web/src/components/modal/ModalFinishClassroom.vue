@@ -6,7 +6,8 @@
               h2.comp_ttl 授業を終了しますか？
               .btnbox.cf
                 button.back(type='button', name='button',@click="$emit('cancel')") キャンセル
-                button.end(type='button', name='button',@click="$emit('closeClassroom')") 終了する
+                a(href='/')
+                  button.end(type='button', name='button',@click="$emit('closeClassroom')") 終了する
 
 </template>
 

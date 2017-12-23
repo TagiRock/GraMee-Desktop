@@ -32,7 +32,8 @@
           span ¥{{sum}}
   .btnbox.cf
     button.cancel(type='button', name='button', @click="clickCancel()") キャンセル
-    button.open_btn(type='submit', name='button', @click="clickCreateClassroom()") 開講する
+    a(href='/')
+      button.open_btn(type='submit', name='button', @click="clickCreateClassroom()") 開講する
 
 </template>
 

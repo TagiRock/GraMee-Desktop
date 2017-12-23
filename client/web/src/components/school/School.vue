@@ -1,11 +1,14 @@
 <template lang="pug">
 div.class_listbox
+  a(href='/create')
+    img.open_classbtn(src='assets/images/open_classbtn.svg',tag="button" to="/create" type='button',)
   img#first_view_image(v-bind:src="imageUrl") 
   div#genre_box
     vue-section-header
     ul
       li
         vue-section(v-for='list in lists', :section="list" )
+
 </template>
 
 <script lang="ts">
@@ -125,6 +128,11 @@ export default class School extends Vue {
       ]
     }
   ];
+public create(){
+
+
+}
+
 }
 </script>
 
@@ -138,5 +146,11 @@ export default class School extends Vue {
 .class_listbox {
   overflow: scroll;
   height: 100%;
+}
+.open_classbtn {
+  position: absolute;
+  right: 20px;
+  width: 160px;
+  bottom: 10px;
 }
 </style>

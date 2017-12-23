@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2282 309 176 176">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-アートボード_1);
+      }
+
+      .cls-2 {
+        fill: #f7745d;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 17px;
+        font-family: HiraginoSans-W7, Hiragino Sans;
+      }
+
+      .cls-5 {
+        filter: url(#楕円形_13);
+      }
+    </style>
+    <filter id="楕円形_13" x="-2283" y="304" width="178" height="178" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-アートボード_1">
+      <rect x="-2282" y="309" width="176" height="176"/>
+    </clipPath>
+  </defs>
+  <g id="アートボード_1" data-name="アートボード – 1" class="cls-1">
+    <g class="cls-5" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <circle id="楕円形_13-2" data-name="楕円形 13" class="cls-2" cx="80" cy="80" r="80" transform="translate(-2274 310)"/>
+    </g>
+    <text id="教室をひらく" class="cls-3" transform="translate(-2247.793 433.966)"><tspan x="0" y="0">教室をひらく</tspan></text>
+    <path id="パス_24" data-name="パス 24" class="cls-4" d="M16.55,42.575v15.55l27.213,14.85,27.213-14.85V42.575L43.763,57.426ZM43.763,3,1,26.325,43.763,49.651,78.751,30.563V57.426h7.775v-31.1Z" transform="translate(-2237.759 340.164)"/>
+  </g>
+</svg>
