@@ -49,6 +49,7 @@ export default class MessageHeader extends Vue {
 .call {
   background: #3074ff;
   border-radius: 50%;
+  cursor: pointer;
   height: 60px;
   position: absolute;
   right: 30px;
@@ -64,6 +65,7 @@ export default class MessageHeader extends Vue {
 .class_end {
   background: #f75d5d;
   border-radius: 50%;
+  cursor: pointer;
   height: 60px;
   position: absolute;
   right: 110px;

@@ -22,7 +22,7 @@ export default class ModalFinishClassroom extends Vue {
 
 <style lang="css" scoped>
 
-.comp_box {
+.modal-container {
   background: #fff;
   border-radius: 6px;
   margin: 0 auto;
@@ -81,7 +81,7 @@ button {
 .modal-container {
   width: 650px;
   margin: 0px auto;
-  padding: 20px 20px;
+  padding: 60px 20px;
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
@@ -133,4 +133,3 @@ button {
   }
 }
 </style>
-

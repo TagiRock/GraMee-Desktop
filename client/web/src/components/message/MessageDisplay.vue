@@ -58,6 +58,7 @@ export default class MessageDisplay extends Vue {
   font-weight: 100;
 }
 .message_box {
+  cursor: pointer;
   position: absolute;
   right: 30px;
   top: 20px;
@@ -66,11 +67,14 @@ export default class MessageDisplay extends Vue {
   height: 440px;
   margin: 0 auto;
   padding: 20px 0 0;
-  width: 80%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 #display video {
+  background: #eee;
   height: 440px;
-  width: 100%;
+  width: 80%;
 }
 #call_icons {
   bottom: 100px;
@@ -81,6 +85,7 @@ export default class MessageDisplay extends Vue {
 .call_end {
   background: #f75d5d;
   border-radius: 50%;
+  cursor: pointer;
   color: #fff;
   height: 60px;
   margin: 0 auto;
