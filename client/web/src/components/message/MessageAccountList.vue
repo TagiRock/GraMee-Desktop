@@ -6,7 +6,7 @@
   ul.account_list
     li.cf.active
       img(src='assets/images/message_account_list/account01.png', alt='')
-      h3 Sample Name
+      h3 西澤 佳裕
 
 </template>
 
