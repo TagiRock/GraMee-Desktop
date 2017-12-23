@@ -1,7 +1,7 @@
 <template lang="pug">
 ul
   li
-    a(href='class/detail.html')
+    a(href='/home')
       img(v-bind:src="model.pictureUrl")
     h3.class_name {{model.name}}
     p.ja {{model.user.name}}
@@ -13,7 +13,7 @@ import Vue from "vue";
 import { ClassroomModel } from "domain/model/ClassroomModel";
 import { UserModel } from "domain/model/UserModel";
 
-function createModel(name: string): ClassroomModel {
+function createModel(): ClassroomModel {
   const model = new ClassroomModel();
   model.user = {
     id: "1",
@@ -21,13 +21,13 @@ function createModel(name: string): ClassroomModel {
     email: "asdfa",
     createAt: "sfdjalkjdfa"
   };
-  model.name = name;
-  model.description = "説明だよ説明だよ説明だよ説明だよ説明だよ";
+  model.name = "HTMLを基礎から学びたい人の教室";
+  model.description = "HTMLの教室";
   model.genre = "Web";
-  model.language = "javascript";
+  model.language = "html";
   model.level = "easy";
   model.pictureUrl = "assets/images/card/class01.jpg";
-  model.price = "500";
+  model.price = "1500";
   return model;
 }
 @Component({
@@ -36,8 +36,8 @@ function createModel(name: string): ClassroomModel {
   }
 })
 export default class Card extends Vue {
-  public model: ClassroomModel;
-  // public model = createModel(this.name);
+  // public model: ClassroomModel;
+  public model = createModel();
 }
 </script>
 

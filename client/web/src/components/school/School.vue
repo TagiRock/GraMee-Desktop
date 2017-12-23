@@ -5,9 +5,7 @@ div.class_listbox
   img#first_view_image(v-bind:src="imageUrl") 
   div#genre_box
     vue-section-header
-    ul
-      li
-        vue-section(v-for='list in lists', :section="list" )
+    vue-card
 
 </template>
 
@@ -128,11 +126,6 @@ export default class School extends Vue {
       ]
     }
   ];
-public create(){
-
-
-}
-
 }
 </script>
 
