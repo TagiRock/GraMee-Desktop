@@ -43,7 +43,7 @@
             <li></li>
             </ul>
         #buy
-          a.cancel_btn.ja(href='#', @click="clickCancel()") キャンセル
+          a.cancel_btn.ja(href='/', @click="clickCancel()") キャンセル
           a.buy_btn.ja(href='#', @click="clickTakeClassroom()") 受講する
 
 </template>
@@ -57,12 +57,13 @@ import VueModalBuyComp from "../modal/ModalBuyComp";
 
 function createModel(): ClassroomModel {
   const model = new ClassroomModel();
-  model.name = "Jquery入門";
-  model.description = "説明だよ説明だよ説明だよ説明だよ説明だよ";
+  model.name = "HTMLを基礎から学びたい人の教室";
+  model.description = "HTMLの教室";
   model.genre = "Web";
-  model.language = "javascript";
+  model.language = "html";
   model.level = "easy";
-  model.price = "500";
+  model.pictureUrl = "assets/images/card/class01.jpg";
+  model.price = "1500";
   //開設日も欲しい
   return model;
 }

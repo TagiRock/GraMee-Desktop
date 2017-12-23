@@ -2,7 +2,7 @@
 #display_box
   #display_head.cf
     img(src='assets/images/message_display/account01.png', alt='')
-    h3.account_name 田木一郎
+    h3.account_name 西澤 佳裕
     p.time 00:37
     .message_box
       i.material-icons(type='button', @click="changeShowChat()") textsms

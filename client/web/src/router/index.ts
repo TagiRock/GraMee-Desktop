@@ -6,6 +6,7 @@ import Setting from "components/setting/Setting.vue";
 import Home from "components/home/Home.vue";
 import Login from "components/login/Login.vue";
 import Signup from "components/signup/Signup.vue";
+import CreateClassroom from "components/school/CreateClassroom.vue";
 import Main from "components/main/Main.vue";
 import store from "../store/index";
 import { Getters as AppGetters } from "../store/app";
@@ -19,6 +20,7 @@ const routes: RouteConfig[] = [
       { path: "message", component: Message, },
       { path: "home", component: Home },
       { path: "setting", component: Setting },
+      { path: "create", component: CreateClassroom },
     ]
   },
   { path: "/login", component: Login },

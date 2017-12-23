@@ -2,7 +2,7 @@
 #chat_box
     #account
         img(src='assets/images/message_chat/account01.png', alt='')
-        h3.account_name 田木一郎
+        h3.account_name 西澤 佳裕
         p.online ログイン
         .class_end(@click="$emit('finish')")
             md-icon(large) check
@@ -40,7 +40,9 @@ export default class MessageHeader extends Vue {
 }
 #account img {
   float: left;
+  height: 60px;
   margin: 0 10px 0 0;
+  width: 60px;
 }
 #account .account_name {
   color: #272c32;

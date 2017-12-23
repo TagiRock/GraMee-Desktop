@@ -2,7 +2,7 @@
 div
   ul
     li(v-for='list in lists') {{list}}
-    button(type='button', @click="add()") add
+    //- button(type='button', @click="add()") add
 
 </template>
  
@@ -47,7 +47,7 @@ export default class MessageText extends Vue {
       text: "終わり"
     }
   ];
-  public lists: string[] = ["りんご", "バナナ", "パイナップル", "スイカ", "いちご"];
+  public lists: string[] = [""];
   public user1 = createModel(1, "ユーザー1だよ");
   public user2 = createModel(2, "ユーザー2だよ");
   public message = new MessageTextModel();

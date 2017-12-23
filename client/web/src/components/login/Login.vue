@@ -11,7 +11,8 @@
     form.login(method='post')
       input(type='text', name='', value='', placeholder='E-mail Address', v-model="email")
       input(type='password', name='', value='', placeholder='Password', v-model="password")
-      button.login_btn(type='button', name='button', @click="clickLoginBtn(email,password)") ログイン
+      a(href='/')
+        button.login_btn(type='button', name='button', @click="clickLoginBtn(email,password)") ログイン
       router-link(to="/signup") 新規アカウントを作成
       a(href='#') パスワードをお忘れですか？
 </template>
