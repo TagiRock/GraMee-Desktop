@@ -7,6 +7,7 @@
     .message_box
       i.material-icons(type='button', @click="changeShowChat()") textsms
   #display
+    video
   #call_icons
     .call_end(@click="$emit('close')")
       md-icon(large) call_end
@@ -62,8 +63,14 @@ export default class MessageDisplay extends Vue {
   top: 20px;
 }
 #display {
+  height: 440px;
   margin: 0 auto;
+  padding: 20px 0 0;
   width: 80%;
+}
+#display video {
+  height: 440px;
+  width: 100%;
 }
 #call_icons {
   bottom: 100px;
@@ -79,8 +86,9 @@ export default class MessageDisplay extends Vue {
   margin: 0 auto;
   width: 60px;
 }
-.call_end v-icon {
+.call_end i.material-icons.md-icon {
   font-size: 40px;
   margin: 10px 0 0;
 }
+
 </style>
