@@ -10,9 +10,6 @@ import VueGenre from "./Genre.vue";
 import VueGenreNavigation from "./GenreNavigation.vue";
 import { Getter } from "vuex-class";
 
-import { GenreType } from "domain/model/GenreType";
-import { LevelType } from "domain/model/LevelType";
-
 @Component({
   components: {
     VueGenre,
@@ -20,7 +17,7 @@ import { LevelType } from "domain/model/LevelType";
   }
 })
 export default class School extends Vue {
- //
+  //
 }
 </script>
 

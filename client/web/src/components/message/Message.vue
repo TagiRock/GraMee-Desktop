@@ -1,25 +1,31 @@
 <template lang="pug">
-  //- vue-message-account-list
-  //- vue-message-chat
-  vue-message-display
+article
+  vue-message-display(v-if='showDisplay', @close='showDisplay = false, showMenu = true')
+  vue-message-menu(v-if='showMenu', @close='showMenu = false, showDisplay = true')
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
 import VueMessageAccountList from "./MessageAccountList";
-import VueMessageChat from "./MessageChat";
 import VueMessageDisplay from "./MessageDisplay";
+import VueMessageChat from "./MessageChat";
+import VueMessageMenu from "./MessageMenu";
 
 @Component({
   components: {
-    VueMessageAccountList,
-    VueMessageChat,
-    VueMessageDisplay
+    VueMessageDisplay,
+    VueMessageMenu
   }
 })
-
 export default class Message extends Vue {
-  public badgeCount = 0;
+  public showDisplay: boolean = false;
+  public showMenu: boolean = true;
 }
 </script>
+
+<style lang="css" scoped>
+article {
+  height: 100%;
+}
+</style>

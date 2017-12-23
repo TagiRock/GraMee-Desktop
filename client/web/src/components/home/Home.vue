@@ -8,6 +8,7 @@ ariticle
   //- vue-create-classroom
   vue-classroom
   //- vue-modal-test
+  //- vue-create-profile
 </template>
 
 <script lang="ts">
@@ -21,7 +22,8 @@ import VueMessageChat from "../message/MessageChat";
 import VueMessageDisplay from "../message/MessageDisplay";
 import VueCreateClassroom from "../school/CreateClassroom";
 import VueClassroom from "../classroom/Classroom";
-import VueModalTest from "../school/ModalTest";
+import VueCreateProfile from "../create_profile/CreateProfile";
+
 @Component({
   components: {
     VueBuy,
@@ -32,7 +34,7 @@ import VueModalTest from "../school/ModalTest";
     VueMessageDisplay,
     VueCreateClassroom,
     VueClassroom,
-    VueModalTest
+    VueCreateProfile
   }
 })
 export default class Home extends Vue {

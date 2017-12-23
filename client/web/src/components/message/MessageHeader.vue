@@ -1,34 +1,26 @@
 <template lang="pug">
-#message
-  #chat_box
-    #chat
-      .chat_message
-        vue-message-text
-      form.sent_message
-        textarea(v-model="textMessage",v-on:keyup.enter="submit()",name='name', rows='1', cols='10', placeholder='ここにメッセージを入力')
-
+#chat_box
+    #account
+        img(src='assets/images/message_chat/account01.png', alt='')
+        h3.account_name 田木一郎
+        p.online ログイン
+        .class_end(@click="$emit('finish')")
+            md-icon(large) check
+        .call(@click="$emit('close')")
+            md-icon(large)  phone
 </template>
  
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import VueMessageText from "./MessageText";
 
 @Component({
-  components: {
-    VueMessageText
-  }
+  components: {}
 })
-export default class MessageChat extends Vue {
-  public textMessage: string = "";
-  public messageWidth: number;
-  public created() {
-    this.messageWidth = 100;
-  }
-  public submit() {
-    //メッセージ送信
-    console.log(this.textMessage);
-    this.textMessage = "";
+export default class MessageHeader extends Vue {
+  public test() {
+    console.log("FInishして");
+    this.$emit("finishClassroom");
   }
 }
 </script>
@@ -36,13 +28,8 @@ export default class MessageChat extends Vue {
 <style lang="css" scoped>
 #message {
   display: flex;
-  background-color: #fff;
-  z-index: 900;
   height: 100%;
-  right: 0;
-  width: 28%;
 }
-
 #chat_box {
   width: 100%;
 }
@@ -68,10 +55,20 @@ export default class MessageChat extends Vue {
   top: 20px;
   width: 60px;
 }
-.call v-icon {
+.call v-icon,
+.class_end v-icon {
   color: #fff;
   font-size: 39px;
   margin: 10px 0 0 10px;
+}
+.class_end {
+  background: #f75d5d;
+  border-radius: 50%;
+  height: 60px;
+  position: absolute;
+  right: 110px;
+  top: 20px;
+  width: 60px;
 }
 #chat {
   height: 100%;
@@ -79,22 +76,17 @@ export default class MessageChat extends Vue {
   position: relative;
   width: 80%;
 }
-
 .sent_message textarea {
   border: none;
   border-top: 1px solid #e5e5e5;
-  top: 450px;
+  bottom: 95px;
   font-size: 16px;
-  height: 80px;
+  height: 100px;
   padding: 20px 0;
   position: absolute;
   width: 100%;
 }
 .sent_message textarea::placeholder {
   color: #a5a2a2;
-}
-
-.chat_message {
-  padding: 20px 0;
 }
 </style>

@@ -1,7 +1,7 @@
 <template lang="pug">
 #details
   // 商品詳細
-  vue-modal(v-if='showModal', @close='showModal = false')
+  vue-modal-buy-comp(v-if='showModal', @close='showModal = false')
   #class_detail
     #class_detail_box
       #class_detail_left
@@ -53,11 +53,10 @@ import Component from "vue-class-component";
 import Vue from "vue";
 import { ClassroomModel } from "domain/model/ClassroomModel";
 import { ClassroomUseCase } from "domain/usecase/ClassroomUseCase";
-import VueModal from "../school/Modal";
+import VueModalBuyComp from "../modal/ModalBuyComp";
 
 function createModel(): ClassroomModel {
   const model = new ClassroomModel();
-
   model.name = "Jquery入門";
   model.description = "説明だよ説明だよ説明だよ説明だよ説明だよ";
   model.genre = "Web";
@@ -70,7 +69,7 @@ function createModel(): ClassroomModel {
 
 @Component({
   components: {
-    VueModal
+    VueModalBuyComp
   }
 })
 export default class Classroom extends Vue {
