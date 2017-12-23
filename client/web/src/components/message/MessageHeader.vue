@@ -9,7 +9,7 @@
         .call(@click="$emit('close')")
             md-icon(large)  phone
 </template>
- 
+
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
@@ -88,5 +88,11 @@ export default class MessageHeader extends Vue {
 }
 .sent_message textarea::placeholder {
   color: #a5a2a2;
+}
+#chat_box #account i.material-icons.md-icon {
+  color: #fff;
+  position: absolute;
+  top: 13px;
+  right: 11px;
 }
 </style>
