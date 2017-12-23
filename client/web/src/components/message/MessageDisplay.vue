@@ -8,9 +8,9 @@
       i.material-icons(type='button', @click="changeShowChat()") textsms
   #display
   #call_icons
-    .call_end
+    .call_end(@click="$emit('close')")
       md-icon(large) call_end
-  vue-message-chat(v-if='showChat')
+  vue-message-chat(v-if='showChat',v-bind:style="{width: 28+'%' ,position: 'absolute'}")
 
 </template>
 

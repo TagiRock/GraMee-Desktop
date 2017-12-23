@@ -1,9 +1,12 @@
 <template lang="pug">
-.comp_box
-  h2.comp_ttl 授業を終了しますか？
-  .btnbox.cf
-    button.back(type='button', name='button') キャンセル
-    button.end(type='button', name='button') 終了する
+.modal-mask
+    .modal-wrapper
+        .modal-container
+            .comp_box
+              h2.comp_ttl 授業を終了しますか？
+              .btnbox.cf
+                button.back(type='button', name='button',@click="$emit('cancel')") キャンセル
+                button.end(type='button', name='button',@click="$emit('closeClassroom')") 終了する
 
 </template>
 
@@ -18,12 +21,15 @@ export default class ModalFinishClassroom extends Vue {
 </script>
 
 <style lang="css" scoped>
-.cartbox {
+
+.comp_box {
   background: #fff;
   border-radius: 6px;
   margin: 0 auto;
-  padding: 60px 60px 20px;
+  padding: 60px;
   width: 80%;
+  animation:move 0.5s ease 0s normal;
+  -webkit-animation:move 0.5s ease 0s normal;
 }
 .comp_ttl {
   text-align: center;
@@ -49,10 +55,10 @@ button {
   width: 200px;
 }
 .back {
-  background: #575a61;
+  background: #575A61;
 }
-.message {
-  background: #f7745d;
+.end {
+  background: #F7745D;
 }
 
 .modal-mask {
@@ -73,9 +79,9 @@ button {
 }
 
 .modal-container {
-  width: 750px;
+  width: 650px;
   margin: 0px auto;
-  padding: 20px 70px;
+  padding: 20px 20px;
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
@@ -108,6 +114,23 @@ button {
 .modal-leave-active .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+@keyframes move {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 </style>
 

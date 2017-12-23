@@ -1,8 +1,7 @@
 <template lang="pug">
 article
-  //- vue-message-account-list
-  //- vue-message-chat(v-if='showChat', @close='showChat = false')
-  vue-message-display(v-if='showDisplay')
+  vue-message-display(v-if='showDisplay', @close='showDisplay = false, showMenu = true')
+  vue-message-menu(v-if='showMenu', @close='showMenu = false, showDisplay = true')
 </template>
 
 <script lang="ts">
@@ -11,15 +10,17 @@ import Vue from "vue";
 import VueMessageAccountList from "./MessageAccountList";
 import VueMessageDisplay from "./MessageDisplay";
 import VueMessageChat from "./MessageChat";
+import VueMessageMenu from "./MessageMenu";
+
 @Component({
   components: {
-    VueMessageAccountList,
-    VueMessageChat,
-    VueMessageDisplay
+    VueMessageDisplay,
+    VueMessageMenu
   }
 })
 export default class Message extends Vue {
-  public showDisplay: boolean = true;
+  public showDisplay: boolean = false;
+  public showMenu: boolean = true;
 }
 </script>
 

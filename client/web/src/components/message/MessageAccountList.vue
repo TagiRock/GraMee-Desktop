@@ -1,13 +1,12 @@
 <template lang="pug">
-#message
-  #accounts
-    .account_search
-      v-icon search
-      input(type='text', name='', value='', placeholder='Search')
-    ul.account_list
-      li.cf.active
-        img(src='assets/images/message_account_list/account01.png', alt='')
-        h3 Sample Name
+#accounts
+  .account_search
+    md-icon search
+    input(type='text', name='', value='', placeholder='Search')
+  ul.account_list
+    li.cf.active
+      img(src='assets/images/message_account_list/account01.png', alt='')
+      h3 Sample Name
 
 </template>
 

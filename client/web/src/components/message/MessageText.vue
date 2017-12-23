@@ -27,7 +27,7 @@ export default class MessageText extends Vue {
   public pushText: string = "";
   public sampleLists: MessageTextModel[] = [
     {
-      userId: 1,
+      userId: 1, 
       text: "りんご"
     },
     {
