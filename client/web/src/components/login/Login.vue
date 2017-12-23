@@ -26,7 +26,7 @@ export default class Login extends Vue {
   @Action(Actions.loginEmail)
   private loginAction: (payload: { email: string, password: string }) => void;
   public clickLoginBtn(email: string, password: string) {
-      //this.loginAction({email , password});
+      this.loginAction({email , password});
   }
 }
 </script>

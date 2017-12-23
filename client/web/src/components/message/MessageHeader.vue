@@ -5,9 +5,9 @@
         h3.account_name 田木一郎
         p.online ログイン
         .class_end(@click="$emit('finish')")
-            md-icon check
+            md-icon(large) check
         .call(@click="$emit('close')")
-            md-icon phone
+            md-icon(large)  phone
 </template>
  
 <script lang="ts">
