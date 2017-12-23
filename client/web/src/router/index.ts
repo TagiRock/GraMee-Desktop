@@ -6,6 +6,7 @@ import Setting from "components/setting/Setting.vue";
 import Home from "components/home/Home.vue";
 import Login from "components/login/Login.vue";
 import Signup from "components/signup/Signup.vue";
+import CreateClassroom from "components/school/CreateClassroom.vue";
 import Main from "components/main/Main.vue";
 import store from "../store/index";
 import { Getters as AppGetters } from "../store/app";
@@ -23,6 +24,7 @@ const routes: RouteConfig[] = [
   },
   { path: "/login", component: Login },
   { path: "/signup", component: Signup },
+  { path: "/create", component: CreateClassroom },
 ];
 
 const router = new VueRouter({
