@@ -10,7 +10,7 @@
       local('Montserrat Regular '),
       url('../assets/fonts/montserrat-latin-400.woff2') format('woff2')
   }
-  
+
 html {
     height: 100%;
     overflow: hidden;
@@ -39,6 +39,7 @@ outline: none;
 }
 button {
 border: none;
+cursor: pointer;
 }
 button:focus {
 background: none;

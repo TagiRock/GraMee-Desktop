@@ -2,14 +2,14 @@
 #chat_box
     #account
         img(src='assets/images/message_chat/account01.png', alt='')
-        h3.account_name 田木一郎
+        h3.account_name 西澤 佳裕
         p.online ログイン
         .class_end(@click="$emit('finish')")
-            md-icon check
+            md-icon(large) check
         .call(@click="$emit('close')")
-            md-icon phone
+            md-icon(large)  phone
 </template>
- 
+
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
@@ -40,7 +40,9 @@ export default class MessageHeader extends Vue {
 }
 #account img {
   float: left;
+  height: 60px;
   margin: 0 10px 0 0;
+  width: 60px;
 }
 #account .account_name {
   color: #272c32;
@@ -49,6 +51,7 @@ export default class MessageHeader extends Vue {
 .call {
   background: #3074ff;
   border-radius: 50%;
+  cursor: pointer;
   height: 60px;
   position: absolute;
   right: 30px;
@@ -64,6 +67,7 @@ export default class MessageHeader extends Vue {
 .class_end {
   background: #f75d5d;
   border-radius: 50%;
+  cursor: pointer;
   height: 60px;
   position: absolute;
   right: 110px;
@@ -88,5 +92,11 @@ export default class MessageHeader extends Vue {
 }
 .sent_message textarea::placeholder {
   color: #a5a2a2;
+}
+#chat_box #account i.material-icons.md-icon {
+  color: #fff;
+  position: absolute;
+  top: 13px;
+  right: 11px;
 }
 </style>

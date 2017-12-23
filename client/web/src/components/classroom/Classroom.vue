@@ -3,12 +3,6 @@
   // 商品詳細
   vue-modal-buy-comp(v-if='showModal', @close='showModal = false')
   #class_detail
-    #panav
-      .col.s12
-        a.breadcrumb(href='#') WEB
-        a.breadcrumb(href='#') Easy
-        a.breadcrumb(href='#') HTML
-        a.breadcrumb {{model.name}}
     #class_detail_box
       #class_detail_left
         img(src='assets/images/card/class01.jpg', alt='')
@@ -122,7 +116,7 @@ export default class Classroom extends Vue {
   width: 100%;
 }
 #class_detail {
-  padding: 25px 60px;
+  padding: 60px;
   width: 80%;
 }
 #account_detail {

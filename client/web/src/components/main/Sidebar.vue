@@ -3,7 +3,7 @@ aside
   nav
     ul
       li
-        img(alt='プロフィール画像')
+        img(src='assets/images/create_profile/account02.png', alt='プロフィール画像' class="account")
       router-link(tag="li" to="/" exact)
         a
           md-icon(medium) school
@@ -15,7 +15,7 @@ aside
       router-link(tag="li" to="/message")
         a
           md-icon(medium) textsms
-          | Message 
+          | Message
       router-link(tag="li" to="/setting")
         a
           md-icon(medium) settings
@@ -33,7 +33,7 @@ export default class Sidebar extends Vue {}
 aside {
   height: 100%;
   background: #272c32;
-  padding: 20px 0 0; 
+  padding: 20px 0 0;
   width: 90px;
 }
 
@@ -89,5 +89,9 @@ ul .active::before {
   position: absolute;
   top: 0;
   width: 2px;
+}
+.account {
+  height: 60px;
+  width: 60px;
 }
 </style>

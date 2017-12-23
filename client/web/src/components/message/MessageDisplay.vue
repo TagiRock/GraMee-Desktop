@@ -2,11 +2,12 @@
 #display_box
   #display_head.cf
     img(src='assets/images/message_display/account01.png', alt='')
-    h3.account_name 田木一郎
+    h3.account_name 西澤 佳裕
     p.time 00:37
     .message_box
       i.material-icons(type='button', @click="changeShowChat()") textsms
   #display
+    video
   #call_icons
     .call_end(@click="$emit('close')")
       md-icon(large) call_end
@@ -57,12 +58,22 @@ export default class MessageDisplay extends Vue {
   font-weight: 100;
 }
 .message_box {
+  cursor: pointer;
   position: absolute;
   right: 30px;
   top: 20px;
 }
 #display {
+  height: 440px;
   margin: 0 auto;
+  padding: 20px 0 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+#display video {
+  background: #eee;
+  height: 440px;
   width: 80%;
 }
 #call_icons {
@@ -74,13 +85,15 @@ export default class MessageDisplay extends Vue {
 .call_end {
   background: #f75d5d;
   border-radius: 50%;
+  cursor: pointer;
   color: #fff;
   height: 60px;
   margin: 0 auto;
   width: 60px;
 }
-.call_end v-icon {
+.call_end i.material-icons.md-icon {
   font-size: 40px;
   margin: 10px 0 0;
 }
+
 </style>

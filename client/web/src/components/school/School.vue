@@ -140,4 +140,3 @@ export default class School extends Vue {
   height: 100%;
 }
 </style>
-
